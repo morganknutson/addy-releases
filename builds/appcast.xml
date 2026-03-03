@@ -1,0 +1,124 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Addy</title>
+        <item>
+            <title>0.1.501</title>
+            <pubDate>Tue, 03 Mar 2026 02:08:38 -0800</pubDate>
+            <sparkle:version>1772532352</sparkle:version>
+            <sparkle:shortVersionString>0.1.501</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<ul>
+  <li>Fixing loggin</li>
+</ul>
+]]></description>
+            <enclosure url="https://addy-ade.com/builds/Addy-0.1.501.zip" length="12639712" type="application/octet-stream" sparkle:edSignature="R3MrbClNg8k2HgnkkkB97jxYzyOVuXGt2jLhoFcLtYlqNoZcG9ZGw6Z9GVIzJvz2WY0wE1Y8AKJwt6xqTVbnDQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://addy-ade.com/builds/Addy1772532352-1772518713.delta" sparkle:deltaFrom="1772518713" length="1850714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uV/PZfdMdDmEmGx4XJvVXxuQbpxCTsi9x8pQEqfOPbr2o5hb+Xu08p/WYQn4/DA2tGLf6AWo7ikQhzDpSUAwAg=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772532352-1772505012.delta" sparkle:deltaFrom="1772505012" length="5096662" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wuPp3CdTxc6Kl69SG/dJdx6aflhsVS6sstNiHDqlLpgX3/n7JYBNnuVc0IPS63ZvqUrvIWwRzMi/mbXAi1FXCA=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772532352-1772504623.delta" sparkle:deltaFrom="1772504623" length="5100086" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="yWacOp275lvyF9EE8clmsmt404/PrwIe39DlGKdpVkNq8iRuhx2IQICrPLBJVu84a1/sB9K9LgOTf4ddBm3yDw=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772532352-1772504160.delta" sparkle:deltaFrom="1772504160" length="5099610" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KImF280GFbLhgyYtcJgw2YiXSoH9qpcwieSwNFoNzyytXUF4LFqVqDteFxWE+PXFdDtE1ws09sy4f7UlIo31Dg=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772532352-1772453761.delta" sparkle:deltaFrom="1772453761" length="2158570" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Yv0DU86VDqMDd3k9EwN2YwDsr83fsCrnVp4PV+aPGtvviSjyc69xpZWggW2BaYBniwSKz0BUV4evcc72UPs+BQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.5</title>
+            <pubDate>Mon, 02 Mar 2026 22:20:58 -0800</pubDate>
+            <sparkle:version>1772518713</sparkle:version>
+            <sparkle:shortVersionString>0.1.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://addy-ade.com/builds/Addy-0.1.5.zip" length="12550698" type="application/octet-stream" sparkle:edSignature="6URu0Wrzy6LQBwKUdaduKOUeRxYsVw824CSYYIx1oDfJkabLePzcyiNrdWFz1eDaYwfYqjN85Ssgw1xKNbbICw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://addy-ade.com/builds/Addy1772518713-1772505012.delta" sparkle:deltaFrom="1772505012" length="4930750" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="BDkV7b1SqV+rWTnoANH6JciZvTpjHygcXpQWUYbJJDzXvMt0T/J5xbxY82tfrEb8Ab/eWTU4P9gH2yP1nCiCAw=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772518713-1772504623.delta" sparkle:deltaFrom="1772504623" length="4928750" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="htVR3Eg2tBr+cCFflMW272928tHHJwiNSn1ftZ5IyhNCi9AbaK0hGLvEL0PJ7QLG89talOEGeTSl0VujyXiYCg=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772518713-1772504160.delta" sparkle:deltaFrom="1772504160" length="4926070" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hsiAUfpLEykSxewZfnfJ21QlbRrY4dl4h4IuoLSCkXCCUNMYhr1fKB92E18XkIQSkec3tXHznXyLp68cR2UnDw=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772518713-1772453761.delta" sparkle:deltaFrom="1772453761" length="1787614" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dykkpGbkpslu0g+uiQpxNqe8uyFd38rLl/WtWcnLrQhc+ETY4dK6fq8XoqKQQaybWPHa0eSHtUxRCnpbYcbpCg=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772518713-1772237219.delta" sparkle:deltaFrom="1772237219" length="6880538" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="WZVdL7hBbXKpbKuvRoCIDOBjGBvkCjf1Q5ROZ5Izup9IPzCDpss8FQ3nOLyJl5S1opTb/WUcR/0B3x0o16vgDg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.5</title>
+            <pubDate>Mon, 02 Mar 2026 22:00:47 -0800</pubDate>
+            <sparkle:version>1772517842</sparkle:version>
+            <sparkle:shortVersionString>0.1.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://addy-ade.com/builds/Addy-0.1.5.zip" length="12550674" type="application/octet-stream" sparkle:edSignature="w8o+AC9i5YXW8PzGiv6eUDUSb9Gu64Sb3CEbyjjjKzZ8H1n39H8yHPOzm5EakRzW6OQzFrTNtc2ynKHRtM9iCA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://addy-ade.com/builds/Addy1772517842-1772505012.delta" sparkle:deltaFrom="1772505012" length="4934526" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YSxAAWVn5zeID+7dTLpPueyZrPv1F80URimQZCjntE5damXNKCEvVNj20wBbFKy0gqUq7QzsWbqX1b/NWEshDw=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772517842-1772504623.delta" sparkle:deltaFrom="1772504623" length="4927598" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hFmwzo4PfmzboevbJUYIuEamoHa/qLh/B2Tv5bgaUtiq+4fst0gVm8JLlt9Q2B7b4CWbkfTDS8R9n2rgKktUCg=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772517842-1772504160.delta" sparkle:deltaFrom="1772504160" length="4927406" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uupmPvGEohHmDWoYQbacPD5R1flITX57ey6X4I/5vz5sAx/XA8gc6COwtJ7g/JXCMN9UvokneRRN+24bHis2Cw=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772517842-1772453761.delta" sparkle:deltaFrom="1772453761" length="1783634" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="yOKNZHqahBbbofzyQRmJqZIc+WgbT9v3+8SFDeip6Tc6nzXYJix4J4Hnw6soxCv0k/UkXqfmQZaI96KATA8SAA=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772517842-1772237219.delta" sparkle:deltaFrom="1772237219" length="6883498" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="TTCPCBgehsY2IykwneP5eK1A+7nh9Os5af5BOWMaOmSx8v8nbaatmOeKkv2H44kDbc6UnQvquFhJ4QR991RhAQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.4</title>
+            <pubDate>Mon, 02 Mar 2026 18:32:34 -0800</pubDate>
+            <sparkle:version>1772505012</sparkle:version>
+            <sparkle:shortVersionString>0.1.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://addy-ade.com/builds/Addy-0.1.4.zip" length="7212858" type="application/octet-stream" sparkle:edSignature="SAEcb43jALuKewevSbUMAcOCG8D4CUCEBPxvHsvQfgOfe7KJqBhCBRJ1roCMWiRetGeZVjqFgOwyGyUvFDRJDA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://addy-ade.com/builds/Addy1772505012-1772504623.delta" sparkle:deltaFrom="1772504623" length="14974" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="/jFrKE/VkGQMi5bY1KHG/hPCAlBq1hm0pvldjlXQWmM5MpPCulCQl2h9DL2LyfL1yWExpuXxRfFArbkIhquDDg=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772505012-1772504160.delta" sparkle:deltaFrom="1772504160" length="14978" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qTXviNR4LpkwTVo14NjSdPVxdj/LDsUzmeot9er2taqIkB8nQKumsjATCuX3m5yEqnZHlgkPbV9HgrT5jm6+Bw=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772505012-1772453761.delta" sparkle:deltaFrom="1772453761" length="1463554" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="soSf34VrehAKEbzL4mUGz2wiGvLhowTkWBYiBdAKnLFdRMGBKvFLiEJP0sLeLBghmve8JQU/QVnM1OWFlh7dAQ=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772505012-1772237219.delta" sparkle:deltaFrom="1772237219" length="2986962" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="OLE+F9wXdfABY8Euyo+0iaR3SANyMghWuLpqP1tIW7qrO0ZLv2Wz57ZNLZaROZbe2of0CysrWNsXdtZEf/u2Cw=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772505012-1772218400.delta" sparkle:deltaFrom="1772218400" length="2995170" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5tnSjqoO3TBAf6nHN+9D9R7GVQAh1XPJBOBqo+g2WN4/vVqSaa9zSCUdY5o3Vh8lFaORXv7lFPMSZSrp566cAQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.3</title>
+            <pubDate>Mon, 02 Mar 2026 12:24:46 -0800</pubDate>
+            <sparkle:version>1772504623</sparkle:version>
+            <sparkle:shortVersionString>0.1.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<ul>
+  <li>Prepares for first Alpha release</li>
+</ul>
+]]></description>
+            <enclosure url="https://addy-ade.com/builds/Addy-0.1.3.zip" length="7212825" type="application/octet-stream" sparkle:edSignature="c8Cbdy5PJszQyxaDVGdBUZ6Oe/vlGHdlN5RTEjL+Bk1wdyxEKbBEZu46pR+W/RrytEh+IQ08gfES23rY/Z2YAg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://addy-ade.com/builds/Addy1772504623-1772504160.delta" sparkle:deltaFrom="1772504160" length="14822" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hQUM5Ird518Qw5eyEVz5z254lbs2ibCfJ9ngJ3/6OplO/s9rrF9BelIfkxI2kQ0pb+UBmgpXRlyBayiEZCKEDg=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772504623-1772453761.delta" sparkle:deltaFrom="1772453761" length="1470958" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ZLpaqOn8JLEXQvSIywSDjxXcpP5OjvI7My8SEXxjdCmHR/nPmmUOuszsfuSdxv3QOcChrbzThGDNDxJbBcf7Cg=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772504623-1772237219.delta" sparkle:deltaFrom="1772237219" length="2984542" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="P3MX7hptZFdSQZFqQMnxLJi5aSWaI/Qi7k1xPslrdJZzLTpspYjqXpkIGdckvsaeTQkc/W/ep2Y6JdQp0YS0BA=="/>
+                <enclosure url="https://addy-ade.com/builds/Addy1772504623-1772218400.delta" sparkle:deltaFrom="1772218400" length="3003774" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="S/iZRu3kEQnmxAZXFa+glJdEnheadLwmLVuWD2nK6fUfakf4OXU4bE+CirstiAZ33gW46uGCZXMex71E2//wAQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.31</title>
+            <pubDate>Mon, 02 Mar 2026 18:18:35 -0800</pubDate>
+            <sparkle:version>1772504160</sparkle:version>
+            <sparkle:shortVersionString>0.1.31</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<ul>
+  <li>Adds logging and events</li>
+</ul>
+]]></description>
+            <enclosure url="https://addy-ade.com/builds/Addy-0.1.31.zip" length="7212816" type="application/octet-stream" sparkle:edSignature="lXVwQqEki+L4ba82GsR5gXURoOEJDTM5DxvhlOYkVKjtjoBYsxK34vAPJ7EynS/aZzsQ5w2PvQUhXQjun2eFAg=="/>
+        </item>
+    </channel>
+</rss>
