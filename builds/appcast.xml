@@ -3,6 +3,32 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.1.508</title>
+            <pubDate>Wed, 04 Mar 2026 02:48:14 -0800</pubDate>
+            <sparkle:version>1772621114</sparkle:version>
+            <sparkle:shortVersionString>0.1.508</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<ul>
+  <li>Lots of bug fixes and pinned panes (thanks brian)</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.1.508.zip" length="12723254" type="application/octet-stream" sparkle:edSignature="8gLu3a4k3wbnQl2nHXSNzQdKzAkOsFMPDo5hATrcuLqNCyO0yG1MWjj6XpN2ZlI0+SVKC10xnkAfdJLBgmNoDw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772621114-1772619105.delta" sparkle:deltaFrom="1772619105" length="1023874" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="rjYfUbIxeEnUrdVAFguyv0aQctziVDc2uX/0cQS5+qgOI/qjckFiWwNtrM2jP3Z0XfX+A/i5l4gHWi/ZjZmsDA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772621114-1772618681.delta" sparkle:deltaFrom="1772618681" length="1019834" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="CsLO7THjn91ka8E2ME39ydkfYGvivgWPrWuylh53N1HpNAxLQ7uOFpbPDS9NM7uPCVeFucEUov9DdfnGoZ8NCg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772621114-1772590469.delta" sparkle:deltaFrom="1772590469" length="1660870" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QZtFleAXAEtLx4cqG5nyLwUBcAm/eq9WIB5nBzpgdIp28fHMj7s5s7Vlfv+scD3RJhbplJ5VIjc6SDZS32IcAQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772621114-1772589968.delta" sparkle:deltaFrom="1772589968" length="1661170" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PDvj3dzfLdxjh2jn62ZusaqSSSfusxNzQzQ0iSCg6lPEUgsg8tcCdoSGFAwazj/4gBSO4vwFkF08RN2IwurxCQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772621114-1772589034.delta" sparkle:deltaFrom="1772589034" length="1659570" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9kooCjaeK5bBhsumgoNbmVhuMLgfbg7iZkunVG4kmor5mjGF/20Q7VdsmpGfciAaXr6Y0KRZNOfrC6jTDvR8BQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.507</title>
             <pubDate>Wed, 04 Mar 2026 02:14:16 -0800</pubDate>
             <sparkle:version>1772619105</sparkle:version>
@@ -35,21 +61,6 @@
             <sparkle:shortVersionString>0.1.506</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.1.506.zip" length="12717836" type="application/octet-stream" sparkle:edSignature="jg0St2Jj6jB6g14lRAwVUN/uRcpwDWtGp3lq6oFgXS7UKYKFawauFVQd6Fvbd6LiRm42dncMHIIHbf5uFdlmBA=="/>
-        </item>
-        <item>
-            <title>0.1.505</title>
-            <pubDate>Tue, 03 Mar 2026 18:17:13 -0800</pubDate>
-            <sparkle:version>1772590469</sparkle:version>
-            <sparkle:shortVersionString>0.1.505</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.1.505.zip" length="12672872" type="application/octet-stream" sparkle:edSignature="1KUWMdosrU7clMumWl4rQE2cI00MbdYJqfWiNvidqlCuvTUy/sT2P9Hx68votr3ciJZmMdIpI6QIG0vRoDsuDQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772590469-1772589968.delta" sparkle:deltaFrom="1772589968" length="19642" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Uu5PULhixxjG18H7RmoBv0qMCXeTZVXdga3mvcye5UIiTPSUQf/sRnTBHtm3prIzGY7zcNdFXwhMBwTQ42yVAA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772590469-1772589034.delta" sparkle:deltaFrom="1772589034" length="627894" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QPwIJdCaZkBWilWfeO2LxU7hK1xftwLfUY7hZsNuoBOmiEF8dL5T3HjQyi9cmrHnZOpGgOAUuxTRd8qsmBIkDQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772590469-1772534357.delta" sparkle:deltaFrom="1772534357" length="1449774" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="IgNlzxaR0P/Vkqk2kreqe3LiEu/z6PxL6kkVe0G8BXFdVLKIWn22WIVVGE4g6bHnia9Q12iWulPGWbY0gWwHDA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772590469-1772532352.delta" sparkle:deltaFrom="1772532352" length="1451202" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ZH4OzdepxXGbaeB/+lCMBYHupvoTNUGnvfNhNAGPwjKega2dSYxXk8X0123ry5KTA+bQnvWaNIbmXwVmPD+TCQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772590469-1772518713.delta" sparkle:deltaFrom="1772518713" length="2002510" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9DXMD4eu/l+QLeWFtiYWyGvDfasZCflQrmv/DFaBp9vDWC6jZJafjyQxALVZtIW7mCgqAmQQZyPrRuSseEYaAw=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>0.1.4</title>
