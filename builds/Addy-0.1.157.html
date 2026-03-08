@@ -1,0 +1,57 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Custom tooltips across the entire app — Buttons, split controls, footer icons, browser toolbar, and pane headers now show animated Addy-styled tooltips on hover (650ms delay, auto-dismiss on scroll/click).</li>
+<li>Multi-select files in the Git pane — Click to select individual files, Shift+click for range selection, Cmd+A to select all unstaged. "Stage All" and "Unstage All" buttons change to "Stage (N)" / "Unstage (N)" when files are selected, operating only on the selection.</li>
+<li>Reviewer standards documents — New per-project design, engineering, and product standards (`.addy/design.md`, `.addy/engineering.md`, `.addy/product.md`) that are automatically loaded into review agents. Manage them with the new `addy_get_standards` and `addy_update_standards` MCP tools.</li>
+<li>Flow tests in the Tests pane — A new "Flow Tests" section lets you run end-to-end infrastructure tests (sub-agent loop, code review loop, plan review loop) against Claude Code, Codex, or Gemini backends, with persistent results and status tracking.</li>
+<li>Localhost reverse proxy for the browser pane — Replaces the old custom URL scheme handler with a proper TCP reverse proxy that strips CSP/HSTS headers, proxies WebSocket connections for HMR, and handles SSE streams. Dev server hot reload now works reliably.</li>
+<li>"Fix Issues" button on plan reviews — When a plan review finds actionable issues, a "Fix Issues" button appears in the header that spawns an agent to automatically update the plan based on the findings.</li>
+<li>ActionButton now supports icons, dropdowns, and working states — Buttons can show an SF Symbol icon, open a dropdown popover with a chevron, and transition through working/finished states with a spinner and auto-revert.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Browser pane cache busting rewritten — Aggressive no-cache headers, fetch() override, and <link> href interception ensure WKWebView always loads fresh CSS/JS from your dev server. No more stale stylesheets after HMR updates.</li>
+<li>Automatic background git fetch — Git provider now runs `git fetch` every 5 minutes so ahead/behind counts stay current without manual fetching. Also fetches immediately when the provider starts.</li>
+<li>Git pull now uses --rebase — `git pull` defaults to `--rebase` to keep a cleaner commit history.</li>
+<li>Git sync errors shown as expandable cards — Push/pull failures now display as a dismissable error card at the top of the Git pane with expandable details, replacing the old disappearing error label.</li>
+<li>Git provider skips redundant updates — State and summary dispatches are now hash-compared, avoiding unnecessary main-thread work when nothing has changed.</li>
+<li>Scrollback increased to 10,000 lines — Agent terminal panes now keep 10,000 lines of scrollback (up from SwiftTerm's default of 500).</li>
+<li>Terminal cursor no longer disappears in TUI apps — A new AddyTerminalView subclass prevents the cursor from vanishing when Claude Code or other Ink-based apps hide it on the normal screen buffer, while still allowing full-screen apps (vim, htop) to manage their own cursor.</li>
+<li>Terminal minimum frame size enforced — Prevents catastrophic text reflow when a pane is resized extremely small (which could freeze the UI for minutes with large scrollback).</li>
+<li>Sub-agents auto-close on completion — When a sub-agent's process exits, the pane is automatically closed and a summary toast appears on the parent pane.</li>
+<li>Sub-agent limit enforced — Maximum 5 sub-agents per parent pane. Exceeding the limit returns a clear error instead of spawning unbounded agents.</li>
+<li>Sub-agents now use --print mode — Sub-agents launched via `addy_spawn_agent` run with `claude --print` so the process exits cleanly when done, enabling reliable completion detection.</li>
+<li>Code review auto-closes and shows summary toast — When the review gate passes (no actionable issues, or max iterations reached), the review pane auto-closes and a summary toast appears on the agent pane showing how many issues were found and fixed.</li>
+<li>Pane split layout is now synchronous — Eliminated async layout passes that caused visible resize flashes when splitting panes. Divider positions are correct on the first render frame.</li>
+<li>Incremental pane insertion — Splitting a pane in the same direction as its parent now inserts incrementally into the existing NSSplitView instead of rebuilding the entire view hierarchy.</li>
+<li>Process detection uses single ps call — Activity polling now runs one `ps` command for all panes instead of two subprocesses per pane, significantly reducing overhead.</li>
+<li>Process detection recognizes script runtimes — Node.js, Deno, and Bun processes now show the script name (e.g. "next-server") instead of just "node".</li>
+<li>Git baseline recording moved off main thread — The `git stash create` call when launching agents no longer blocks the UI.</li>
+<li>Memory system type taxonomy simplified — Memory types consolidated from 9 categories to 5 (guides, gotchas, conventions, research, features) with automatic migration from legacy types.</li>
+<li>Memory pane reorganized — Now shows the full Injected/Recalled knowledge structure: Why, Architecture, and Knowledge Taxonomy docs pinned at top, reviewer standards in a "Reviewers" section, and recalled memories grouped by type below.</li>
+<li>Memory type filter uses dropdown button — Replaced the NSPopUpButton with a styled ActionButton dropdown for filtering memory types.</li>
+<li>Chat input replaced with inline prompt field — The chat pane now uses a compact InlinePromptField instead of the old ChatInputBar, with a dedicated stop button overlay during generation.</li>
+<li>Chat turn separators removed — Cleaner message flow without horizontal dividers between assistant/user turns.</li>
+<li>Chat tool block spacing tightened — Tool blocks are more compact with consistent 4px spacing.</li>
+<li>Expanded button design system — Full theme palette for button states: resting, active/pressed, destructive, accent, success, and disabled — each with background, border, inner border, and text colors for both light and dark modes.</li>
+<li>Segmented control inner border — SegmentPicker highlight now has a subtle inner border for more depth.</li>
+<li>Window minimum size enforced — The app window now has a proper minimum size constraint, preventing it from being resized too small.</li>
+<li>Plans change notifications scoped to active project — FSEvents for plan file changes now only notify the active project instead of all projects, reducing unnecessary UI updates.</li>
+<li>Server footer expanded controls are clickable — Fixed hit-test issues with expanded server footer buttons (collapse chevron, action buttons) by routing them through the overlay control system.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Browser reload now bypasses cache — Reload button and Cmd+R use `reloadFromOrigin()` instead of `reload()`, ensuring the dev server always serves fresh content.</li>
+<li>"Open in Browser" opens the real URL — The external browser button now opens the original localhost URL, not the internal proxy URL.</li>
+<li>Connector lines z-order preserved during pane close — Closing a pane no longer causes sub-agent connector lines to render behind content instead of on top.</li>
+<li>Ghost cursor fixed in agent panes — Removed `neverHideCaret` from agent terminals, which was showing a phantom cursor at Claude Code's internal cursor position (often on a wrong line).</li>
+<li>Chat assistant messages hidden until content arrives — Empty assistant message wrappers (tool-only turns) no longer leave 24px blank gaps in the message stream.</li>
+</ul>
