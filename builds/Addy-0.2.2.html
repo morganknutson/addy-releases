@@ -1,0 +1,46 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Git Worktrees — Work on multiple branches in parallel without stashing. Create a worktree from the sidebar context menu or the Git pane's branch list, and it opens as a nested sub-project with its own terminal, panes, and git state. Worktree children appear indented under their parent with a collapsible disclosure chevron.</li>
+<li>DialKit pane — A native parameter tuning pane for React projects. Connects to your running app's browser pane via a JS bridge, mirroring sliders, toggles, color pickers, text fields, and dropdowns as native macOS controls. Changes flow bidirectionally between the native pane and the browser in real time. Includes preset saving/loading and "Copy for Agent" to share current values with AI.</li>
+<li>DialKit MCP tools — AI agents can now read, set, and preset DialKit parameters via <code>addy_dialkit_params</code>, <code>addy_dialkit_set</code>, <code>addy_dialkit_presets</code>, <code>addy_dialkit_save_preset</code>, and <code>addy_dialkit_apply_preset</code>.</li>
+<li>Git worktree MCP tools — Agents can create, list, and remove worktrees via <code>addy_git_worktree_add</code>, <code>addy_git_worktree_list</code>, and <code>addy_git_worktree_remove</code>.</li>
+<li>Branches section in the Git pane — The Git pane now lists all local branches below the file changes, with "current" and "worktree" badges. Click "Open Worktree" on any branch to spin up a parallel workspace.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Redesigned onboarding visuals — The onboarding wizard now uses a full-bleed gradient background image with light-on-dark colors, replacing the flat theme-dependent background. All steps (dependencies, pane mode, typeface, theme, skills, plugins, feedback, done) have been updated for consistent styling.</li>
+<li>GitHub CLI sign-in no longer hangs during onboarding — The auth flow now runs with <code>GH_PROMPT_DISABLED</code> to prevent hidden prompts, automatically opens the browser to github.com/login/device, and provides a dedicated "Open Browser" button if you need to re-open it. Error messages from <code>gh</code> are now surfaced clearly instead of showing a generic "Sign-in failed".</li>
+<li>Color picker now includes a blend mode dropdown — The inline color picker in design tokens replaces the preview swatch with a "Normal" dropdown that lets you pick blend modes directly. The alpha slider gradient direction is corrected (transparent → opaque, left to right).</li>
+<li>Token popover headers use InlinePromptField — Display name and variable name fields in the typography, spacing, and color token popovers now use the same styled input field as the rest of the app.</li>
+<li>Nested popovers no longer dismiss prematurely — Clicking inside a child PopoverPanel (e.g., a dropdown inside a popover) no longer dismisses the parent.</li>
+<li>Sidebar drag-and-drop uses stable project IDs — Reordering projects in the sidebar is now based on UUID rather than row index, preventing stale row references when worktree children are present.</li>
+<li>Conversations and Skills panes moved behind dev flag — These panes are no longer shown in the launcher in release builds while they're being polished.</li>
+<li>Theme Editor toggle removed from Settings — The Theme Editor pane is now always available in debug builds and doesn't require a separate settings toggle.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed split pane redistribution causing uneven sizes after adding new panes — Redundant same-direction split wrappers are now flattened (normalized) before redistribution, ensuring all siblings are sized evenly. A post-layout redistribution pass catches cases where bounds were zero during the initial pass.</li>
+<li>Fixed preferredWidth corruption when inserting panes incrementally — The <code>splitViewDidResizeSubviews</code> callback is now suppressed during intermediate subview insertions, preventing <code>adjustSubviews()</code> from overwriting fixed-width pane sizes.</li>
+<li>Fixed focus glow rendering in deeply nested split panes — The glow effect now renders on the root view rather than the immediate parent, preventing it from being covered by ancestor siblings in complex layouts.</li>
+<li>Fixed focus glow crash when a pane wrapper is removed from the view hierarchy — Glow layers are now cleaned up in <code>viewDidMoveToSuperview</code> when the superview becomes nil.</li>
+<li>Fixed Git pane "Stage All" button appearing when there are no stageable files — The button now correctly hides when only conflict or already-staged files remain.</li>
+<li>Fixed GitFileRow auto-layout constraint warnings — Height and layout constraints are now activated after the row is added to its superview, avoiding "not yet in the window" warnings.</li>
+<li>Fixed git FSEvents watcher failing for worktree directories — The watcher now resolves <code>gitdir:</code> pointer files to find the actual <code>.git</code> directory, so file change detection works in worktrees.</li>
+<li>Stale worktree sub-projects are cleaned up on launch — If a worktree directory was deleted externally, its sidebar entry is automatically removed on next app start.</li>
+<li>Fixed click-through on ActionButton dropdowns in pane headers — Dropdown-style ActionButtons now properly open their menu on mouse down.</li>
+<li>Fixed agent pane terminal focus not reasserting on click — Clicking an already-active terminal pane now properly re-focuses the terminal, fixing cases where the cursor would stop blinking after interacting with other views.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Added FrameworkDetector to detect React, Next.js, Vue, Svelte, and Angular projects from package.json, enabling conditional pane visibility in the launcher.</li>
+<li>Split pane holding priority calculation extracted to a shared <code>holdingPriority(isFixed:index:)</code> helper, eliminating duplicated priority arithmetic across five call sites.</li>
+<li>New app icon.</li>
+</ul>

@@ -3,6 +3,68 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.2.2</title>
+            <pubDate>Wed, 11 Mar 2026 16:51:52 -0700</pubDate>
+            <sparkle:version>1773272893</sparkle:version>
+            <sparkle:shortVersionString>0.2.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Git Worktrees — Work on multiple branches in parallel without stashing. Create a worktree from the sidebar context menu or the Git pane's branch list, and it opens as a nested sub-project with its own terminal, panes, and git state. Worktree children appear indented under their parent with a collapsible disclosure chevron.</li>
+<li>DialKit pane — A native parameter tuning pane for React projects. Connects to your running app's browser pane via a JS bridge, mirroring sliders, toggles, color pickers, text fields, and dropdowns as native macOS controls. Changes flow bidirectionally between the native pane and the browser in real time. Includes preset saving/loading and "Copy for Agent" to share current values with AI.</li>
+<li>DialKit MCP tools — AI agents can now read, set, and preset DialKit parameters via <code>addy_dialkit_params</code>, <code>addy_dialkit_set</code>, <code>addy_dialkit_presets</code>, <code>addy_dialkit_save_preset</code>, and <code>addy_dialkit_apply_preset</code>.</li>
+<li>Git worktree MCP tools — Agents can create, list, and remove worktrees via <code>addy_git_worktree_add</code>, <code>addy_git_worktree_list</code>, and <code>addy_git_worktree_remove</code>.</li>
+<li>Branches section in the Git pane — The Git pane now lists all local branches below the file changes, with "current" and "worktree" badges. Click "Open Worktree" on any branch to spin up a parallel workspace.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Redesigned onboarding visuals — The onboarding wizard now uses a full-bleed gradient background image with light-on-dark colors, replacing the flat theme-dependent background. All steps (dependencies, pane mode, typeface, theme, skills, plugins, feedback, done) have been updated for consistent styling.</li>
+<li>GitHub CLI sign-in no longer hangs during onboarding — The auth flow now runs with <code>GH_PROMPT_DISABLED</code> to prevent hidden prompts, automatically opens the browser to github.com/login/device, and provides a dedicated "Open Browser" button if you need to re-open it. Error messages from <code>gh</code> are now surfaced clearly instead of showing a generic "Sign-in failed".</li>
+<li>Color picker now includes a blend mode dropdown — The inline color picker in design tokens replaces the preview swatch with a "Normal" dropdown that lets you pick blend modes directly. The alpha slider gradient direction is corrected (transparent → opaque, left to right).</li>
+<li>Token popover headers use InlinePromptField — Display name and variable name fields in the typography, spacing, and color token popovers now use the same styled input field as the rest of the app.</li>
+<li>Nested popovers no longer dismiss prematurely — Clicking inside a child PopoverPanel (e.g., a dropdown inside a popover) no longer dismisses the parent.</li>
+<li>Sidebar drag-and-drop uses stable project IDs — Reordering projects in the sidebar is now based on UUID rather than row index, preventing stale row references when worktree children are present.</li>
+<li>Conversations and Skills panes moved behind dev flag — These panes are no longer shown in the launcher in release builds while they're being polished.</li>
+<li>Theme Editor toggle removed from Settings — The Theme Editor pane is now always available in debug builds and doesn't require a separate settings toggle.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed split pane redistribution causing uneven sizes after adding new panes — Redundant same-direction split wrappers are now flattened (normalized) before redistribution, ensuring all siblings are sized evenly. A post-layout redistribution pass catches cases where bounds were zero during the initial pass.</li>
+<li>Fixed preferredWidth corruption when inserting panes incrementally — The <code>splitViewDidResizeSubviews</code> callback is now suppressed during intermediate subview insertions, preventing <code>adjustSubviews()</code> from overwriting fixed-width pane sizes.</li>
+<li>Fixed focus glow rendering in deeply nested split panes — The glow effect now renders on the root view rather than the immediate parent, preventing it from being covered by ancestor siblings in complex layouts.</li>
+<li>Fixed focus glow crash when a pane wrapper is removed from the view hierarchy — Glow layers are now cleaned up in <code>viewDidMoveToSuperview</code> when the superview becomes nil.</li>
+<li>Fixed Git pane "Stage All" button appearing when there are no stageable files — The button now correctly hides when only conflict or already-staged files remain.</li>
+<li>Fixed GitFileRow auto-layout constraint warnings — Height and layout constraints are now activated after the row is added to its superview, avoiding "not yet in the window" warnings.</li>
+<li>Fixed git FSEvents watcher failing for worktree directories — The watcher now resolves <code>gitdir:</code> pointer files to find the actual <code>.git</code> directory, so file change detection works in worktrees.</li>
+<li>Stale worktree sub-projects are cleaned up on launch — If a worktree directory was deleted externally, its sidebar entry is automatically removed on next app start.</li>
+<li>Fixed click-through on ActionButton dropdowns in pane headers — Dropdown-style ActionButtons now properly open their menu on mouse down.</li>
+<li>Fixed agent pane terminal focus not reasserting on click — Clicking an already-active terminal pane now properly re-focuses the terminal, fixing cases where the cursor would stop blinking after interacting with other views.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Added FrameworkDetector to detect React, Next.js, Vue, Svelte, and Angular projects from package.json, enabling conditional pane visibility in the launcher.</li>
+<li>Split pane holding priority calculation extracted to a shared <code>holdingPriority(isFixed:index:)</code> helper, eliminating duplicated priority arithmetic across five call sites.</li>
+<li>New app icon.</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.2.zip" length="17745744" type="application/octet-stream" sparkle:edSignature="z2SAU3dsSe3i72I05HPslHXUoC19S2+hCgRIgeCLTqw6Y+Z065WgeUHm8siHX3v+2FVg6GyQ69Y+36L3gLgwCQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1773220617.delta" sparkle:deltaFrom="1773220617" length="5548078" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SIS586p6SUcCfDztPAP3BjRc2RsU18uGOo2hhnzN7Qxa7Fr/VPRDGtSzSzyI/A82SlRWJqNoHOpPFvBNRmsgAQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1773217369.delta" sparkle:deltaFrom="1773217369" length="5604194" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="NGjLVUzNw6M8oplf5gxUVarRJl4bN7jfJN21dGIQgfVqQcEKIUQhpfwlE9kWGX9j5HYf2/PNTdpmjTny9dMUBg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1772972374.delta" sparkle:deltaFrom="1772972374" length="8019922" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5DUDpgTuyJhyFUqPknuvirgwfG3fvRoG34TToItS3dNN5iYwoqFJWCNdI53StZNEacwb9CA8PKNIGI7B/JDhCg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1772825469.delta" sparkle:deltaFrom="1772825469" length="8400518" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KqVz92TJSRZvHB+PJYFSn5FDaw+4cJlJbD2u+OAZo9cFHOGdnPSdGC7SC3ejP941MCq4iicNMpeJXF5pqjteAw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1772792653.delta" sparkle:deltaFrom="1772792653" length="8460794" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fh4NHSgbOu66mH33UCWdO4w46/jHyAAsawCInuPGp6gGTGyCDOyvQtBd1vl1iw1OjqcvSw0RDjmjwW3YM+NPBw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.1</title>
             <pubDate>Wed, 11 Mar 2026 02:19:55 -0700</pubDate>
             <sparkle:version>1773220617</sparkle:version>
@@ -99,79 +161,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773217369-1772792653.delta" sparkle:deltaFrom="1772792653" length="5243270" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="14XtclWvR000ccW7PSi6JO+8rBWwqeV5QMJS586BDCvwbkG4mlZoTQ0p8dl+iSzq71M6i+/Ut0Uor7gU1Y2qBw=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773217369-1772790478.delta" sparkle:deltaFrom="1772790478" length="5218498" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="spFbOeqsTNRZOxTHKfS8W0d9AtKfL0atDaQ0DZUupTkiOE4Fnw9RAS0+6WZvk/XxM9UzeE3wd77XIxCP6b0EAA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773217369-1772748108.delta" sparkle:deltaFrom="1772748108" length="5291186" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wHVSjMTCWIyVVFE0mMvS2JqWoX1nHFZdHAjIwhPxW7T9b8PWXWF+Ij2Ar3kx0JoN7+xAAp2D1jeHd7MuzU3OCg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.1.157</title>
-            <pubDate>Sun, 08 Mar 2026 05:23:05 -0700</pubDate>
-            <sparkle:version>1772972374</sparkle:version>
-            <sparkle:shortVersionString>0.1.157</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
-  h3 { margin: 0 0 8px; font-size: 14px; }
-  h2 { margin: 0 0 8px; font-size: 12px; }
-  ul { margin: 4px 0; padding-left: 20px; }
-  li { margin: 2px 0; }
-</style>
-<h3>What's New</h3>
-<h2>New Features</h2>
-<ul>
-<li>Custom tooltips across the entire app — Buttons, split controls, footer icons, browser toolbar, and pane headers now show animated Addy-styled tooltips on hover (650ms delay, auto-dismiss on scroll/click).</li>
-<li>Multi-select files in the Git pane — Click to select individual files, Shift+click for range selection, Cmd+A to select all unstaged. "Stage All" and "Unstage All" buttons change to "Stage (N)" / "Unstage (N)" when files are selected, operating only on the selection.</li>
-<li>Reviewer standards documents — New per-project design, engineering, and product standards (`.addy/design.md`, `.addy/engineering.md`, `.addy/product.md`) that are automatically loaded into review agents. Manage them with the new `addy_get_standards` and `addy_update_standards` MCP tools.</li>
-<li>Flow tests in the Tests pane — A new "Flow Tests" section lets you run end-to-end infrastructure tests (sub-agent loop, code review loop, plan review loop) against Claude Code, Codex, or Gemini backends, with persistent results and status tracking.</li>
-<li>Localhost reverse proxy for the browser pane — Replaces the old custom URL scheme handler with a proper TCP reverse proxy that strips CSP/HSTS headers, proxies WebSocket connections for HMR, and handles SSE streams. Dev server hot reload now works reliably.</li>
-<li>"Fix Issues" button on plan reviews — When a plan review finds actionable issues, a "Fix Issues" button appears in the header that spawns an agent to automatically update the plan based on the findings.</li>
-<li>ActionButton now supports icons, dropdowns, and working states — Buttons can show an SF Symbol icon, open a dropdown popover with a chevron, and transition through working/finished states with a spinner and auto-revert.</li>
-</ul>
-<h2>Improvements</h2>
-<ul>
-<li>Browser pane cache busting rewritten — Aggressive no-cache headers, fetch() override, and <link> href interception ensure WKWebView always loads fresh CSS/JS from your dev server. No more stale stylesheets after HMR updates.</li>
-<li>Automatic background git fetch — Git provider now runs `git fetch` every 5 minutes so ahead/behind counts stay current without manual fetching. Also fetches immediately when the provider starts.</li>
-<li>Git pull now uses --rebase — `git pull` defaults to `--rebase` to keep a cleaner commit history.</li>
-<li>Git sync errors shown as expandable cards — Push/pull failures now display as a dismissable error card at the top of the Git pane with expandable details, replacing the old disappearing error label.</li>
-<li>Git provider skips redundant updates — State and summary dispatches are now hash-compared, avoiding unnecessary main-thread work when nothing has changed.</li>
-<li>Scrollback increased to 10,000 lines — Agent terminal panes now keep 10,000 lines of scrollback (up from SwiftTerm's default of 500).</li>
-<li>Terminal cursor no longer disappears in TUI apps — A new AddyTerminalView subclass prevents the cursor from vanishing when Claude Code or other Ink-based apps hide it on the normal screen buffer, while still allowing full-screen apps (vim, htop) to manage their own cursor.</li>
-<li>Terminal minimum frame size enforced — Prevents catastrophic text reflow when a pane is resized extremely small (which could freeze the UI for minutes with large scrollback).</li>
-<li>Sub-agents auto-close on completion — When a sub-agent's process exits, the pane is automatically closed and a summary toast appears on the parent pane.</li>
-<li>Sub-agent limit enforced — Maximum 5 sub-agents per parent pane. Exceeding the limit returns a clear error instead of spawning unbounded agents.</li>
-<li>Sub-agents now use --print mode — Sub-agents launched via `addy_spawn_agent` run with `claude --print` so the process exits cleanly when done, enabling reliable completion detection.</li>
-<li>Code review auto-closes and shows summary toast — When the review gate passes (no actionable issues, or max iterations reached), the review pane auto-closes and a summary toast appears on the agent pane showing how many issues were found and fixed.</li>
-<li>Pane split layout is now synchronous — Eliminated async layout passes that caused visible resize flashes when splitting panes. Divider positions are correct on the first render frame.</li>
-<li>Incremental pane insertion — Splitting a pane in the same direction as its parent now inserts incrementally into the existing NSSplitView instead of rebuilding the entire view hierarchy.</li>
-<li>Process detection uses single ps call — Activity polling now runs one `ps` command for all panes instead of two subprocesses per pane, significantly reducing overhead.</li>
-<li>Process detection recognizes script runtimes — Node.js, Deno, and Bun processes now show the script name (e.g. "next-server") instead of just "node".</li>
-<li>Git baseline recording moved off main thread — The `git stash create` call when launching agents no longer blocks the UI.</li>
-<li>Memory system type taxonomy simplified — Memory types consolidated from 9 categories to 5 (guides, gotchas, conventions, research, features) with automatic migration from legacy types.</li>
-<li>Memory pane reorganized — Now shows the full Injected/Recalled knowledge structure: Why, Architecture, and Knowledge Taxonomy docs pinned at top, reviewer standards in a "Reviewers" section, and recalled memories grouped by type below.</li>
-<li>Memory type filter uses dropdown button — Replaced the NSPopUpButton with a styled ActionButton dropdown for filtering memory types.</li>
-<li>Chat input replaced with inline prompt field — The chat pane now uses a compact InlinePromptField instead of the old ChatInputBar, with a dedicated stop button overlay during generation.</li>
-<li>Chat turn separators removed — Cleaner message flow without horizontal dividers between assistant/user turns.</li>
-<li>Chat tool block spacing tightened — Tool blocks are more compact with consistent 4px spacing.</li>
-<li>Expanded button design system — Full theme palette for button states: resting, active/pressed, destructive, accent, success, and disabled — each with background, border, inner border, and text colors for both light and dark modes.</li>
-<li>Segmented control inner border — SegmentPicker highlight now has a subtle inner border for more depth.</li>
-<li>Window minimum size enforced — The app window now has a proper minimum size constraint, preventing it from being resized too small.</li>
-<li>Plans change notifications scoped to active project — FSEvents for plan file changes now only notify the active project instead of all projects, reducing unnecessary UI updates.</li>
-<li>Server footer expanded controls are clickable — Fixed hit-test issues with expanded server footer buttons (collapse chevron, action buttons) by routing them through the overlay control system.</li>
-</ul>
-<h2>Bug Fixes</h2>
-<ul>
-<li>Browser reload now bypasses cache — Reload button and Cmd+R use `reloadFromOrigin()` instead of `reload()`, ensuring the dev server always serves fresh content.</li>
-<li>"Open in Browser" opens the real URL — The external browser button now opens the original localhost URL, not the internal proxy URL.</li>
-<li>Connector lines z-order preserved during pane close — Closing a pane no longer causes sub-agent connector lines to render behind content instead of on top.</li>
-<li>Ghost cursor fixed in agent panes — Removed `neverHideCaret` from agent terminals, which was showing a phantom cursor at Claude Code's internal cursor position (often on a wrong line).</li>
-<li>Chat assistant messages hidden until content arrives — Empty assistant message wrappers (tool-only turns) no longer leave 24px blank gaps in the message stream.</li>
-</ul>
-]]></description>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.1.157.zip" length="13461056" type="application/octet-stream" sparkle:edSignature="9NgrBQyksfdwDzB+iu1VgmLrKIg6FmgqDhpT7NXc+x7sBapme2HBLlmk77IzFxe4kJK+kTon4F+kM3QwMQ/+DA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772972374-1772825469.delta" sparkle:deltaFrom="1772825469" length="2754494" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hzG/NrYpyfSt/fNBSEYttEc9n8UHdtFoP3N8UGEOtHnnQbIbYtksppbDFzlNy9Fe9fImsfy1SYhsiYUH6oyMDg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772972374-1772792653.delta" sparkle:deltaFrom="1772792653" length="2848694" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="NsEylMDLZVA0zcPwD0v2Mdpwp8aCIlvPWHSRhmH2T2m/KZASwv59duhdc6z0Fi/KYIkKfclIzgdBQtseEbINBQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772972374-1772790478.delta" sparkle:deltaFrom="1772790478" length="2922894" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="zqfdi6T1rW3C5kEjy+DQkHedGN0Tua4H5ADiJh21bgGXAQezT0Z5BKbj9uGqmD0r0x8jKWcexPYr92xS5/tLDA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772972374-1772748108.delta" sparkle:deltaFrom="1772748108" length="3153306" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wFCd4ed/ntlE+9mG/V0qFPYSw6TpRFWBiSUW8kWx6gnxYUuEqA9DQ/Ou4gRf0ThJt8pkYByYHdbyRtac9+GXDw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1772972374-1772688727.delta" sparkle:deltaFrom="1772688727" length="3294978" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="sdgmg5TVPnatqt3s1jBQJ2qAqy3ixrQ8IklTDu5ee6Wn+mwo0UmoRnKYvg2k3pfrZ+0MVIQsdaDNUJgwq513Dw=="/>
             </sparkle:deltas>
         </item>
         <item>
