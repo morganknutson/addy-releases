@@ -3,6 +3,35 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.2.3</title>
+            <pubDate>Wed, 11 Mar 2026 17:41:04 -0700</pubDate>
+            <sparkle:version>1773275895</sparkle:version>
+            <sparkle:shortVersionString>0.2.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed Theme Editor export sometimes including extra content after a theme block — The static block range calculation now correctly handles trailing newlines, preventing stray characters from appearing in exported ThemePalette.swift.</li>
+<li>Fixed MCP server logging reliability — Diagnostic log writes to stderr now use low-level C I/O instead of Foundation's FileHandle, preventing potential dropped or garbled log messages.</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.3.zip" length="17744651" type="application/octet-stream" sparkle:edSignature="1p5eEWpgdH1zSnonCJ+pCLEatOifSbfY4vRxLdz9ME9djfhHFl4lCZJVA3VANPqHiok9sZkLYC/VokHjx8GqCw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1773272893.delta" sparkle:deltaFrom="1773272893" length="680178" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="y4vvs8bGaLmXhRYh+7I74dviZhBB8WdPBPYlJpzY9/o4Kkc4lbE32puAuPoDH2knP8sWx5zE7DghBQECCcHWDA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1773220617.delta" sparkle:deltaFrom="1773220617" length="5559050" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KBn14dnqBI4k8q3ORA2xJIucdsn7ZzR2x+RNAVjSXKydKjVD+W+g2HHJxwUFRPRbzI2Ubla3IoHdQfx007oJAQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1773217369.delta" sparkle:deltaFrom="1773217369" length="5601630" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="c5UH9okEmIZI87LwsafFmAePdCmwNV6/0DYHWk8W+xtiC8JlC6FN2D0rQDxWh7sACsprBjtJU5UFXAIRRdZHCg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1772972374.delta" sparkle:deltaFrom="1772972374" length="8030386" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XWyX2F5oCfovsT/fH88zf34xow6S/+6NK7WaZU8ZGcbU3GVi0aR0WC34PCwf8+Czp1C7b/Mzy4UFzvPIbZJlDQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1772825469.delta" sparkle:deltaFrom="1772825469" length="8403242" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3t7Nn772jHigcyBbHyfqj7m/kcQITOY/Me8+PX/V+tADFstFR1GzejXKqyqz2g3+/2NZyiYrllbT8eGWFateAA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.2</title>
             <pubDate>Wed, 11 Mar 2026 16:51:52 -0700</pubDate>
             <sparkle:version>1773272893</sparkle:version>
@@ -95,72 +124,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773220617-1772825469.delta" sparkle:deltaFrom="1772825469" length="5136946" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GW8ad17cdXSVGgyvdhRqV8A7IZ1X/ds5H/FUGSqAMU31kQac+LgsbpiF8xHShySkZeaNUliSwM7ZUz5Tpb4BAQ=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773220617-1772792653.delta" sparkle:deltaFrom="1772792653" length="5207554" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="pGvn0W7RAwEmdbG3BofL2T9g3qa+bkpegyRL+ajs9K4sqihgn9yF4yHrterWxhvt6f8+BdpYAkd7qiUsoO/7DA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773220617-1772790478.delta" sparkle:deltaFrom="1772790478" length="5271094" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="oFdN9L33z1Be4aOqiN2t0NVIwEiQ+L3drXh0zdcKqHMEpm6XXmgJcIsuBnS7UnGTQA6Io0WJ8eql8NVgy6PiAQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.2.0</title>
-            <pubDate>Wed, 11 Mar 2026 01:26:21 -0700</pubDate>
-            <sparkle:version>1773217369</sparkle:version>
-            <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
-  h3 { margin: 0 0 8px; font-size: 14px; }
-  h2 { margin: 0 0 8px; font-size: 12px; }
-  ul { margin: 4px 0; padding-left: 20px; }
-  li { margin: 2px 0; }
-</style>
-<h3>What's New</h3>
-<h2>New Features</h2>
-<ul>
-<li>Skills pane — Browse, search, and install skills from the skills.sh marketplace directly inside Addy. View skill details, install counts, security audit status, and install or uninstall with one click.</li>
-<li>Conversations pane — A unified view of all past chat and terminal conversations across Claude, Gemini, and Codex. Filter by source, scope, or category, search by keyword, and resume or fork any previous session.</li>
-<li>Multi-model profiles with per-role assignments — Models are now full profiles with backend detection, capability flags, and model overrides. Assign different profiles for terminal, chat, helper (commit messages), and code review roles from the redesigned Models settings tab.</li>
-<li>Git pane file context menu — Right-click any file in the Git pane to "Open in Finder" or "Delete File", in addition to the existing stage/unstage actions.</li>
-<li>Sub-agent spawn direction setting — New preference (right, left, top, bottom) to control where sub-agent panes open relative to the parent.</li>
-<li>Agent pane footer bar — Agent and chat panes now share a new footer component with the model picker and input field, replacing the old freestanding layout.</li>
-</ul>
-<h2>Improvements</h2>
-<ul>
-<li>Chat tool blocks collapse immediately — Completed tool blocks now roll up into a summary group after a short delay, instead of waiting for the next user message. Keeps the chat stream compact during long agent runs.</li>
-<li>Terminal paste moved off main thread — Pasting into a terminal no longer blocks the UI. The pasteboard read happens on a background thread, preventing hangs when Universal Clipboard or clipboard managers are slow.</li>
-<li>Commit message generation uses your helper profile — The "Generate commit message" feature now uses whichever model profile you've assigned as the helper, instead of hardcoding a path to the Claude binary.</li>
-<li>Multiline task and plan prompts — The Tasks pane input and Plan prompt fields now support multi-line editing with auto-growing height, using the shared InlinePromptField component.</li>
-<li>Tasks pane redesigned — Double-height header with a progress bar showing completion percentage, a summary label, and the new InlinePromptField for adding tasks.</li>
-<li>Onboarding welcome screen refreshed — New centered hero layout with the Addy wordmark, cleaner typography, and simplified copy.</li>
-<li>Settings window simplified — The "Interface" tab has been merged into "Appearance" (now includes pane defaults like default new-pane mode). Sidebar reduced to four tabs: Appearance, Models, Behavior, Integrations.</li>
-<li>Settings window follows theme — The settings window background now updates live when you switch themes.</li>
-<li>Model launch button rebuilt with ActionButton — The model picker button now uses the shared ActionButton component with proper dropdown menus, hover states, and active model display.</li>
-<li>Pane split creation lag reduced — Splitting a pane in the same direction as its parent now inserts incrementally into the existing NSSplitView instead of tearing down and rebuilding the entire view hierarchy.</li>
-<li>Terminal minimum size guard improved — The reflow-prevention guard now estimates actual column/row counts from cell dimensions instead of using a fixed pixel threshold, making it more accurate across different font sizes.</li>
-<li>Runtime identity injected into all agent sessions — Every terminal, chat, and sub-agent pane now receives ADDY_RUNTIME, ADDY_SESSION_MODE, and ADDY_SOCKET environment variables so agents and MCP servers can reliably detect when they're running inside Addy.</li>
-<li>Codex stream parser rewritten — Block start/complete events are now matched by item ID, fixing tool and text block mismatches that caused garbled chat output with Codex.</li>
-<li>Gemini stream parser improved — Better multi-turn message ID tracking and content block correlation for more reliable chat rendering with Gemini CLI.</li>
-<li>Code editor: Tab indents selection — Pressing Tab with a multi-line selection now indents all selected lines. Shift+Tab still dedents.</li>
-<li>Code editor incremental highlighting — Syntax highlighting now only invalidates the changed range after edits, instead of re-highlighting the entire document.</li>
-<li>Commit drawer auto-resizes — The git commit message drawer now adjusts its height as you type or when the field is cleared, preventing wasted space.</li>
-<li>Pull button always enabled — The Git pane pull button is now always clickable (it was previously disabled when there were no remote changes), so you can manually fetch and pull at any time.</li>
-<li>Plan build uses interactive CLI — The "Build" button on plans now opens an interactive CLI session instead of a non-interactive --print session, so you can guide the agent during execution.</li>
-<li>App icon updated — New app icon design with refreshed gradients.</li>
-</ul>
-<h2>Bug Fixes</h2>
-<ul>
-<li>Notepad paste colors fixed in dark mode — Pasted text no longer retains invisible dark-on-dark foreground colors from the clipboard. A new paste sanitizer normalizes all text colors to the active theme palette.</li>
-<li>Focus glow no longer clips on vertical splits — The focused pane glow effect was being clipped by parent split views when a pane lived inside a vertical (top/bottom) split. The glow container is now hosted on a layer that doesn't clip.</li>
-<li>Code editor line numbers no longer reversed — Line numbers were rendering upside-down and scrolling in the wrong direction. Fixed by making the gutter view use a flipped coordinate system.</li>
-<li>Skills pane no longer freezes on open — Opening the Skills pane could stall the main thread and freeze the launcher popover animation. Catalog loading is now fully asynchronous with a loading indicator.</li>
-<li>Orphaned browser console panes fixed — Closing a browser pane now correctly closes its linked console pane, preventing orphaned consoles that couldn't be removed.</li>
-<li>Commit message generation race condition fixed — Rapidly clicking "Generate" no longer causes stale responses to overwrite your commit message. Each request is tracked by a unique ID and discarded if superseded.</li>
-<li>Expandable cards fill parent width — Expandable card views (used in reviews, plans, and skills) were sometimes drifting right instead of filling the available width. Fixed with correct constraint binding.</li>
-</ul>
-]]></description>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.0.zip" length="15204716" type="application/octet-stream" sparkle:edSignature="h9FsQPIdmI0/5jjQXxvNZ4ML1JAZywsyqlpOo1MQ3Y8Z3XPPSmBlXOIb61uMY4Lj8SNsHKAyGbPFXYDNkSJRCA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773217369-1772972374.delta" sparkle:deltaFrom="1772972374" length="4793354" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+d8pWqKA4NKJc2/QMRtcCJYsZhFXFtBrdGUcoSv5h7wnnX8B9SUYNZK8XIbQhdLo4zDOt5AQ6HO0+w4DmdVMAw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773217369-1772825469.delta" sparkle:deltaFrom="1772825469" length="5193342" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="zZBHAOe5v6EAQOD3zHvjm2iN29VK/4zLbEAidAgRYY+rcvhcViCRqeSpk5CDZ8+4YufBNn5gzn3c53hgsXKnDw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773217369-1772792653.delta" sparkle:deltaFrom="1772792653" length="5243270" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="14XtclWvR000ccW7PSi6JO+8rBWwqeV5QMJS586BDCvwbkG4mlZoTQ0p8dl+iSzq71M6i+/Ut0Uor7gU1Y2qBw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773217369-1772790478.delta" sparkle:deltaFrom="1772790478" length="5218498" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="spFbOeqsTNRZOxTHKfS8W0d9AtKfL0atDaQ0DZUupTkiOE4Fnw9RAS0+6WZvk/XxM9UzeE3wd77XIxCP6b0EAA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773217369-1772748108.delta" sparkle:deltaFrom="1772748108" length="5291186" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wHVSjMTCWIyVVFE0mMvS2JqWoX1nHFZdHAjIwhPxW7T9b8PWXWF+Ij2Ar3kx0JoN7+xAAp2D1jeHd7MuzU3OCg=="/>
             </sparkle:deltas>
         </item>
         <item>
