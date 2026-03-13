@@ -1,0 +1,30 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Install AI CLIs directly from Addy — A new onboarding step and a new "CLI Installs" section in Settings > Models let you install Claude Code, Gemini CLI, and Codex CLI with one click, without leaving the app.</li>
+<li>Branch workspaces — Selecting a project now automatically discovers all git branches and creates worktree-based workspaces for each one. Branches appear as sub-items in the sidebar, and switching between them is instant.</li>
+<li>Merge to default branch — The Git pane for branch workspaces now shows a "Merge to Main" button (adapts to your default branch name) to merge the branch back without leaving Addy.</li>
+<li>Model switcher grouped by provider — The model picker now organizes models under Anthropic, OpenAI, and Google section headers. When a pane overrides the default model, the menu offers a quick "Use Default Model" option to revert.</li>
+<li>Expanded OpenAI model options — Added built-in profiles for GPT-5.4, GPT-5.3-Codex, GPT-5.3-Codex-Spark, GPT-5.2-Codex, GPT-5.2, GPT-5.1-Codex-Max, and GPT-5.1-Codex-Mini.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Smarter model switching in terminal panes — Switching models now waits for the shell prompt to be ready before sending the launch command, instead of relying on fixed delays that could misfire.</li>
+<li>Automatic model profile migration — Saved Anthropic profiles using older aliases (e.g. claude-opus-4-1) are automatically upgraded to current identifiers (e.g. claude-opus-4-6). Legacy single "Codex" profiles migrate to GPT-5.4.</li>
+<li>Simplified footer branch display — The branch name in the footer is now a clean, non-interactive label. Branch switching has moved to the sidebar and Git pane for a less cluttered status bar.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed DialKit pane showing empty controls when opened alongside an already-loaded browser — The DialKit pane now requests a state sync from the existing browser, so controls populate immediately.</li>
+<li>Fixed tooltip shadow direction when tooltips appear above their anchor — The shadow now correctly casts in the appropriate direction based on placement.</li>
+<li>Fixed tooltip animation jitter on upward placement — The scale and slide animation now anchors from the outer container instead of the card, preventing visual artifacts during show/hide.</li>
+<li>Fixed potential crash from broken stdin pipes — Chat sessions and LSP connections now use a hardened POSIX write helper that gracefully handles broken-pipe errors instead of raising an exception.</li>
+<li>Fixed stale worktree sub-projects not being cleaned up — Worktree entries with missing or empty branch names are now properly removed on launch.</li>
+</ul>
