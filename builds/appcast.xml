@@ -3,6 +3,56 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.2.5</title>
+            <pubDate>Thu, 19 Mar 2026 22:44:38 -0700</pubDate>
+            <sparkle:version>1773985272</sparkle:version>
+            <sparkle:shortVersionString>0.2.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Chat attachment support — You can now drag and drop or paste files and images directly into the chat composer. Attachments appear as previews above the input field before sending.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Smarter tool groups in chat — Tool call groups now auto-expand while tools are running and show a live "Running N tools…" status. When all tools finish, the group automatically collapses after a short delay.</li>
+<li>Faster project switching — Chat pane restoration is now deferred until after the window renders, so switching to a project with open chat panes feels significantly snappier.</li>
+<li>Hardened Codex chat sessions — Codex chat turn completion now tracks per-message state, buffers stderr, and properly handles edge cases like process exits before stream completion, reducing stuck or blank chat turns.</li>
+<li>Multiline chat composer rewrite — The chat input field now uses a proper text view with multiline editing, correct cursor positioning for unicode text, and support for paste and drop handlers.</li>
+<li>Codex profile flag passthrough — Codex chat sessions now correctly forward model overrides and configuration flags (like --profile, --sandbox, --config) from your model profile commands.</li>
+<li>Test runner pane ownership — When an agent triggers a test run, the Tests pane is now owned by and anchored to that agent, keeping test results associated with the pane that requested them.</li>
+<li>Resilient chat conversation loading — Saved chat conversations now decode gracefully when fields are missing or have unexpected casing, preventing blank chat restores after updates.</li>
+<li>Model profile deduplication — Duplicate built-in model profiles (e.g. multiple GPT-5.4 entries) are now automatically detected and cleaned up on launch.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed pane corner radius highlighting not tracking the focused pane correctly when switching between panes — the selection indicator now updates reliably.</li>
+<li>Fixed plan card titles getting clipped when hovering over action buttons — the header content area now adjusts its trailing constraint based on which trailing view is visible.</li>
+<li>Fixed Cmd+click path injection in the file explorer not working when the row was already selected — the action now fires from the click handler instead of the selection delegate.</li>
+<li>Fixed sidebar activity indicators showing stale state — they now reflect actual agent activity by polling the real pane model state.</li>
+<li>Fixed sub-agent connector arrows flickering between directions — the arrow now uses the dominant center offset between parent and child panes for stable positioning.</li>
+<li>Fixed background review agents getting permanently stuck — a 5-minute watchdog timer now fails wedged review processes so the parent agent can continue.</li>
+<li>Fixed LSP diagnostics callback firing on a background thread, which could cause UI glitches in the footer status bar.</li>
+<li>Fixed git snapshot operations not validating project paths before launching git, which could cause crashes with malformed paths.</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.5.zip" length="18171097" type="application/octet-stream" sparkle:edSignature="wmZgQE1i+CpDdEqMTr4T0elJnJFQRErnAVxtUm074Jx25aHhbwkFxtsuxGGb9DQPhguumIb9mttkCetRgl3pAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773985272-1773445160.delta" sparkle:deltaFrom="1773445160" length="3239674" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+0DQedQQnqKFm43fJ9pJPiWheN3kRxMhYUHMwxznOeZahXd1NGH/F2dErJzT9ibYfw7WqPuxutmTQ6VhTzjQAA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773985272-1773275895.delta" sparkle:deltaFrom="1773275895" length="3549274" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="syIhLkdoTHUbs/GfLj0K/GqstXDl+rHS4P+bYqG70NR5bFnbdu21ZSPS2/Ewq5hUMHKVkbaSGoUQ9WuR1FbFCg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773985272-1773272893.delta" sparkle:deltaFrom="1773272893" length="3554458" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="JBvu6GpN7Ia/QRFRaR6JddI+/SXegGeVjZgDLXw3Zf8nPa2UA81uqCBWxcobSA0ZaQApN6jGdR/LUwpEL35jDw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773985272-1773220617.delta" sparkle:deltaFrom="1773220617" length="6837890" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="eolSjzHZWwcoVyyc8vwKCcTgm5pKDtIbQKBH+XRtg3+xXpikJ+MjUQGPZX7QY+P8PCkNIijYR4bq5cVB/SvoAA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773985272-1773217369.delta" sparkle:deltaFrom="1773217369" length="6915054" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="G7QpmgreERv8WHmmVEzEj6JzzScTOqjJ77EfuCnc97Y5Bj+e/orReiVFkX1zkdLTUd31JyY+5r3wud2nS37AAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.4</title>
             <pubDate>Sat, 14 Mar 2026 00:42:15 +0100</pubDate>
             <sparkle:version>1773445160</sparkle:version>
@@ -75,68 +125,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1773217369.delta" sparkle:deltaFrom="1773217369" length="5601630" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="c5UH9okEmIZI87LwsafFmAePdCmwNV6/0DYHWk8W+xtiC8JlC6FN2D0rQDxWh7sACsprBjtJU5UFXAIRRdZHCg=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1772972374.delta" sparkle:deltaFrom="1772972374" length="8030386" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XWyX2F5oCfovsT/fH88zf34xow6S/+6NK7WaZU8ZGcbU3GVi0aR0WC34PCwf8+Czp1C7b/Mzy4UFzvPIbZJlDQ=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1772825469.delta" sparkle:deltaFrom="1772825469" length="8403242" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3t7Nn772jHigcyBbHyfqj7m/kcQITOY/Me8+PX/V+tADFstFR1GzejXKqyqz2g3+/2NZyiYrllbT8eGWFateAA=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.2.2</title>
-            <pubDate>Wed, 11 Mar 2026 16:51:52 -0700</pubDate>
-            <sparkle:version>1773272893</sparkle:version>
-            <sparkle:shortVersionString>0.2.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
-  h3 { margin: 0 0 8px; font-size: 14px; }
-  h2 { margin: 0 0 8px; font-size: 12px; }
-  ul { margin: 4px 0; padding-left: 20px; }
-  li { margin: 2px 0; }
-</style>
-<h3>What's New</h3>
-<h2>New Features</h2>
-<ul>
-<li>Git Worktrees — Work on multiple branches in parallel without stashing. Create a worktree from the sidebar context menu or the Git pane's branch list, and it opens as a nested sub-project with its own terminal, panes, and git state. Worktree children appear indented under their parent with a collapsible disclosure chevron.</li>
-<li>DialKit pane — A native parameter tuning pane for React projects. Connects to your running app's browser pane via a JS bridge, mirroring sliders, toggles, color pickers, text fields, and dropdowns as native macOS controls. Changes flow bidirectionally between the native pane and the browser in real time. Includes preset saving/loading and "Copy for Agent" to share current values with AI.</li>
-<li>DialKit MCP tools — AI agents can now read, set, and preset DialKit parameters via <code>addy_dialkit_params</code>, <code>addy_dialkit_set</code>, <code>addy_dialkit_presets</code>, <code>addy_dialkit_save_preset</code>, and <code>addy_dialkit_apply_preset</code>.</li>
-<li>Git worktree MCP tools — Agents can create, list, and remove worktrees via <code>addy_git_worktree_add</code>, <code>addy_git_worktree_list</code>, and <code>addy_git_worktree_remove</code>.</li>
-<li>Branches section in the Git pane — The Git pane now lists all local branches below the file changes, with "current" and "worktree" badges. Click "Open Worktree" on any branch to spin up a parallel workspace.</li>
-</ul>
-<h2>Improvements</h2>
-<ul>
-<li>Redesigned onboarding visuals — The onboarding wizard now uses a full-bleed gradient background image with light-on-dark colors, replacing the flat theme-dependent background. All steps (dependencies, pane mode, typeface, theme, skills, plugins, feedback, done) have been updated for consistent styling.</li>
-<li>GitHub CLI sign-in no longer hangs during onboarding — The auth flow now runs with <code>GH_PROMPT_DISABLED</code> to prevent hidden prompts, automatically opens the browser to github.com/login/device, and provides a dedicated "Open Browser" button if you need to re-open it. Error messages from <code>gh</code> are now surfaced clearly instead of showing a generic "Sign-in failed".</li>
-<li>Color picker now includes a blend mode dropdown — The inline color picker in design tokens replaces the preview swatch with a "Normal" dropdown that lets you pick blend modes directly. The alpha slider gradient direction is corrected (transparent → opaque, left to right).</li>
-<li>Token popover headers use InlinePromptField — Display name and variable name fields in the typography, spacing, and color token popovers now use the same styled input field as the rest of the app.</li>
-<li>Nested popovers no longer dismiss prematurely — Clicking inside a child PopoverPanel (e.g., a dropdown inside a popover) no longer dismisses the parent.</li>
-<li>Sidebar drag-and-drop uses stable project IDs — Reordering projects in the sidebar is now based on UUID rather than row index, preventing stale row references when worktree children are present.</li>
-<li>Conversations and Skills panes moved behind dev flag — These panes are no longer shown in the launcher in release builds while they're being polished.</li>
-<li>Theme Editor toggle removed from Settings — The Theme Editor pane is now always available in debug builds and doesn't require a separate settings toggle.</li>
-</ul>
-<h2>Bug Fixes</h2>
-<ul>
-<li>Fixed split pane redistribution causing uneven sizes after adding new panes — Redundant same-direction split wrappers are now flattened (normalized) before redistribution, ensuring all siblings are sized evenly. A post-layout redistribution pass catches cases where bounds were zero during the initial pass.</li>
-<li>Fixed preferredWidth corruption when inserting panes incrementally — The <code>splitViewDidResizeSubviews</code> callback is now suppressed during intermediate subview insertions, preventing <code>adjustSubviews()</code> from overwriting fixed-width pane sizes.</li>
-<li>Fixed focus glow rendering in deeply nested split panes — The glow effect now renders on the root view rather than the immediate parent, preventing it from being covered by ancestor siblings in complex layouts.</li>
-<li>Fixed focus glow crash when a pane wrapper is removed from the view hierarchy — Glow layers are now cleaned up in <code>viewDidMoveToSuperview</code> when the superview becomes nil.</li>
-<li>Fixed Git pane "Stage All" button appearing when there are no stageable files — The button now correctly hides when only conflict or already-staged files remain.</li>
-<li>Fixed GitFileRow auto-layout constraint warnings — Height and layout constraints are now activated after the row is added to its superview, avoiding "not yet in the window" warnings.</li>
-<li>Fixed git FSEvents watcher failing for worktree directories — The watcher now resolves <code>gitdir:</code> pointer files to find the actual <code>.git</code> directory, so file change detection works in worktrees.</li>
-<li>Stale worktree sub-projects are cleaned up on launch — If a worktree directory was deleted externally, its sidebar entry is automatically removed on next app start.</li>
-<li>Fixed click-through on ActionButton dropdowns in pane headers — Dropdown-style ActionButtons now properly open their menu on mouse down.</li>
-<li>Fixed agent pane terminal focus not reasserting on click — Clicking an already-active terminal pane now properly re-focuses the terminal, fixing cases where the cursor would stop blinking after interacting with other views.</li>
-</ul>
-<h2>Internal Changes</h2>
-<ul>
-<li>Added FrameworkDetector to detect React, Next.js, Vue, Svelte, and Angular projects from package.json, enabling conditional pane visibility in the launcher.</li>
-<li>Split pane holding priority calculation extracted to a shared <code>holdingPriority(isFixed:index:)</code> helper, eliminating duplicated priority arithmetic across five call sites.</li>
-<li>New app icon.</li>
-</ul>
-]]></description>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.2.zip" length="17745744" type="application/octet-stream" sparkle:edSignature="z2SAU3dsSe3i72I05HPslHXUoC19S2+hCgRIgeCLTqw6Y+Z065WgeUHm8siHX3v+2FVg6GyQ69Y+36L3gLgwCQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1773220617.delta" sparkle:deltaFrom="1773220617" length="5548078" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SIS586p6SUcCfDztPAP3BjRc2RsU18uGOo2hhnzN7Qxa7Fr/VPRDGtSzSzyI/A82SlRWJqNoHOpPFvBNRmsgAQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1773217369.delta" sparkle:deltaFrom="1773217369" length="5604194" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="NGjLVUzNw6M8oplf5gxUVarRJl4bN7jfJN21dGIQgfVqQcEKIUQhpfwlE9kWGX9j5HYf2/PNTdpmjTny9dMUBg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1772972374.delta" sparkle:deltaFrom="1772972374" length="8019922" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5DUDpgTuyJhyFUqPknuvirgwfG3fvRoG34TToItS3dNN5iYwoqFJWCNdI53StZNEacwb9CA8PKNIGI7B/JDhCg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1772825469.delta" sparkle:deltaFrom="1772825469" length="8400518" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KqVz92TJSRZvHB+PJYFSn5FDaw+4cJlJbD2u+OAZo9cFHOGdnPSdGC7SC3ejP941MCq4iicNMpeJXF5pqjteAw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773272893-1772792653.delta" sparkle:deltaFrom="1772792653" length="8460794" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fh4NHSgbOu66mH33UCWdO4w46/jHyAAsawCInuPGp6gGTGyCDOyvQtBd1vl1iw1OjqcvSw0RDjmjwW3YM+NPBw=="/>
             </sparkle:deltas>
         </item>
         <item>
