@@ -3,6 +3,47 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.2.6</title>
+            <pubDate>Fri, 20 Mar 2026 13:22:34 -0700</pubDate>
+            <sparkle:version>1774037970</sparkle:version>
+            <sparkle:shortVersionString>0.2.6</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<h2>Improvements</h2>
+<ul>
+<li>Theme-driven chat typography — Chat font sizes and spacing are now controlled by your theme rather than hardcoded, so custom themes can adjust text size and layout density across all chat elements.</li>
+<li>Dedicated thinking block rendering — Thinking blocks now use their own markdown renderer with independent font and color settings, separate from regular message text.</li>
+<li>Taller multiline prompt field — The chat composer's multiline input now shows up to 8 visible lines (up from 5) before scrolling, giving you more room to compose longer messages.</li>
+<li>Light theme polish — Adjusted pane borders, footer backgrounds, card hover borders, and chat background colors in the light theme for better contrast and consistency.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed Codex chat duplicating text — The Codex stream parser was emitting the same text twice when an <code>item.completed</code> event repeated text already sent during <code>item.started</code>. Text is now deduplicated per block.</li>
+<li>Fixed chat blocks stuck in streaming state — When the model finished a message without explicitly closing its content blocks, text and thinking blocks would remain incomplete. Open blocks are now finalized automatically when the message ends.</li>
+<li>Fixed empty assistant messages briefly flashing — Whitespace-only text blocks (common during streaming) were incorrectly treated as visible content, causing empty message wrappers to appear and create visual gaps.</li>
+<li>Fixed CloudKit sync race condition — Concurrent access to the pending saves/deletes state could cause data corruption during sync. Added proper locking to serialize access from multiple threads.</li>
+<li>Fixed multiline prompt field scroll position not resetting when content shrinks back below the maximum height after deleting text.</li>
+<li>Fixed multiline prompt field text layout not properly updating its frame height after content changes, which could cause clipping or extra whitespace.</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.6.zip" length="18208887" type="application/octet-stream" sparkle:edSignature="XC7ZiG3SXy9/R+Uiwxvj8cIsFrm9NPnov/UHG6xL6jmgRuTEdah31qZgiRteyFZ5QzpJwaJMW1ji1SaH9neyDw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774037970-1773985272.delta" sparkle:deltaFrom="1773985272" length="1970882" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PlfNKXZKl5x8z9rrHYi7qCyx/J975lF6mbkXuaZm+g+TkQMnJxzsML46rzpfDSUZybpO+W1TasmNi470eyIxDQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774037970-1773445160.delta" sparkle:deltaFrom="1773445160" length="3398426" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QgD5GzH+KZ5zjc/8f9pJHjAshgDiaVSk2uCqYg3w5bGlEBmLAwvWMA8UGAF1rTbKBjKHeue8EcL4LW9n//nxCg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774037970-1773275895.delta" sparkle:deltaFrom="1773275895" length="3713090" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="yAoX0xA4i2zWSd8iF5Z6AimylanOeBWdORho5YDBCSLeOiuV/dfcHhnhHyPLmFBLdAdlu9l8XUG05/SKi33yBQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774037970-1773272893.delta" sparkle:deltaFrom="1773272893" length="3722630" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="rnbfbHeqIiuPPVQcHftf3wWnf3NMThgpRyjBR2G8TNomKl7NhCxkFtV/izWtMWB8VLFC3h21UU/qIYCDDlqdBw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774037970-1773220617.delta" sparkle:deltaFrom="1773220617" length="7017010" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jv/TYZLv7e2k45imytpT97ylKqBA+Dxgo6yV3V7H3q15Av1OxP7s8n1natVmj4HRtMdBdmqhzCPV2E8DNRi4BA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.5</title>
             <pubDate>Thu, 19 Mar 2026 22:44:38 -0700</pubDate>
             <sparkle:version>1773985272</sparkle:version>
@@ -96,35 +137,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773445160-1773220617.delta" sparkle:deltaFrom="1773220617" length="5933946" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="cEGdYqCMlR06/MPIm4KAHYF+q+xIK+Hx+jb8yUr6Ine3fsUwOmAoFUUiCSyiJyDV4xAcWzavYO0h8ekMCIdPBQ=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773445160-1773217369.delta" sparkle:deltaFrom="1773217369" length="6009406" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0LsYi5hpUETg/S/PbbSiATonZ9SBnUMIDkGwdtmd3+pnN1zJvWZuCGuz+RdaoOm4C5pzWLDoeCHZJMpMs2ZPDw=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773445160-1772972374.delta" sparkle:deltaFrom="1772972374" length="8200206" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qXtW5zFpGxnemWK0ybAhJ4slvotgpWNXSQj4JBMsEFZ89MjJT1C9Iqjj88h9xGjoh8e2khXLgcGCLF7Bi41vCw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.2.3</title>
-            <pubDate>Wed, 11 Mar 2026 17:41:04 -0700</pubDate>
-            <sparkle:version>1773275895</sparkle:version>
-            <sparkle:shortVersionString>0.2.3</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
-  h3 { margin: 0 0 8px; font-size: 14px; }
-  h2 { margin: 0 0 8px; font-size: 12px; }
-  ul { margin: 4px 0; padding-left: 20px; }
-  li { margin: 2px 0; }
-</style>
-<h3>What's New</h3>
-<h2>Bug Fixes</h2>
-<ul>
-<li>Fixed Theme Editor export sometimes including extra content after a theme block — The static block range calculation now correctly handles trailing newlines, preventing stray characters from appearing in exported ThemePalette.swift.</li>
-<li>Fixed MCP server logging reliability — Diagnostic log writes to stderr now use low-level C I/O instead of Foundation's FileHandle, preventing potential dropped or garbled log messages.</li>
-</ul>
-]]></description>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.3.zip" length="17744651" type="application/octet-stream" sparkle:edSignature="1p5eEWpgdH1zSnonCJ+pCLEatOifSbfY4vRxLdz9ME9djfhHFl4lCZJVA3VANPqHiok9sZkLYC/VokHjx8GqCw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1773272893.delta" sparkle:deltaFrom="1773272893" length="680178" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="y4vvs8bGaLmXhRYh+7I74dviZhBB8WdPBPYlJpzY9/o4Kkc4lbE32puAuPoDH2knP8sWx5zE7DghBQECCcHWDA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1773220617.delta" sparkle:deltaFrom="1773220617" length="5559050" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KBn14dnqBI4k8q3ORA2xJIucdsn7ZzR2x+RNAVjSXKydKjVD+W+g2HHJxwUFRPRbzI2Ubla3IoHdQfx007oJAQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1773217369.delta" sparkle:deltaFrom="1773217369" length="5601630" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="c5UH9okEmIZI87LwsafFmAePdCmwNV6/0DYHWk8W+xtiC8JlC6FN2D0rQDxWh7sACsprBjtJU5UFXAIRRdZHCg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1772972374.delta" sparkle:deltaFrom="1772972374" length="8030386" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XWyX2F5oCfovsT/fH88zf34xow6S/+6NK7WaZU8ZGcbU3GVi0aR0WC34PCwf8+Czp1C7b/Mzy4UFzvPIbZJlDQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1773275895-1772825469.delta" sparkle:deltaFrom="1772825469" length="8403242" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3t7Nn772jHigcyBbHyfqj7m/kcQITOY/Me8+PX/V+tADFstFR1GzejXKqyqz2g3+/2NZyiYrllbT8eGWFateAA=="/>
             </sparkle:deltas>
         </item>
         <item>
