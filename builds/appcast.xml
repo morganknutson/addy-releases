@@ -3,6 +3,40 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.2.96</title>
+            <pubDate>Thu, 26 Mar 2026 01:33:21 -0700</pubDate>
+            <sparkle:version>1774513814</sparkle:version>
+            <sparkle:shortVersionString>0.2.96</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>Improvements</h2>
+<ul>
+<li>Project standards (design, engineering, product) are now synced to CloudKit alongside plans, tasks, and context — standards you set on one device will appear on another</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed architecture describer attempting to run when the AI backend CLI isn&#x27;t installed, which could cause errors on machines without certain CLIs set up</li>
+<li>Fixed CloudKit sync loop where incoming project context records would be re-queued for upload instead of being saved locally only</li>
+<li>Fixed a layout constraint warning in agent pane footer bars caused by manually detaching views before re-adding them to a stack view — the stack view now handles reparenting internally</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.96.zip" length="18890367" type="application/octet-stream" sparkle:edSignature="5qOfBfxkdfHPPIJrx9LOKEk9UDxOZeYnegLDUayuDQsJmHbezgLVlD8xe5p2q/89+a4di2EG8jHdsq6roUQXCQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774513814-1774509948.delta" sparkle:deltaFrom="1774509948" length="1019314" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="pXLmMdXZ4TdN/VtJVqZbLbnqJOSGgD9kpQEbWQRig5y3wB/HrlUBD14LKGaj5nH6OfLRv//KMbvZ1BLA93SvDQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774513814-1774461130.delta" sparkle:deltaFrom="1774461130" length="2274166" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SE2TZRUjqorjyGnnYsUcB/LUS2Jm7a6ud/2GEdiEWHixC/2GOpW8FBF9VB8pNQu5UwJEp6g5RSAfRz93jMxQAw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774513814-1774324330.delta" sparkle:deltaFrom="1774324330" length="5297054" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SXvzWlKmsMqk3p3+3hpzoBLaJLss4WUMQbZ9j9YhDQ3m9L4+WWk4MrddE7rEHcoAkRHRPgRjnhdNwAKgARQ3CQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774513814-1774216452.delta" sparkle:deltaFrom="1774216452" length="5591186" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="W/dv5aa+xxsuGK7c0FeRRar43wBxq0hWIsQK1f3y8FryrZoSa9WjXh9rbXDueRPpNotCEtCXB1g/41VCG43uCA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774513814-1774215353.delta" sparkle:deltaFrom="1774215353" length="5589654" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0MaoMsqpdZpAWRudM6RQsjCJuW3onNmVuGfrWSdDyQtIOiaVPp+F1smf2svw+bYBuR3uWVyiveYhMsZUmphUDg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.95</title>
             <pubDate>Thu, 26 Mar 2026 00:29:09 -0700</pubDate>
             <sparkle:version>1774509948</sparkle:version>
@@ -107,70 +141,6 @@
             <sparkle:shortVersionString>0.2.94</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.94.zip" length="18875959" type="application/octet-stream" sparkle:edSignature="HmfbVub7GA0kzXfOAtc+ToIKf17IYQHIfdiD4DJsuDOEegqg0z8xE9irIIn57xK899BRegV0+zKnC0lc6cv3BQ=="/>
-        </item>
-        <item>
-            <title>0.2.93</title>
-            <pubDate>Mon, 23 Mar 2026 20:55:23 -0700</pubDate>
-            <sparkle:version>1774324330</sparkle:version>
-            <sparkle:shortVersionString>0.2.93</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
-  h3 { margin: 0 0 8px; font-size: 14px; }
-  h2 { margin: 0 0 8px; font-size: 12px; }
-  ul { margin: 4px 0; padding-left: 20px; }
-  li { margin: 2px 0; }
-</style>
-<h3>What's New</h3>
-<h2>Agent Permission Prompts in Chat</h2>
-<ul>
-  <li>When an agent needs permission to run a tool (Bash, Edit, Read, etc.), an inline card now appears in the chat with Allow and Deny buttons — no more silently auto-accepting everything</li>
-  <li>Permission cards show the tool name and a description of what it wants to do (e.g., the command to run, or the file to edit)</li>
-  <li>Supports freeform question prompts too — when the agent asks a question, you get a text field to type your response</li>
-  <li>Unanswered permission requests expire and grey out when the session ends</li>
-  <li>Permission history is fully persisted — you can see what was allowed or denied when reopening a conversation</li>
-</ul>
-<h2>Animated Send/Stop Button</h2>
-<ul>
-  <li>The send and stop buttons in the chat input bar have been unified into a single animated button — sends when idle, shows a bouncing dot animation while the agent is working, and reveals a stop button on hover</li>
-</ul>
-
-<h3>Improvements</h3>
-<h2>Chat</h2>
-<ul>
-  <li>MCP tool calls now show human-readable names instead of raw identifiers (e.g., &quot;Navigate&quot; instead of &quot;mcp__addy__addy_browser_navigate&quot;)</li>
-  <li>Tool blocks in expanded tool groups now stretch to full width instead of bunching up on the left</li>
-  <li>Send button now enables when you have image attachments queued, even without text</li>
-  <li>Activity status label shows &quot;Waiting for your response...&quot; when the agent is blocked on a permission prompt</li>
-</ul>
-<h2>Conversations Pane</h2>
-<ul>
-  <li>Pinned conversations now appear in their own section at the top with a pin icon</li>
-  <li>Background agent conversations (sub-agents, code reviews, plan reviews) are now hidden from the list to reduce clutter</li>
-  <li>Conversation titles are backfilled from pane names so they stay meaningful</li>
-</ul>
-<h2>Activity Indicators</h2>
-<ul>
-  <li>Pane activity indicators moved from the header bar to the bottom-center of each pane, keeping headers cleaner</li>
-  <li>In chat panes, the animated action button replaces the header indicator — no more duplicate activity signals</li>
-</ul>
-
-<h3>Bug Fixes</h3>
-<ul>
-  <li>Fixed Cmd+V paste in terminal panes silently failing on macOS 14+ — paste was reading the clipboard on a background thread where it could return nil</li>
-  <li>Fixed pinned and snapshot flags being lost when conversations were synced to disk</li>
-  <li>Fixed Gemini conversation discovery showing stale sessions with &quot;Just now&quot; timestamps when dates couldn't be parsed</li>
-  <li>Fixed thinking blocks not resizing properly after theme changes</li>
-</ul>
-]]></description>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.93.zip" length="18556201" type="application/octet-stream" sparkle:edSignature="41SZHRV1y2eiMChxZQsejzjttLF6rDOKzdk19yhcHwsHjgZ+hjHrJG2PGxZR9GfiQ2O3hz0tkIvoH+EZztXJAA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774324330-1774216452.delta" sparkle:deltaFrom="1774216452" length="2420742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="rQMrVbItpjPAd4ejfW8ZdrCzz2qAtjwOcZUtLv72ES6yUA/kJ8Aqj23YUTVZSKU+IwlSiFn+cC6k7+OwFgjmBA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774324330-1774215353.delta" sparkle:deltaFrom="1774215353" length="2425966" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="gMyysRMU4W17qqw0hBrlfeIOPEMg1W24ffUuEAnRjZ0EpQYLJczjVCINwmGTPFnLxGk+11xQUc2emLEDzWy/DA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774324330-1774212769.delta" sparkle:deltaFrom="1774212769" length="2430650" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="vUPP1FovIM0wBDduxS6E9pD3TeDd94gr2VsM2IV8xtAdg2tt7cQILvdEAIroEivdnGhlr4mihfL57aV1vkx5Cg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774324330-1774145433.delta" sparkle:deltaFrom="1774145433" length="2657710" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mbOZupeL2+1SK8+YeS/B4bFGSRT6KW9vMOOSa89e4ZoW4skvUC/8qg6gVLlQ+do2tLuG+sSdYK7H6S1U6vxcCw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774324330-1774055866.delta" sparkle:deltaFrom="1774055866" length="3039986" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="TywD920+8Nvhuzvs7wIU3DgAD85iRmHJt3+XFa4d1FurSt1vhAGLS90pQSGCu+DX9fW1VZYqrrpMtZAVYtjpDw=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>0.1.4</title>
