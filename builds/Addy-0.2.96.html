@@ -6,13 +6,25 @@
   li { margin: 2px 0; }
 </style>
 <h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Reviewer standards (design, engineering, product documents) now sync to CloudKit alongside plans, memories, and other project data — your review criteria carry across devices automatically</li>
+</ul>
 <h2>Improvements</h2>
 <ul>
-<li>Project standards (design, engineering, product) are now synced to CloudKit alongside plans, tasks, and context — standards you set on one device will appear on another</li>
+<li>Browser JavaScript instrumentation now runs in all frames including iframes, not just the main page — console logging and error capture are more comprehensive for apps with embedded frames</li>
+<li>Architecture description generation gracefully skips when the required AI CLI tool is not installed, instead of attempting to run and failing silently</li>
+<li>Memory items and the memory index are now sorted alphabetically within each type group instead of by most-recently-updated, making it easier to find specific memories</li>
 </ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>Fixed architecture describer attempting to run when the AI backend CLI isn&#x27;t installed, which could cause errors on machines without certain CLIs set up</li>
-<li>Fixed CloudKit sync loop where incoming project context records would be re-queued for upload instead of being saved locally only</li>
-<li>Fixed a layout constraint warning in agent pane footer bars caused by manually detaching views before re-adding them to a stack view — the stack view now handles reparenting internally</li>
+<li>Fixed browser loading bar occasionally showing zero-width progress when the pane is first displayed — the bar&#x27;s frame is now laid out before computing the progress width</li>
+<li>Fixed incoming CloudKit project context changes triggering another outgoing sync write, which could cause unnecessary sync churn</li>
+<li>Fixed agent pane footer bar triggering Auto Layout constraint evaluation while the view hierarchy was still being assembled, which could cause layout warnings</li>
+<li>Fixed the Conversations pane appearing in the pane launcher for production builds — it has been returned to debug-only while still in development</li>
+<li>Fixed chat scroll-to-bottom causing multi-second hangs on long conversations by scoping the layout pass to just the scroll view&#x27;s document instead of the entire view subtree</li>
+</ul>
+<h2>Changes</h2>
+<ul>
+<li>Now I have a complete picture of the changes. Let me analyze the net diff from v0.2.95 to HEAD across the 3 commits (including two reverts of post-release simplifications that introduced issues).</li>
 </ul>

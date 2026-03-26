@@ -5,6 +5,52 @@
         <item>
             <title>0.2.96</title>
             <pubDate>Thu, 26 Mar 2026 01:33:21 -0700</pubDate>
+            <sparkle:version>1774517140</sparkle:version>
+            <sparkle:shortVersionString>0.2.96</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Reviewer standards (design, engineering, product documents) now sync to CloudKit alongside plans, memories, and other project data — your review criteria carry across devices automatically</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Browser JavaScript instrumentation now runs in all frames including iframes, not just the main page — console logging and error capture are more comprehensive for apps with embedded frames</li>
+<li>Architecture description generation gracefully skips when the required AI CLI tool is not installed, instead of attempting to run and failing silently</li>
+<li>Memory items and the memory index are now sorted alphabetically within each type group instead of by most-recently-updated, making it easier to find specific memories</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed browser loading bar occasionally showing zero-width progress when the pane is first displayed — the bar&#x27;s frame is now laid out before computing the progress width</li>
+<li>Fixed incoming CloudKit project context changes triggering another outgoing sync write, which could cause unnecessary sync churn</li>
+<li>Fixed agent pane footer bar triggering Auto Layout constraint evaluation while the view hierarchy was still being assembled, which could cause layout warnings</li>
+<li>Fixed the Conversations pane appearing in the pane launcher for production builds — it has been returned to debug-only while still in development</li>
+<li>Fixed chat scroll-to-bottom causing multi-second hangs on long conversations by scoping the layout pass to just the scroll view&#x27;s document instead of the entire view subtree</li>
+</ul>
+<h2>Changes</h2>
+<ul>
+<li>Now I have a complete picture of the changes. Let me analyze the net diff from v0.2.95 to HEAD across the 3 commits (including two reverts of post-release simplifications that introduced issues).</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.96.zip" length="18904144" type="application/octet-stream" sparkle:edSignature="xo7uOLaZlxSfgDeTb6T93V7qYbJkAPIUIk0CoVbxhpPTGddDVy34g92mrNME65sLj/ABtepP/IJOIPoXMzcPAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774517140-1774509948.delta" sparkle:deltaFrom="1774509948" length="3236890" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="r0oNIvAWoLScRDUocTla/p2C1SzafZI8U5OEGqVY6p6G35shkt71sCxm1PnHZTO/UOIgmUNwrNaG8AJ938FCBA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774517140-1774461130.delta" sparkle:deltaFrom="1774461130" length="3171714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="4+hjEXqhlmEJDe7mAPPtfbH1EQ9P5yq26fptA2dEyNvAbGHn0BZhAIE515/WGXoI7pQ3o18wBzQxcUR6saSBAg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774517140-1774324330.delta" sparkle:deltaFrom="1774324330" length="5146010" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fWUJx7KyqjczoQQj7cEttpIlnfJG8VIjxCszwnhALP3cATkqBfyLukoRXqwPBKIsv66l3/uZoFNQqXnJ3N5dCA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774517140-1774216452.delta" sparkle:deltaFrom="1774216452" length="5400390" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="zX5ku8899LQg94tzzlTot6pK+bmUiBJb2AydDItNv54MtFgU1+EKU+OV2fcIncp9inJZTqLEe4Mpf7JMPSoxBA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774517140-1774215353.delta" sparkle:deltaFrom="1774215353" length="5400782" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MbCVOdeJ/p8gMjiQaEUqKK3V8nwbyklIaCfm6O0BX1QUkDPkZr2J9Rx77Bi5F+UKR7YLtWHfRGxlcpqdMdruBg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.2.96</title>
+            <pubDate>Thu, 26 Mar 2026 01:33:21 -0700</pubDate>
             <sparkle:version>1774513814</sparkle:version>
             <sparkle:shortVersionString>0.2.96</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
@@ -133,14 +179,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774509948-1774215353.delta" sparkle:deltaFrom="1774215353" length="5593570" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="z7vIOWVsWy8q7YTwn0FmGW/OH0kQScSNUuNotGWVmqIAT8Z3VFMk3AmGDdLr9X80yL7U5IgJnMxE9xSnBQ8YDw=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774509948-1774212769.delta" sparkle:deltaFrom="1774212769" length="5580098" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="iEvikO9DoQh54/ksgkcwNOpjkfksCazUMgY8MWp4Sg81UipwiJMpq8V7iXxd10SVRQgAoaJNMqEjoU4icVMbDQ=="/>
             </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.2.94</title>
-            <pubDate>Wed, 25 Mar 2026 10:56:23 -0700</pubDate>
-            <sparkle:version>1774461130</sparkle:version>
-            <sparkle:shortVersionString>0.2.94</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.94.zip" length="18875959" type="application/octet-stream" sparkle:edSignature="HmfbVub7GA0kzXfOAtc+ToIKf17IYQHIfdiD4DJsuDOEegqg0z8xE9irIIn57xK899BRegV0+zKnC0lc6cv3BQ=="/>
         </item>
         <item>
             <title>0.1.4</title>
