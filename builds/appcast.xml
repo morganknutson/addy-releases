@@ -3,6 +3,77 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.3.0</title>
+            <pubDate>Sat, 28 Mar 2026 14:37:59 -0700</pubDate>
+            <sparkle:version>1774733642</sparkle:version>
+            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Context compaction for chat sessions — when a conversation approaches the model&#x27;s context limit, Addy automatically summarizes the history and starts a fresh session with full context preserved, keeping long conversations going without losing work</li>
+<li>&quot;New conversation&quot; button at the top of the Conversations pane for quickly starting a fresh chat session</li>
+<li>Claude Code control protocol handshake — Addy now registers a PreToolUse hook at session start, enabling the Allow/Deny permission prompt UI for tool calls</li>
+<li>Design token scanner now parses Swift struct files (e.g. Theme.swift, Colors.swift) and categorizes static properties as color, typography, or spacing tokens</li>
+</ul>
+<h2>Manual compaction</h2>
+<ul>
+<li>Use the Compact action in a chat session&#x27;s context menu to trigger context compaction on demand, not just at automatic thresholds</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Terminal auto-scroll no longer yanks the viewport to the bottom while you&#x27;re scrolled up reading output — new output accumulates quietly until you scroll back down (SwiftTerm fork fix)</li>
+<li>Chat errors now appear as inline styled cards in the message stream instead of overwriting the activity bar, making them easier to read and preserving conversation flow</li>
+<li>Thinking block durations are now accurate — they reflect actual model thinking time rather than wall-clock time from when the event was processed, and persist correctly when conversations are restored</li>
+<li>Pane splitting is significantly faster for cross-direction splits (e.g. splitting horizontally inside a vertical stack) — the view is now restructured incrementally instead of tearing down and rebuilding the entire hierarchy</li>
+<li>Conversations pane now infinite-scrolls instead of requiring a &quot;Show More&quot; button, starts narrower (280pt), and always shows saved/pinned conversations regardless of branch or page cutoff</li>
+<li>Git staging and unstaging operations now automatically retry when encountering index.lock conflicts, with stale lock file cleanup and user-facing error toasts when retries are exhausted</li>
+<li>Pane names set via the header label now sync to conversation records, so renamed panes show the correct title in the Conversations list</li>
+<li>The thinking block chevron is now positioned to the right of the label text instead of the far left, making it easier to click</li>
+<li>Chat message slide-in animation now fires after scroll positioning, preventing messages from briefly appearing at a stale scroll offset</li>
+<li>Minimum pane width increased to 160pt for horizontal splits to prevent chat tool cards and pane headers from becoming unsatisfiably narrow</li>
+<li>Toast notifications now support a bottom-center position with slide-up animation, used for git mutation error messages</li>
+<li>Popover menu rows now correctly highlight both label and icon text as white on hover</li>
+<li>Sub-agent connector lines update their color when the system appearance changes</li>
+<li>Architecture description generation now bails out of a batch after consecutive CLI failures instead of continuing to retry every file</li>
+<li>Background CLI processes (plan reviews, architecture describer) now use the full discovered binary path instead of bare command names, fixing &quot;command not found&quot; on machines where AI CLIs aren&#x27;t on the default PATH</li>
+<li>Chat store writes are now coalesced and flushed on app quit, reducing disk I/O during active sessions</li>
+<li>Theme card previews in the theme switcher are now fully driven by theme metrics and update in real time when editing the theme</li>
+<li>Main agent panes no longer get &quot;(done)&quot; appended to their name when they go idle — only sub-agent panes do</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed chat stop button and Escape key not working for Codex app-server sessions when pressed before the turn ID arrived — the interrupt is now queued and delivered as soon as the turn ID becomes available</li>
+<li>Fixed tool caller pane resolution silently drifting to the wrong terminal when an explicit pane ID was stale or when lastActiveTerminalPaneId took priority over the currently active agent pane</li>
+<li>Fixed compaction card layout not respecting themed edge insets and timestamp font size not being independently themeable</li>
+<li>Fixed session resume failures (expired Codex threads) showing a generic error instead of automatically recovering — Addy now triggers compaction recovery to start a fresh session with summarized context</li>
+<li>Fixed localhost proxy server leaking dispatch sources when a proxied connection completed — sources are now cancelled after their final read</li>
+<li>Fixed the commit button in the Git pane being visible before any commit message is typed — it now only appears once text is entered</li>
+<li>Fixed lazy-loaded older chat messages showing empty wrappers (gaps) for tool-only assistant messages — the same visibility check from the live path now applies during scroll-back loading</li>
+<li>Fixed adjustSubviews() being called on existing split views during redistribution, which could undo even divider distribution set by setPosition()</li>
+</ul>
+<h2>Changes</h2>
+<ul>
+<li>Now I have a comprehensive understanding of all the changes. Let me produce the release notes.</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.3.0.zip" length="19119553" type="application/octet-stream" sparkle:edSignature="dhmeOAUM3kKoLqiWyHsz7jh/aMlezNHXM7XGedhlCyIKpUVumR8MbYhkx4N72bEwfoErsuootmp/HAGoaik2Cg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774733642-1774517140.delta" sparkle:deltaFrom="1774517140" length="2848738" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="AlEg7SX2XFLwYd+fVMD8ni0zlmiFEUKaR1l0dTiC4sl9ow187CgVqUtn1K3Smh/UUPhmXFti9HcjDW5h7FjXAA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774733642-1774509948.delta" sparkle:deltaFrom="1774509948" length="4265446" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QVzGd8HbA32M17qORCgn/CrrdOlmHZGe53GpJbsPb9Sar/tN00+o/wZ5hBDVTyGwqVisUHpy9JXWo9GeFkDuAw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774733642-1774461130.delta" sparkle:deltaFrom="1774461130" length="4200194" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="OgEA6tZp4er1q8XfP/rcpeKnSdd8FfY9pN1zdFymmrZrKOLjWvfpOYdDcgHjANAz//ieByTtnyRjSfXb9ZqZAw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774733642-1774324330.delta" sparkle:deltaFrom="1774324330" length="5697686" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dTiTo+TAZWCrBitltUHw8NsenOAW1T1jdDuwTnBvOsZCQU3TZpUYF/KNDP/bR6rxXa5VSqMxqMT2/CMF7sOnCA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774733642-1774216452.delta" sparkle:deltaFrom="1774216452" length="5862402" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mTH1ed492QCfJ/LEr099hvKLX2RZjPLG8UTQj7SZ8SopReqgAzJMFarwKiNi6HdSg48uddqoZNxbLjDp1OK6Ag=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.96</title>
             <pubDate>Thu, 26 Mar 2026 01:33:21 -0700</pubDate>
             <sparkle:version>1774517140</sparkle:version>
@@ -80,104 +151,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774513814-1774324330.delta" sparkle:deltaFrom="1774324330" length="5297054" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SXvzWlKmsMqk3p3+3hpzoBLaJLss4WUMQbZ9j9YhDQ3m9L4+WWk4MrddE7rEHcoAkRHRPgRjnhdNwAKgARQ3CQ=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774513814-1774216452.delta" sparkle:deltaFrom="1774216452" length="5591186" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="W/dv5aa+xxsuGK7c0FeRRar43wBxq0hWIsQK1f3y8FryrZoSa9WjXh9rbXDueRPpNotCEtCXB1g/41VCG43uCA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774513814-1774215353.delta" sparkle:deltaFrom="1774215353" length="5589654" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0MaoMsqpdZpAWRudM6RQsjCJuW3onNmVuGfrWSdDyQtIOiaVPp+F1smf2svw+bYBuR3uWVyiveYhMsZUmphUDg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.2.95</title>
-            <pubDate>Thu, 26 Mar 2026 00:29:09 -0700</pubDate>
-            <sparkle:version>1774509948</sparkle:version>
-            <sparkle:shortVersionString>0.2.95</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
-  h3 { margin: 0 0 8px; font-size: 14px; }
-  h2 { margin: 0 0 8px; font-size: 12px; }
-  ul { margin: 4px 0; padding-left: 20px; }
-  li { margin: 2px 0; }
-</style>
-<h3>New Features</h3>
-<h2>Codex Permission Prompts in Chat</h2>
-<ul>
-  <li>Codex chat sessions now show inline permission and input request cards — the same Allow/Deny UI that Claude sessions already have — instead of silently logging permission events</li>
-  <li>Supports tool permission requests (Bash, Edit, Read, etc.), freeform questions with custom options, and nested control requests</li>
-  <li>Permission responses are normalized for Codex (Allow → "y", Deny → "n") so the backend receives the format it expects</li>
-  <li>Gemini sessions also now show inline permission and input prompts using the same shared parser</li>
-</ul>
-<h2>Context Usage Gauge for All Backends</h2>
-<ul>
-  <li>The context usage gauge in chat now works for Claude, Codex, and Gemini sessions — previously it was Claude-only</li>
-  <li>Context limits are automatically set based on the model's context window size reported by the backend (e.g., 200K for Claude, 1M for Gemini)</li>
-  <li>The gauge now tracks actual context window size per API call rather than cumulative billed tokens, so it accurately reflects how full the context window really is</li>
-  <li>Context gauge and its Clear/Compact actions are now visible as soon as a session starts, even before the first usage report</li>
-  <li>Token usage state is persisted across app restarts — reopening a saved conversation restores the gauge to where it was</li>
-</ul>
-<h2>Mid-Conversation Model Switching</h2>
-<ul>
-  <li>Switching models during a chat conversation now builds a summary of the conversation history and sends it to the new model, so context carries over seamlessly instead of starting from scratch</li>
-</ul>
-<h2>Chat Mode for Plans</h2>
-<ul>
-  <li>Plans can now be built and executed via the chat UI (not just terminal) when the default agent mode is set to chat — the "Build" button sends the orchestrator prompt directly to a new chat session</li>
-  <li>Creating a new plan from the Plans pane also respects the default agent mode, spawning a chat-based agent pane when configured</li>
-</ul>
-<h2>Theme Editor Category Navigation</h2>
-<ul>
-  <li>The theme editor now has a middle sidebar that lets you filter color tokens by UI category — App Chrome, Buttons, Chat, Browser, Syntax, etc. — instead of scrolling through the entire list</li>
-</ul>
-
-<h3>Improvements</h3>
-<h2>Chat</h2>
-<ul>
-  <li>Pressing Escape during an active chat session now stops it, matching standard terminal behavior</li>
-  <li>Tool calls that run for more than 3 minutes without completing now auto-stop the session, preventing hung sessions</li>
-  <li>MCP tool names from Codex (e.g., "addy.addy_list_panes") are now displayed with human-readable names, matching the existing Claude format</li>
-  <li>Claude stream parser now includes cache creation and cache read tokens in context usage calculations, giving a more accurate picture of total context consumption</li>
-  <li>Card expand/collapse animations now scope layout to the card itself instead of the entire scroll view, eliminating O(N³) constraint solving stalls on long conversations</li>
-  <li>Chat session now properly restarts when clearing a conversation, so you can immediately send a new message</li>
-</ul>
-<h2>Design System</h2>
-<ul>
-  <li>Added new "Surface" and "Raised" button styles to the theme system — buttons across the app (Git pane, Plans, Memory, Tests, Skills, etc.) now use the Surface style for better visual hierarchy against pane backgrounds</li>
-  <li>Scroll-to-bottom button now has a dedicated hover background color in the theme, replacing the hardcoded blend calculation</li>
-</ul>
-<h2>Terminal</h2>
-<ul>
-  <li>macOS Dictation now works in terminal panes — dictated text flows through naturally without being intercepted by the key event handler</li>
-  <li>Added "Cut" (Cmd+X) to the Edit menu — previously only Copy, Paste, and Select All were available</li>
-</ul>
-<h2>Performance</h2>
-<ul>
-  <li>Chat conversation store now writes to disk on a background queue with an in-memory cache, eliminating main-thread I/O stalls during autosave</li>
-  <li>FileIconView no longer redraws on every frame — the document icon is rendered once into a cached NSImage, eliminating redundant Core Graphics work</li>
-  <li>Split pane insertion now uses incremental updates when adding to an existing split, avoiding a full view hierarchy rebuild</li>
-  <li>Layout after pane insertion uses deferred needsLayout instead of immediate constraint resolution to avoid stalling the main thread</li>
-</ul>
-<h2>Other</h2>
-<ul>
-  <li>The Conversations pane is now available in the pane launcher for all builds (previously debug-only)</li>
-  <li>Claude Code prompts passed via the toolbar now use <code>--append-system-prompt</code> for better context injection</li>
-</ul>
-
-<h3>Bug Fixes</h3>
-<ul>
-  <li>Fixed chat appearing blank after pane view hierarchy rebuild — the scroll view's clip view could have stale bounds until the next user scroll</li>
-  <li>Fixed normal session stops (SIGTERM, exit code 143) being incorrectly reported as errors — "Process exited with code 143" no longer appears when you stop a session</li>
-  <li>Fixed chat generating state not clearing properly for Claude sessions — the session now waits for the <code>result</code> event to mark the true end of a turn instead of clearing on every <code>messageStop</code></li>
-  <li>Fixed context gauge showing inflated values when restoring conversations saved before the per-call context fix — stale cumulative totals are detected and suppressed</li>
-  <li>Fixed file attachment preview cards using incorrect centering and aspect ratio after the FileIconView shadow padding change</li>
-  <li>Fixed project cleanup leaking review findings, hook activity state, and sync count dictionaries when removing a project</li>
-  <li>Fixed worktree sync creating phantom sidebar entries on fresh repos with only one branch</li>
-  <li>Fixed Codex config corruption where older Addy versions wrote array-valued <code>notify</code> fields into non-hooks TOML sections — the config writer now repairs these to string values</li>
-  <li>Fixed default branch detection falling back to "master" on fresh repos — now correctly reads the HEAD symbolic ref (e.g., "main")</li>
-</ul>
-]]></description>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.2.95.zip" length="18888577" type="application/octet-stream" sparkle:edSignature="0CwkPVL3QndHbs6weY9t2i/ZiGtKzhiRrACxUfn230eM+Wj71x4ePU/8cxfG8Sf4GdG/a0ERITBYsQyZtyHfBg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774509948-1774461130.delta" sparkle:deltaFrom="1774461130" length="2253466" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="laHjAShNm4ReiZfnVA1IzcbzrlHyYVHmWw++2CQbJhJVGtEyEnhPfB/wD5OMq6aXWG/0D+MOZ7XGYP6A3ErdCg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774509948-1774324330.delta" sparkle:deltaFrom="1774324330" length="5305286" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="zqTcszcEhKw9S2UyrR+GhqZ2QuLakXVUWgepiRYGDtY+Dbnuu27UHLmK31RnQEYCiKlPvE1rUjivki2uF4JcCQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774509948-1774216452.delta" sparkle:deltaFrom="1774216452" length="5590110" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5yd8jEokXzqolQCLeqrerHkrctvOOKoYnlpeVZn/e4DJQO592vWpiJbzKe3P4pwZWR8I26fmk+KlxOVZA/vDDQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774509948-1774215353.delta" sparkle:deltaFrom="1774215353" length="5593570" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="z7vIOWVsWy8q7YTwn0FmGW/OH0kQScSNUuNotGWVmqIAT8Z3VFMk3AmGDdLr9X80yL7U5IgJnMxE9xSnBQ8YDw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1774509948-1774212769.delta" sparkle:deltaFrom="1774212769" length="5580098" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="iEvikO9DoQh54/ksgkcwNOpjkfksCazUMgY8MWp4Sg81UipwiJMpq8V7iXxd10SVRQgAoaJNMqEjoU4icVMbDQ=="/>
             </sparkle:deltas>
         </item>
         <item>
