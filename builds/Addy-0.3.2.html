@@ -1,0 +1,20 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>Improvements</h2>
+<ul>
+<li>Model switching is now more reliable — process verification correctly detects running AI CLIs even when they&#x27;re launched through wrapper scripts or nested several levels deep in the process tree</li>
+<li>Model switch status messages (&quot;Switching to…&quot;, &quot;Now using…&quot;) are now saved in your chat history, so they persist when scrolling back or restoring a conversation</li>
+<li>Context compression and compaction notices are now part of your conversation history instead of ephemeral UI-only messages that disappeared on scroll</li>
+<li>Session errors (like expired connections) now appear inline in the chat as styled error messages instead of briefly flashing in the activity bar</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed a deadlock that could freeze the UI when switching models, caused by process verification waiting on a full pipe buffer before reading its output</li>
+<li>Fixed model switch failure messages displaying as neutral system text instead of visually distinct error indicators</li>
+</ul>
