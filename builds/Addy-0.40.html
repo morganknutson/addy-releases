@@ -1,0 +1,50 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+
+<h2>IMPORTANT</h2>
+<ul>
+<li>New pane shortcuts are now cmd+T instead of cmd+D</li>
+
+</ul>
+
+<h2>New Features</h2>
+<ul>
+<li>Added a dedicated Build tool (addyrunbuild) that agents can use to run compile and build commands in their own managed pane, keeping your terminal free.</li>
+<li>Agents now receive a structured runtime identity block in their prompts, giving them reliable awareness of which pane they&#x27;re in, what project they&#x27;re working on, and whether they&#x27;re a sub-agent.</li>
+<li>Added ⇧⌘C keyboard shortcut to open the Conversations pane. Tests pane moved to ⇧⌘D.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Chat is now backed by a virtualized NSTableView instead of a plain stack view. Conversations with hundreds of messages scroll, resize, and stream dramatically faster without UI stalls.</li>
+<li>Multiple performance passes eliminated main-thread stalls during chat resize, conversation preview loading, theme palette switching, and tool group rendering. Added a native frame-pointer backtrace sampler to pinpoint bottlenecks.</li>
+<li>Owned child panes (sub-agents, reviews, tests, servers, builds) now share a unified vertical stack attached to their parent pane. Mixed stacks of different pane types render correctly, and closing a child pane properly cleans up the hierarchy.</li>
+<li>The &quot;Collapse reviews by default&quot; setting now applies to all sub-processes — reviews, tests, and sub-agents — and has been renamed accordingly.</li>
+<li>Theme picker in Settings now uses a sidebar layout with Light/Dark/System options on the left and a larger preview on the right.</li>
+<li>Settings headings moved into the header bar for a cleaner look with tighter spacing.</li>
+<li>Built-in model profiles now show concrete names like &quot;Claude Opus 4.7 (Latest)&quot; instead of generic &quot;Latest&quot; labels. Legacy saved profiles are migrated automatically.</li>
+<li>Pasted images are now automatically downscaled to fit API dimension limits before sending, preventing agent crashes from oversized screenshots.</li>
+<li>Conversations pane pagination no longer gets stuck when multiple chats are streaming simultaneously.</li>
+<li>Codex chat now handles MCP elicitation requests, enabling tool permission prompts during Codex sessions.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed chat messages being cropped or clipped at the bottom of the scroll view after restore or resize.</li>
+<li>Fixed streaming text duplicating the first word or prefix during live Codex chat output.</li>
+<li>Fixed thinking blocks not rendering correctly — restored the thought bubble accessory, fixed collapsed card height, and ensured expand/collapse animations work properly.</li>
+<li>Fixed chat not pinning to the bottom when you send a message while the assistant is streaming.</li>
+<li>Fixed streaming row heights not updating as content grows, causing text to overlap or get hidden.</li>
+<li>Fixed a reentrant NSTableView crash that could occur when messages streamed in during a layout pass.</li>
+<li>Fixed the Plans pane &quot;Mark Complete&quot; button not working — it was incorrectly requiring auto-review prerequisites.</li>
+<li>Fixed git pane failing to stage files with spaces or special characters in their paths (quoted porcelain path decoding).</li>
+<li>Bounded git provider process execution to prevent runaway subprocesses from hanging the git pane.</li>
+<li>Fixed tool group card animations firing on the wrong cell when scrolling quickly during expand/collapse.</li>
+<li>Resolved Auto Layout conflicts in the pane header bar, memory view, and expandable cards.</li>
+<li>Fixed permission card deduplication in chat tool rollups so repeated permission prompts don&#x27;t pile up.</li>
+<li>Fixed blank chat view that could appear after switching conversations.</li>
+</ul>
