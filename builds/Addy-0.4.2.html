@@ -1,0 +1,59 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Added a fast mode toggle (bolt icon) next to the model picker in chat. Toggling fast mode on a Codex session sends a serviceTier: &quot;fast&quot; flag on the existing thread instead of starting a new session. Claude chat fast mode switches to a Haiku model. The toggle is only visible for backends that support it (Claude and Codex).</li>
+<li>Added browser Direct/Compatibility mode picker in the browser pane header bar. Localhost pages now default to Compatibility Mode (proxy), but you can switch to Direct Mode to preserve the original localhost origin — useful for auth flows, CORS, and OAuth. The mode preference is remembered per project+host+port.</li>
+<li>Added browser issue detection footer that automatically detects common localhost problems (HMR failures, CSP blocking, CORS errors, auth failures) and suggests switching browser mode with a one-click &quot;Switch Mode&quot; button.</li>
+<li>Added Compatibility Mode remote API proxy so that localhost apps loaded through the Addy proxy can still reach remote APIs. The proxy rewrites Origin/Referer headers to the real localhost origin and handles cookie bridging, redirect rewriting, and CORS header stripping.</li>
+<li>Codex chat now handles command execution approval requests — when Codex asks to run a shell command, Addy shows an Allow/Deny permission card instead of silently proceeding.</li>
+<li>Added a Codex wrapper script that automatically applies --ask-for-approval never and --sandbox workspace-write defaults when Codex runs inside Addy&#x27;s terminal environment.</li>
+<li>Server and build panes now persist and restore across app restarts, including their command, process window shape, footer bar state, and owned-child workflow registration.</li>
+<li>Server panes are now reused when an agent requests the same server command again — instead of creating a duplicate pane, the existing one is restarted.</li>
+</ul>
+<h2>Focus preservation</h2>
+<ul>
+<li>Agent-driven pane operations (split, open URL, browser JS evaluation, console open) no longer steal keyboard focus from the pane you&#x27;re typing in. This includes cross-project scenarios where a background agent mutates panes in a hidden project.</li>
+<li>Cmd+/Cmd-/Cmd+0 font scaling now works correctly in chat panes. Previously, focused text views could intercept the shortcuts before they reached the app. Chat messages, the empty state, and the composer all refresh at the new font size.</li>
+<li>Terminal scrolling performance dramatically improved for panes with large scrollback buffers. Addy now handles scroll wheel events directly instead of routing through SwiftTerm&#x27;s per-event overlay scroller animations.</li>
+</ul>
+<h2>Stdout line buffering optimized</h2>
+<ul>
+<li>the chat session line parser now slices into the incoming chunk directly instead of repeatedly copying into a growing buffer string.</li>
+<li>Server pane &quot;Start&quot;/&quot;Build&quot; button now expands the footer shade and shows a spinning starting indicator while the process launches.</li>
+<li>Server pane &quot;Open&quot; button now detects the server port from terminal output (e.g. &quot;http://localhost:3001&quot;) rather than only parsing the launch command.</li>
+<li>Browser pane now uses the default persistent WKWebView data store instead of a non-persistent one, fixing auth-heavy sites like Apple Developer that depend on normal cookie/session behavior.</li>
+<li>Browser instrumentation, cache-busting, and CSP stripping scripts now only run on localhost pages, leaving real websites untouched.</li>
+<li>Build panes now use a status marker to detect exit codes, making finite build completion more reliable than relying solely on process exit signals.</li>
+<li>Background CLI processes (plan reviews, code reviews, inspector agents) now use the resolved absolute binary path from BackendRegistry instead of bare command names, and inherit the user&#x27;s interactive shell environment — fixing &quot;command not found&quot; errors on machines where claude/codex aren&#x27;t on the default PATH.</li>
+<li>Codex config now sets defaulttoolsapproval_mode = &quot;approve&quot; on the Addy MCP server section, ensuring tool permissions flow through Addy&#x27;s approval UI.</li>
+<li>Chat card spacing and header padding refined for a cleaner look in both light and dark themes.</li>
+</ul>
+<h2>Worktree management improved</h2>
+<ul>
+<li>prunable worktrees are now tracked, duplicate sidebar entries are deduplicated, and stored worktree projects are reconciled against actual disk state on branch scan.</li>
+<li>HTML responses from localhost dev servers are now rewritten to keep asset and WebSocket URLs pointing at the proxy origin, preventing broken resources when loading through Compatibility Mode.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed focus stealing when input request views in hidden/inactive project panes attempted to auto-focus their text fields.</li>
+<li>Fixed a crash when spawning code review sub-agents caused by Auto Layout constraints being activated on views not yet in the view hierarchy (ReviewAgentStatusView).</li>
+<li>Fixed cross-project MCP tool routing where an implicit sourcepaneid from the calling pane overrode an explicit project_path, causing browser and server panes to open in the wrong project.</li>
+<li>Fixed attachment preview cards showing a large blank gap above file/image thumbnails by applying proper stack alignment and explicit height constraints.</li>
+<li>Fixed Codex app-server initialization hanging indefinitely — a 5-second timeout now falls back to legacy transport if the app-server doesn&#x27;t respond.</li>
+<li>Fixed user stop during app-server initialization leaving the session in a broken state.</li>
+<li>Fixed the Direct Mode content rule list failing to compile due to an unsupported URL filter disjunction — split into separate rules for localhost, 127.0.0.1, and [::1].</li>
+<li>Fixed the owned child pane rail visual artifact being left behind after the rail was removed.</li>
+<li>Fixed cloud-synced projects without a local path incorrectly showing the &quot;New Branch&quot; context menu action.</li>
+<li>Fixed sidebar worktree creation not showing an error alert when git worktree add fails.</li>
+</ul>
+<h2>Changes</h2>
+<ul>
+<li>I&#x27;ve now read the entire diff. Let me synthesize the release notes.</li>
+</ul>
