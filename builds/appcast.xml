@@ -3,6 +3,62 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.66</title>
+            <pubDate>Tue, 14 Jul 2026 09:07:48 -0700</pubDate>
+            <sparkle:version>1784044938</sparkle:version>
+            <sparkle:shortVersionString>0.66</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>Voice input</h2>
+<ul>
+<li>Addy can now transcribe your microphone into the prompt locally. Press ⌥1 or tap the mic button in the chat input to dictate; enable it under Settings → Voice, where you can also download the local transcription model.</li>
+<li>Text-to-speech — Assistant replies can be read aloud with a local voice. Each assistant message gets a play button, and an optional setting speaks completed replies automatically. Speech streams in buffered chunks so playback starts sooner, and you can pick a voice and download the local speech model from Settings.</li>
+</ul>
+<h2>Connect agents</h2>
+<ul>
+<li>Link two agent chat panes by dragging a cable from one pane&#x27;s plug icon to another&#x27;s socket, so the agents can pass messages directly to each other. Relayed messages appear as agent-to-agent cards in the chat, and a &quot;Connected to Agent&quot; notice confirms the link.</li>
+</ul>
+<h2>Pane color tags</h2>
+<ul>
+<li>Right-click an empty area of a pane&#x27;s footer to tag it with a color, shown as a colored border around that pane&#x27;s chat input for quick visual identification.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>The workspace footer bar moved to a header at the top of the workspace; the toggle shortcut is now ⌃⌘. (&quot;Toggle Header&quot;).</li>
+<li>Queued messages now stack vertically in the input area instead of scrolling in a horizontal carousel, so pending messages are easier to see at a glance.</li>
+<li>⌥1 now starts voice input in the active pane (the previous ⌥1–⌥9 pane-focus shortcuts have been removed).</li>
+<li>Local speech models now download as split zip archives with a clearer download and setup flow, and text-to-speech uses a higher-quality 1.7B voice model.</li>
+<li>Voice settings are now honored consistently across the chat controls.</li>
+<li>addyruncommand now runs in owned subpanes, and subpane navigation arrows are hidden for a cleaner layout.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed stale Git change attribution so the agent or pane credited with a file change is tracked accurately across concurrent operations; also fixed the attribution label that could show raw placeholder text instead of the mode and pane ID.</li>
+<li>Fixed queued messages stacking incorrectly in the input area.</li>
+<li>Fixed universal (Apple Silicon + Intel) release packaging so the shipped app bundle is built correctly.</li>
+</ul>
+<h2>Changes</h2>
+<ul>
+<li>I have a thorough understanding of all the changes. Here&#x27;s the changelog</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.66.zip" length="24953246" type="application/octet-stream" sparkle:edSignature="F92+zkExjRNNA9IO+CrUkbH6QCOrpv06ADeMU9TZVn74zJ5+7rMRUVRl/9KKiwIgAcTMkeq+pZMV83r2dxaLDw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784044938-1783923215.delta" sparkle:deltaFrom="1783923215" length="8130406" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XrsuWIUOKTY7ZuCQGwabX4aQH4Eh3n3rkhQjUgPQ+rOOImrKnAHYryn6uSptt7FP1MnyTir6XaTSZT56DJ3xAA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784044938-1783821826.delta" sparkle:deltaFrom="1783821826" length="8139738" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fEU1iCV/CxIUTJ6zDsreJWDXFDdUPWy0Rm6bKQ27AGzo88wIGqWyzYPlghnNLw4dHVHV/NOpTBzrKmcA233oDw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784044938-1783821018.delta" sparkle:deltaFrom="1783821018" length="8135530" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fo5adppf4EM/eMctnAsAYFbDPm0wpVQq4PiN2kH3x1gPsYihC998sk1DKorfx/r4vmmEeHy3y5YwBzyV0kfeCg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784044938-1781908445.delta" sparkle:deltaFrom="1781908445" length="8237006" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="eNRXRK+I42GAepuc8yXKq8i1a+xbDmAl2QROlb6wccedtoN5wD6QHw1Lzpwqpci1i9KF/7J7cxvf28+dxRf2Dg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784044938-1781896191.delta" sparkle:deltaFrom="1781896191" length="8265610" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="w/9N4T9s5qBDjqhD5DZMF9aqk0ecx1sieaCDbZB9HJJxqoixHdENMpfQ/pILOSLvLK8rR9WnBYSm9zLN0r4iCg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.64</title>
             <pubDate>Sun, 12 Jul 2026 23:14:43 -0700</pubDate>
             <sparkle:version>1783923215</sparkle:version>
@@ -93,14 +149,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1783821826-1781895581.delta" sparkle:deltaFrom="1781895581" length="1898910" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Gqce/RV2vqyzJs4kyN16lyMtMG2nqzK6CGAcdGdWrHnh1fHELeN0rXain/rwSP0vXQD2amMe/+ZKdWZ5IbX6Bg=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1783821826-1781895206.delta" sparkle:deltaFrom="1781895206" length="1900266" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="L4QwYNkYCZUvY3H6yEDt43nIMRgNuqL0IP4KOJXevCD4QXXbLWA4iCatNXcqnKst/FB5rJwZA+fJOJV4TScADA=="/>
             </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.61</title>
-            <pubDate>Sat, 11 Jul 2026 18:51:28 -0700</pubDate>
-            <sparkle:version>1783821018</sparkle:version>
-            <sparkle:shortVersionString>0.61</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.61.zip" length="20946611" type="application/octet-stream" sparkle:edSignature="EU1AVF23wIZvm9DIIkRIthzykeqHKOhZ5xDlsXUdMrU1cA7J1sEjMgB/FrpEhdps5gRSIRfh0WuqgudWVUTUBw=="/>
         </item>
         <item>
             <title>0.1.4</title>
