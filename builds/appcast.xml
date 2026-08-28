@@ -3,6 +3,67 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.70</title>
+            <pubDate>Thu, 27 Aug 2026 23:54:13 -0700</pubDate>
+            <sparkle:version>1787899769</sparkle:version>
+            <sparkle:shortVersionString>0.70</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>Pop panes out into their own windows</h2>
+<ul>
+<li>Double-click a pane&#x27;s header drag handle to lift it out of the workspace into a standalone window — double-click again (or close the window) to snap it back. A &quot;Pop Out to Window&quot; / &quot;Return to Workspace&quot; item was also added to the pane context menu.</li>
+<li>Popped-out panes stay fully live: agents, focus, IPC, and session persistence keep working, and the remaining panes absorb the freed space instead of leaving a gap.</li>
+<li>The browser remembers its pop-out window position, so an agent that closes and reopens the browser (for example to recover a broken page) won&#x27;t yank it back into the workspace.</li>
+</ul>
+<h2>Portable project Blueprints</h2>
+<ul>
+<li>Project setup actions are now called Blueprints, and each Blueprint can be exported to a shareable .addyblueprint file from its card header, or imported from the Project pane&#x27;s new &quot;Import Blueprint&quot; button.</li>
+<li>Exports and imports are reviewed before they happen: Addy warns when a Blueprint contains absolute or machine-specific paths or values that look like credentials, and an import preview shows the action count and description before you accept it as a copy.</li>
+</ul>
+<h2>Reorder queued messages</h2>
+<ul>
+<li>Queued chat messages can now be dragged by their position badge to reorder them before they&#x27;re sent.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Server steps in a Blueprint now show a &quot;Stop&quot; button while their server is running, and starting a Blueprint server whose pane was previously stopped restarts it in place instead of opening a duplicate collapsed pane.</li>
+<li>Right-clicking a link in a chat message adds a &quot;Copy Link&quot; action alongside &quot;Copy Message&quot;.</li>
+<li>Truncated pane titles now show the full name as a tooltip on hover, in both the pane header bar and inline editable pane names.</li>
+<li>Sidebar project rows now show server activity, not just model activity.</li>
+<li>A successful git pull shows a &quot;Pulled successfully&quot; confirmation toast instead of finishing silently.</li>
+<li>The project file browser now lists hidden dotfiles and directories.</li>
+<li>On a clean install, Addy picks its default model from the backends you actually have installed rather than shipping a fixed list, and Settings marks that auto-selected model as the current default.</li>
+<li>New installs now default to collapsed reviews, auto-compaction off, and the process window curtain off.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed the Memory pane reloading and re-laying out repeatedly, including redundant work when a reload was already in flight.</li>
+<li>Fixed Blueprint command checks hanging indefinitely when a child process left inherited pipe handles open.</li>
+<li>Fixed clicks in one window matching panes in another; pane hit-testing is now scoped to the window the click occurred in.</li>
+<li>Closing the main window now also closes any pop-out pane windows, so the app quits properly.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>SwiftTerm is now pinned by revision rather than branch, and local SwiftPM edit-mode overrides are ignored, so builds are reproducible.</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.70.zip" length="27400570" type="application/octet-stream" sparkle:edSignature="EfQCpuyqz/1tf6jmpsWFjJkPcxaGKgrbmHLu+x9XdFxS3cdYvCn+qqfwWTp9LNnPffb7UgswtcKbByxLtMNUDw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787899769-1787790470.delta" sparkle:deltaFrom="1787790470" length="3663946" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="2GTl3rp3ljQPkX/RfxBopgHIO1IbxFOuBGIICfWitwuPLNcUPW+IzpL86k8WMHDh8LrVnSamp/+N50o9uu8uDg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787899769-1787158515.delta" sparkle:deltaFrom="1787158515" length="3790802" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="w+N/MFWEzpGpUb1sbgxlJcwBXLS//Yve6yDFWr326mmx0hCK9375x/hr8zI/a2eMdenwdaOvV+7Ycfkj4aseCw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787899769-1784481548.delta" sparkle:deltaFrom="1784481548" length="5510262" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="C0P/kbCxEUHrWMA+EDpLGljYQZlr7A1WgxDIfKwBKax+EO4cDlTvmxkLD5QXL6BFJHTNjqqAf0ElkWQUUFLQAQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787899769-1784044938.delta" sparkle:deltaFrom="1784044938" length="7325978" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="OCSlDpjSi3apqcqf/IiOTM3l+E5rE1y94Te50amHnsaHjOMIt1vQaGl/AjrxCXcHutvLA+oQiAWHrIeW3hRVBQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787899769-1783923215.delta" sparkle:deltaFrom="1783923215" length="10907594" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="xURZW3uOHk+mHjfyekvSeoxZkPB/lWOW1fdFjvlZGYR6I3ZSt2tA/DxTv+e/c8mKdXBqJXoB9jnhe7zom+2vBQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.69</title>
             <pubDate>Wed, 26 Aug 2026 17:32:14 -0700</pubDate>
             <sparkle:version>1787790470</sparkle:version>
@@ -59,22 +120,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787158515-1783923215.delta" sparkle:deltaFrom="1783923215" length="10778262" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="U9KTmy7M/22C9vzn+1txooZusNvdRZ7ByfwFuJCzTxWOUr57RruKwgXev9cXEXWxuCu+K7yxFAOWw7vLQWaFCQ=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787158515-1783821826.delta" sparkle:deltaFrom="1783821826" length="10774714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="aDKUrUGPjtTqg8NcJ5PsHjveGekpkQZlHof1OjddPc3UVaLvERZG+oUnsxOVvQoa4a/k2tParg8+GGNPF2NLDw=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787158515-1783821018.delta" sparkle:deltaFrom="1783821018" length="10778218" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LT8EGMXAMbd3XclPNnm9vPbY9VtJm5drDfVrKcVvBJpUNWi+aCD4pj1Pg0mq2DP1DjGocNHDVlzLtioqj1pcDA=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.67</title>
-            <pubDate>Sun, 19 Jul 2026 10:24:36 -0700</pubDate>
-            <sparkle:version>1784481548</sparkle:version>
-            <sparkle:shortVersionString>0.67</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://morganknutson.github.io/addy-releases/builds/Addy-0.67.html</sparkle:releaseNotesLink>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.67.zip" length="26831734" type="application/octet-stream" sparkle:edSignature="AsP8WJ/sWIlLeJ3TqnWhqL4nEBFGyCvNiiLi0S+OcvtwXa76P+20xXGshsl1fMrIOTnB0iHcuLcSH82fsdftDw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784481548-1784044938.delta" sparkle:deltaFrom="1784044938" length="6037998" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="V2RyPpG601lLNGiMkaTLsBw6y34fi1XKMyivqDr6WehsyHXonrduPDzL7v6C5pssJEyluW7+DVivwlgJ7P3nCw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784481548-1783923215.delta" sparkle:deltaFrom="1783923215" length="10074446" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MkN28QXbAEX0OFYxiJJNJQuxhYq208xkLi1g/N9PFpuZamuP1WRXGeZfD6wR7jNuFuTiILMmyq5a5cqRMrlfAg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784481548-1783821826.delta" sparkle:deltaFrom="1783821826" length="10070158" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="VMJm613m7UAbWzEeobLMbwyTnO48TbNZW+hvV2UUgtPTTz2Bp3XFKXl2ycmf2AiAwiBmmTFvJWu5KsMvx5M6BA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784481548-1783821018.delta" sparkle:deltaFrom="1783821018" length="10073338" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ddKc5cL/JgfHjYh0LOtfStBTeZjdGDlPYifZyFkpdbxb7i0m7GPSXNJClme39v0c5TW/ZEiz/ZCr8jvQJxsoDg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1784481548-1781908445.delta" sparkle:deltaFrom="1781908445" length="10096434" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="I43H97YjMkj0K56lC8PjQz1FyFWEb03YtW7V+SktQvJMsaL85hMVOXtZWIJpTQneDkarvJmu6oj1UT4BUkgpCw=="/>
             </sparkle:deltas>
         </item>
         <item>

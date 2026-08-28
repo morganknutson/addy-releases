@@ -1,0 +1,45 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>Pop panes out into their own windows</h2>
+<ul>
+<li>Double-click a pane&#x27;s header drag handle to lift it out of the workspace into a standalone window — double-click again (or close the window) to snap it back. A &quot;Pop Out to Window&quot; / &quot;Return to Workspace&quot; item was also added to the pane context menu.</li>
+<li>Popped-out panes stay fully live: agents, focus, IPC, and session persistence keep working, and the remaining panes absorb the freed space instead of leaving a gap.</li>
+<li>The browser remembers its pop-out window position, so an agent that closes and reopens the browser (for example to recover a broken page) won&#x27;t yank it back into the workspace.</li>
+</ul>
+<h2>Portable project Blueprints</h2>
+<ul>
+<li>Project setup actions are now called Blueprints, and each Blueprint can be exported to a shareable .addyblueprint file from its card header, or imported from the Project pane&#x27;s new &quot;Import Blueprint&quot; button.</li>
+<li>Exports and imports are reviewed before they happen: Addy warns when a Blueprint contains absolute or machine-specific paths or values that look like credentials, and an import preview shows the action count and description before you accept it as a copy.</li>
+</ul>
+<h2>Reorder queued messages</h2>
+<ul>
+<li>Queued chat messages can now be dragged by their position badge to reorder them before they&#x27;re sent.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Server steps in a Blueprint now show a &quot;Stop&quot; button while their server is running, and starting a Blueprint server whose pane was previously stopped restarts it in place instead of opening a duplicate collapsed pane.</li>
+<li>Right-clicking a link in a chat message adds a &quot;Copy Link&quot; action alongside &quot;Copy Message&quot;.</li>
+<li>Truncated pane titles now show the full name as a tooltip on hover, in both the pane header bar and inline editable pane names.</li>
+<li>Sidebar project rows now show server activity, not just model activity.</li>
+<li>A successful git pull shows a &quot;Pulled successfully&quot; confirmation toast instead of finishing silently.</li>
+<li>The project file browser now lists hidden dotfiles and directories.</li>
+<li>On a clean install, Addy picks its default model from the backends you actually have installed rather than shipping a fixed list, and Settings marks that auto-selected model as the current default.</li>
+<li>New installs now default to collapsed reviews, auto-compaction off, and the process window curtain off.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed the Memory pane reloading and re-laying out repeatedly, including redundant work when a reload was already in flight.</li>
+<li>Fixed Blueprint command checks hanging indefinitely when a child process left inherited pipe handles open.</li>
+<li>Fixed clicks in one window matching panes in another; pane hit-testing is now scoped to the window the click occurred in.</li>
+<li>Closing the main window now also closes any pop-out pane windows, so the app quits properly.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>SwiftTerm is now pinned by revision rather than branch, and local SwiftPM edit-mode overrides are ignored, so builds are reproducible.</li>
+</ul>
