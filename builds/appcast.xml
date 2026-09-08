@@ -3,6 +3,78 @@
     <channel>
         <title>Addy</title>
         <item>
+            <title>0.71</title>
+            <pubDate>Mon, 07 Sep 2026 16:22:25 -0700</pubDate>
+            <sparkle:version>1788823055</sparkle:version>
+            <sparkle:shortVersionString>0.71</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Connect a worktree to every agent in a project. Right-click a worktree in the sidebar and choose &quot;Copy Worktree&quot;, then pick &quot;Paste Worktree&quot; from any pane&#x27;s context menu — or use &quot;Connect Worktree…&quot; to pick one from a new project/worktree sheet. The connection persists, grants folder access automatically, and is injected into the context of every current and future agent in that project.</li>
+<li>Agents can manage this themselves through three new tools: addylistworktrees, addyconnectworktree, and addygrantfolder_access (which grants a single agent pane access to a folder outside its project and relaunches it with native workspace access).</li>
+<li>Rename Project… was added to the sidebar context menu. It renames the project inside Addy only — the folder on disk is untouched.</li>
+<li>Pasting a GitHub branch URL (github.com/owner/repo/tree/branch) into &quot;Add Github Repository&quot; now clones that branch directly, and Addy remembers the parent directory you last cloned into instead of always defaulting to ~/Developer.</li>
+<li>Chat conversations now sync over iCloud, alongside sidebar project order, worktree branches, favorite branches, and repository scope.</li>
+<li>Settings → iCloud gained a progress bar and a Sync Details card that compares both sides: how many records are on this Mac versus in iCloud, broken down per project and record type into uploads, downloads, differences, and deletions, plus queued/retrying/blocked counts.</li>
+<li>Agents can now request a hard interrupt when messaging another agent (deliverypolicy: interruptactive), which stops the target&#x27;s active turn and cancels its blocking review, test, build, or sub-agent work before delivering the message. Ordinary messages remain non-preemptive.</li>
+<li>A plan review you start from the Plans pane now runs to completion on its own: if it finds critical or warning issues, a visible &quot;Fix: &lt;plan&gt;&quot; chat agent opens, updates the plan, and requests another review, looping until the plan passes.</li>
+<li>Right-clicking a link in a chat message adds Open in Default Browser alongside Copy Link, and clicking an image file path in a chat message opens it in an image preview panel.</li>
+<li>The chat input now supports undo and redo (Cmd+Z / Shift+Cmd+Z).</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>When an agent in one project tries to switch or activate a different project, Addy asks first with a &quot;Switch Project&quot; / &quot;Stay Here&quot; prompt from the window you&#x27;re actually looking at, and tells the agent not to retry if you decline.</li>
+<li>addyopenurl and browser screenshots now report which pane and project they targeted and whether it is actually on screen, so an agent can no longer tell you it opened a page you cannot see. Screenshots can also target a specific browser pane.</li>
+<li>Dragging or pasting attachments into chat now imports them in the background with fast thumbnails; the send button stays disabled and shows &quot;Preparing attachments…&quot; until they&#x27;re ready, so large images no longer freeze the window.</li>
+<li>Scrolling back through a chat holds your place when new messages arrive: a live scroll always wins over auto-follow, and only messages you send yourself jump the view back to the bottom.</li>
+<li>A browser pane that is hidden, in an inactive project, or detached from a window now unloads its page to release memory (and does so immediately under system memory pressure), restoring it when you come back to it.</li>
+<li>Code editor shortcuts like Cmd+W and Cmd+S only apply when the editor actually has keyboard focus, so an open editor pane no longer hijacks Close Pane for the whole window.</li>
+<li>Generating a commit message now explains failures with a toast instead of silently doing nothing — separate messages for unstaged changes, no Helper model configured, usage limits, sign-in required, a missing CLI, and being offline.</li>
+<li>Truncated pane names now refresh their tooltip when a pane is resized or renamed, not just on layout.</li>
+<li>Sidebar right-click menus are now native macOS menus that open at the pointer instead of a popover anchored to the row.</li>
+<li>Popped-out and hidden panes no longer hold an invisible slot in the split layout, which removes the sliver artifacts and makes hide, reveal, and pop-out re-layout faster.</li>
+<li>Chat rows are reused without being torn down and rebuilt, and very large messages skip an expensive width measurement pass, so long transcripts scroll and resize more smoothly.</li>
+<li>Review pane dropdown buttons are larger and easier to hit, and the light theme&#x27;s chat cards, input field, and user bubbles were lightened.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Connected worktrees are no longer dropped when projects are saved during normal use or at quit.</li>
+<li>Fixed streaming chat updates being applied to the wrong message when the transcript shifted mid-response.</li>
+<li>Stopping and immediately resuming a Claude chat session could leave two processes running against the same session; the old process is now retired before the new one starts, and stale termination callbacks are ignored.</li>
+<li>Encoding images and writing large messages to a backend moved off the main thread, fixing UI hangs when sending big attachments.</li>
+<li>Pending iCloud changes now live in a crash-safe journal, so unsent edits survive a restart and an older upload can no longer acknowledge a newer local edit or overwrite it.</li>
+<li>Conflict resolution preserves the server record&#x27;s change tag and clears removed fields, so ordinary updates are no longer treated as conflicts and deleted values no longer reappear.</li>
+<li>Switching iCloud accounts no longer applies records from the previous account, and each upload gets its own temp file so an in-flight upload can&#x27;t send bytes from a newer edit.</li>
+<li>Standards records are now keyed by domain and kind, so general and specific standards no longer overwrite each other in iCloud.</li>
+<li>Why documents and standards sync with their real file modification dates instead of &quot;now&quot;, and an empty project context is no longer created and uploaded for projects that never had one.</li>
+<li>Layouts received from another device are saved without being echoed back to iCloud, ending a sync loop.</li>
+<li>A memory deleted on another device is now applied correctly even when the local project&#x27;s memory store hasn&#x27;t been loaded yet.</li>
+<li>Tasks now carry a modification timestamp, so an older copy from another device can no longer win over a newer local edit.</li>
+<li>Hang detection uses a monotonic clock, so waking the Mac from sleep no longer reports a fictitious multi-minute freeze.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Log messages are capped at 32 KB with a truncation marker, and chat stderr is logged as a preview, so a single huge payload can&#x27;t flood the log file.</li>
+</ul>
+]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.71.zip" length="28147740" type="application/octet-stream" sparkle:edSignature="bRtqalVRzN3SjpO4YSH/jk6U9nj22vD9O+kngCX6qcfn/O3r0zsWp6xT1RIggHy723yL5QiACRekr5ylwmc0BQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1788823055-1787899769.delta" sparkle:deltaFrom="1787899769" length="5300078" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="eGeqEPXEidWg/ebBpO3JLQEcE9jUsivCDlxyA/C2gFgyKI/CGIRs29Ap3kJ8sUgBabJ02iEAVLiahILBQnW1Bw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1788823055-1787790470.delta" sparkle:deltaFrom="1787790470" length="5658746" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="P8UK33FZEHY7JlvU2lZFCZm1OlfYCYZR6Q3QIIZ0HIZry63AMAzkQURBTsA37kpIWWhm4ET0CKvkbemi0TUZDA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1788823055-1787158515.delta" sparkle:deltaFrom="1787158515" length="5715414" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+3BGuTtTqTcH/yf/mIIhdtTxYI4MHMLqRplQCHE3x+z9+gTgX8nLV4kV86JAmXTWsOUvg1eyb6fpgc33IEXqBg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1788823055-1784481548.delta" sparkle:deltaFrom="1784481548" length="6772734" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YRwVeLISbLKPUn9NpIGwCSkurE8bvfbBCbhyHpgkdwuK0iTBllmncQpkDH4/T0GWf8P9A/dwt7nQY3v9NYYOAw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1788823055-1784044938.delta" sparkle:deltaFrom="1784044938" length="8364834" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XAgO3lRb6t9/r63RJIdb2R3ntWK6NnVeC04WdXCM83bIUzEXTYvCG5B7zLk0Gs7QtzdoVHNzWZ1wxXN3Ix1YBQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.70</title>
             <pubDate>Thu, 27 Aug 2026 23:54:13 -0700</pubDate>
             <sparkle:version>1787899769</sparkle:version>
@@ -105,21 +177,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787790470-1784044938.delta" sparkle:deltaFrom="1784044938" length="7034522" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GSMOfpFZgzDVQ7BAxq6VviZaN8O6QWbfeYDoGfWRY1OYrS0zUsMEzM4OApyjyNK2HryJBbOko/2/An//C5/DDA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787790470-1783923215.delta" sparkle:deltaFrom="1783923215" length="10797186" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+arWOnOuHE7z89k0wOwb+uPk+nvJkcntAyCv8tKixScgGV2yTEkEyDnyqfvmN8ks9K+ARWyQuClnN+vwxze5Bw=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787790470-1783821826.delta" sparkle:deltaFrom="1783821826" length="10783154" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Y9gHTNPKLm8l6s2s+OMCSLtW+0N9K8ZImTwwuP9mfHGoZ5cIIn2yFJioYvEQ3DhJ7a+MLI9ILMfXhOe8H2MeDw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.68</title>
-            <pubDate>Wed, 19 Aug 2026 10:00:13 -0700</pubDate>
-            <sparkle:version>1787158515</sparkle:version>
-            <sparkle:shortVersionString>0.68</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.68.zip" length="27288108" type="application/octet-stream" sparkle:edSignature="iEBBmj4KzB1Ufw/z/hf357u2W4eAYQi8Ed1MTNMEAolANJqZAUWRXtq0cARJntYzHWmqER8XJ1j3r18UJpgkAQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787158515-1784481548.delta" sparkle:deltaFrom="1784481548" length="5079482" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="4hAVx8GeTMOhfVJR3pNG8K7K8CAUs327A1BNIzkU9ZNHYEXSP5A65chtuknms8jbl7fEzSwwZteCzwPwmNWxCQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787158515-1784044938.delta" sparkle:deltaFrom="1784044938" length="7014482" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="nubp4Q1JWWvwj5gxaqBeo8m5O3gym5gxFOKm9w9AQVH0WktuA3NlSDpRGcCH4POEq19vkLnbstVl3KGnKqvqAQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787158515-1783923215.delta" sparkle:deltaFrom="1783923215" length="10778262" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="U9KTmy7M/22C9vzn+1txooZusNvdRZ7ByfwFuJCzTxWOUr57RruKwgXev9cXEXWxuCu+K7yxFAOWw7vLQWaFCQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787158515-1783821826.delta" sparkle:deltaFrom="1783821826" length="10774714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="aDKUrUGPjtTqg8NcJ5PsHjveGekpkQZlHof1OjddPc3UVaLvERZG+oUnsxOVvQoa4a/k2tParg8+GGNPF2NLDw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787158515-1783821018.delta" sparkle:deltaFrom="1783821018" length="10778218" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LT8EGMXAMbd3XclPNnm9vPbY9VtJm5drDfVrKcVvBJpUNWi+aCD4pj1Pg0mq2DP1DjGocNHDVlzLtioqj1pcDA=="/>
             </sparkle:deltas>
         </item>
         <item>
