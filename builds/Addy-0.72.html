@@ -1,0 +1,55 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>Addy Mobile remote access</h2>
+<ul>
+<li>a new host lets the Addy Mobile app connect to your Mac. It can pair with nearby phones automatically, or reach Addy from anywhere through the addy-relay service, with push notifications.</li>
+<li>Addy Mobile mirrors the Mac&#x27;s chat presentation. It can also open the Browser, Code Editor, Conversations, File Explorer, Git, Memory, Notepad, Plans, Project Health and Test Runner panes.</li>
+</ul>
+<h2>Chat browser tabs</h2>
+<ul>
+<li>the browser pane now supports tabs, and agents open pages in the browser you can actually see.</li>
+<li>File paths in chat messages are now clickable.</li>
+<li>Code blocks and tables in chat can be popped out into a preview panel.</li>
+<li>Onboarding is now a two-page floating setup window.</li>
+<li>Settings now covers CLI install, update, sign-in and integration health. Sign-in is also available directly in chat.</li>
+<li>The theme system was overhauled and the Theme Editor rebuilt.</li>
+<li>Settings has a new &quot;Show Footer&quot; option.</li>
+<li>Addy discovers Gemini models through ACP.</li>
+<li>Agent spawning is split into three tools: spawnagent, spawnsubagents and spawnterminal.</li>
+<li>addystartserver is now idempotent. A new server ledger tracks servers that agents have started.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Split a pane by holding Cmd-D and pressing an arrow key. The rail toggle moved to Opt-R.</li>
+<li>Rails, divider drags and the layout solver were reworked.</li>
+<li>Chat spacing is unified, and pane chips look like buttons.</li>
+<li>Queued message cards, tool groups and tool cells in chat were redesigned. Error views now explain more.</li>
+<li>Settings was reorganized into cleaner cards, with refined model guidance.</li>
+<li>The Project pane layout and command previews were polished.</li>
+<li>The chat reader stays in place while an agent streams a response.</li>
+<li>Popped-out panes and the split layout handle pop-out changes more reliably.</li>
+<li>The onboarding window stays visible when Addy isn&#x27;t the active app.</li>
+<li>The app icon now uses Icon Composer icons.</li>
+<li>Selected settings, voice, text-to-speech, auto-compaction and dev-only panes and shortcuts are limited to debug builds. Release builds no longer show them.</li>
+<li>The default model no longer auto-starts.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Sub-agent panes no longer shrink based on their position in the stack.</li>
+<li>Release launches no longer rewrite the auto-compaction setting to off.</li>
+<li>Duplicate pending iCloud (CloudKit) changes for the same record are now merged.</li>
+<li>&quot;Mark Layout Jank&quot; appears only when layout tracing is on.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Releases are now built, signed and published from GitHub Actions. Release notes are written by Claude in CI.</li>
+<li>The build falls back to checked-in .icns icons when actool can&#x27;t compile .icon files.</li>
+<li>Added pane layout trace logging.</li>
+<li>Added theme tokens for the scroll button shadow and sidebar radii.</li>
+</ul>

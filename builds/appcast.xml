@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.71</title>
-            <pubDate>Mon, 07 Sep 2026 16:22:25 -0700</pubDate>
-            <sparkle:version>1788823055</sparkle:version>
-            <sparkle:shortVersionString>0.71</sparkle:shortVersionString>
+            <title>0.72</title>
+            <pubDate>Tue, 29 Sep 2026 21:41:18 +0000</pubDate>
+            <sparkle:version>1790717070</sparkle:version>
+            <sparkle:shortVersionString>0.72</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -16,55 +16,66 @@
   li { margin: 2px 0; }
 </style>
 <h3>What's New</h3>
-<h2>New Features</h2>
+<h2>Addy Mobile remote access</h2>
 <ul>
-<li>Connect a worktree to every agent in a project. Right-click a worktree in the sidebar and choose &quot;Copy Worktree&quot;, then pick &quot;Paste Worktree&quot; from any pane&#x27;s context menu — or use &quot;Connect Worktree…&quot; to pick one from a new project/worktree sheet. The connection persists, grants folder access automatically, and is injected into the context of every current and future agent in that project.</li>
-<li>Agents can manage this themselves through three new tools: addylistworktrees, addyconnectworktree, and addygrantfolder_access (which grants a single agent pane access to a folder outside its project and relaunches it with native workspace access).</li>
-<li>Rename Project… was added to the sidebar context menu. It renames the project inside Addy only — the folder on disk is untouched.</li>
-<li>Pasting a GitHub branch URL (github.com/owner/repo/tree/branch) into &quot;Add Github Repository&quot; now clones that branch directly, and Addy remembers the parent directory you last cloned into instead of always defaulting to ~/Developer.</li>
-<li>Chat conversations now sync over iCloud, alongside sidebar project order, worktree branches, favorite branches, and repository scope.</li>
-<li>Settings → iCloud gained a progress bar and a Sync Details card that compares both sides: how many records are on this Mac versus in iCloud, broken down per project and record type into uploads, downloads, differences, and deletions, plus queued/retrying/blocked counts.</li>
-<li>Agents can now request a hard interrupt when messaging another agent (deliverypolicy: interruptactive), which stops the target&#x27;s active turn and cancels its blocking review, test, build, or sub-agent work before delivering the message. Ordinary messages remain non-preemptive.</li>
-<li>A plan review you start from the Plans pane now runs to completion on its own: if it finds critical or warning issues, a visible &quot;Fix: &lt;plan&gt;&quot; chat agent opens, updates the plan, and requests another review, looping until the plan passes.</li>
-<li>Right-clicking a link in a chat message adds Open in Default Browser alongside Copy Link, and clicking an image file path in a chat message opens it in an image preview panel.</li>
-<li>The chat input now supports undo and redo (Cmd+Z / Shift+Cmd+Z).</li>
+<li>a new host lets the Addy Mobile app connect to your Mac. It can pair with nearby phones automatically, or reach Addy from anywhere through the addy-relay service, with push notifications.</li>
+<li>Addy Mobile mirrors the Mac&#x27;s chat presentation. It can also open the Browser, Code Editor, Conversations, File Explorer, Git, Memory, Notepad, Plans, Project Health and Test Runner panes.</li>
+</ul>
+<h2>Chat browser tabs</h2>
+<ul>
+<li>the browser pane now supports tabs, and agents open pages in the browser you can actually see.</li>
+<li>File paths in chat messages are now clickable.</li>
+<li>Code blocks and tables in chat can be popped out into a preview panel.</li>
+<li>Onboarding is now a two-page floating setup window.</li>
+<li>Settings now covers CLI install, update, sign-in and integration health. Sign-in is also available directly in chat.</li>
+<li>The theme system was overhauled and the Theme Editor rebuilt.</li>
+<li>Settings has a new &quot;Show Footer&quot; option.</li>
+<li>Addy discovers Gemini models through ACP.</li>
+<li>Agent spawning is split into three tools: spawnagent, spawnsubagents and spawnterminal.</li>
+<li>addystartserver is now idempotent. A new server ledger tracks servers that agents have started.</li>
 </ul>
 <h2>Improvements</h2>
 <ul>
-<li>When an agent in one project tries to switch or activate a different project, Addy asks first with a &quot;Switch Project&quot; / &quot;Stay Here&quot; prompt from the window you&#x27;re actually looking at, and tells the agent not to retry if you decline.</li>
-<li>addyopenurl and browser screenshots now report which pane and project they targeted and whether it is actually on screen, so an agent can no longer tell you it opened a page you cannot see. Screenshots can also target a specific browser pane.</li>
-<li>Dragging or pasting attachments into chat now imports them in the background with fast thumbnails; the send button stays disabled and shows &quot;Preparing attachments…&quot; until they&#x27;re ready, so large images no longer freeze the window.</li>
-<li>Scrolling back through a chat holds your place when new messages arrive: a live scroll always wins over auto-follow, and only messages you send yourself jump the view back to the bottom.</li>
-<li>A browser pane that is hidden, in an inactive project, or detached from a window now unloads its page to release memory (and does so immediately under system memory pressure), restoring it when you come back to it.</li>
-<li>Code editor shortcuts like Cmd+W and Cmd+S only apply when the editor actually has keyboard focus, so an open editor pane no longer hijacks Close Pane for the whole window.</li>
-<li>Generating a commit message now explains failures with a toast instead of silently doing nothing — separate messages for unstaged changes, no Helper model configured, usage limits, sign-in required, a missing CLI, and being offline.</li>
-<li>Truncated pane names now refresh their tooltip when a pane is resized or renamed, not just on layout.</li>
-<li>Sidebar right-click menus are now native macOS menus that open at the pointer instead of a popover anchored to the row.</li>
-<li>Popped-out and hidden panes no longer hold an invisible slot in the split layout, which removes the sliver artifacts and makes hide, reveal, and pop-out re-layout faster.</li>
-<li>Chat rows are reused without being torn down and rebuilt, and very large messages skip an expensive width measurement pass, so long transcripts scroll and resize more smoothly.</li>
-<li>Review pane dropdown buttons are larger and easier to hit, and the light theme&#x27;s chat cards, input field, and user bubbles were lightened.</li>
+<li>Split a pane by holding Cmd-D and pressing an arrow key. The rail toggle moved to Opt-R.</li>
+<li>Rails, divider drags and the layout solver were reworked.</li>
+<li>Chat spacing is unified, and pane chips look like buttons.</li>
+<li>Queued message cards, tool groups and tool cells in chat were redesigned. Error views now explain more.</li>
+<li>Settings was reorganized into cleaner cards, with refined model guidance.</li>
+<li>The Project pane layout and command previews were polished.</li>
+<li>The chat reader stays in place while an agent streams a response.</li>
+<li>Popped-out panes and the split layout handle pop-out changes more reliably.</li>
+<li>The onboarding window stays visible when Addy isn&#x27;t the active app.</li>
+<li>The app icon now uses Icon Composer icons.</li>
+<li>Selected settings, voice, text-to-speech, auto-compaction and dev-only panes and shortcuts are limited to debug builds. Release builds no longer show them.</li>
+<li>The default model no longer auto-starts.</li>
 </ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>Connected worktrees are no longer dropped when projects are saved during normal use or at quit.</li>
-<li>Fixed streaming chat updates being applied to the wrong message when the transcript shifted mid-response.</li>
-<li>Stopping and immediately resuming a Claude chat session could leave two processes running against the same session; the old process is now retired before the new one starts, and stale termination callbacks are ignored.</li>
-<li>Encoding images and writing large messages to a backend moved off the main thread, fixing UI hangs when sending big attachments.</li>
-<li>Pending iCloud changes now live in a crash-safe journal, so unsent edits survive a restart and an older upload can no longer acknowledge a newer local edit or overwrite it.</li>
-<li>Conflict resolution preserves the server record&#x27;s change tag and clears removed fields, so ordinary updates are no longer treated as conflicts and deleted values no longer reappear.</li>
-<li>Switching iCloud accounts no longer applies records from the previous account, and each upload gets its own temp file so an in-flight upload can&#x27;t send bytes from a newer edit.</li>
-<li>Standards records are now keyed by domain and kind, so general and specific standards no longer overwrite each other in iCloud.</li>
-<li>Why documents and standards sync with their real file modification dates instead of &quot;now&quot;, and an empty project context is no longer created and uploaded for projects that never had one.</li>
-<li>Layouts received from another device are saved without being echoed back to iCloud, ending a sync loop.</li>
-<li>A memory deleted on another device is now applied correctly even when the local project&#x27;s memory store hasn&#x27;t been loaded yet.</li>
-<li>Tasks now carry a modification timestamp, so an older copy from another device can no longer win over a newer local edit.</li>
-<li>Hang detection uses a monotonic clock, so waking the Mac from sleep no longer reports a fictitious multi-minute freeze.</li>
+<li>Sub-agent panes no longer shrink based on their position in the stack.</li>
+<li>Release launches no longer rewrite the auto-compaction setting to off.</li>
+<li>Duplicate pending iCloud (CloudKit) changes for the same record are now merged.</li>
+<li>&quot;Mark Layout Jank&quot; appears only when layout tracing is on.</li>
 </ul>
 <h2>Internal Changes</h2>
 <ul>
-<li>Log messages are capped at 32 KB with a truncation marker, and chat stderr is logged as a preview, so a single huge payload can&#x27;t flood the log file.</li>
+<li>Releases are now built, signed and published from GitHub Actions. Release notes are written by Claude in CI.</li>
+<li>The build falls back to checked-in .icns icons when actool can&#x27;t compile .icon files.</li>
+<li>Added pane layout trace logging.</li>
+<li>Added theme tokens for the scroll button shadow and sidebar radii.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.72.zip" length="33005865" type="application/octet-stream" sparkle:edSignature="ZBdswss1bDitEn6YEppWA15XcKVT54rF5fhUUiHnbNCT3icjJvz+7iJU9HR3XWLmEIo7bacEeWpgbQ3Z7lwsCg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1790717070-1788823055.delta" sparkle:deltaFrom="1788823055" length="19697654" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tkooGJbZ21ft35CxBY/Q01s6JqJMHgNkX+nxkBDg7iDfkmpjwtYenxsE2h+nxzoyQOOHaXeLHXiJ/GkTY0wlAw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1790717070-1787899769.delta" sparkle:deltaFrom="1787899769" length="20006758" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="G9cl/PBb2Dwd+q5d/E4gzgyj+EgM7H8WEivhWPTp2X9TOlQ8Yg2835jpelD/9JQOQeaCieXgdSinBorzQO4eDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.71</title>
+            <pubDate>Mon, 07 Sep 2026 16:22:25 -0700</pubDate>
+            <sparkle:version>1788823055</sparkle:version>
+            <sparkle:shortVersionString>0.71</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.71.zip" length="28147740" type="application/octet-stream" sparkle:edSignature="bRtqalVRzN3SjpO4YSH/jk6U9nj22vD9O+kngCX6qcfn/O3r0zsWp6xT1RIggHy723yL5QiACRekr5ylwmc0BQ=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1788823055-1787899769.delta" sparkle:deltaFrom="1787899769" length="5300078" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="eGeqEPXEidWg/ebBpO3JLQEcE9jUsivCDlxyA/C2gFgyKI/CGIRs29Ap3kJ8sUgBabJ02iEAVLiahILBQnW1Bw=="/>
@@ -80,52 +91,6 @@
             <sparkle:version>1787899769</sparkle:version>
             <sparkle:shortVersionString>0.70</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
-  h3 { margin: 0 0 8px; font-size: 14px; }
-  h2 { margin: 0 0 8px; font-size: 12px; }
-  ul { margin: 4px 0; padding-left: 20px; }
-  li { margin: 2px 0; }
-</style>
-<h3>What's New</h3>
-<h2>Pop panes out into their own windows</h2>
-<ul>
-<li>Double-click a pane&#x27;s header drag handle to lift it out of the workspace into a standalone window — double-click again (or close the window) to snap it back. A &quot;Pop Out to Window&quot; / &quot;Return to Workspace&quot; item was also added to the pane context menu.</li>
-<li>Popped-out panes stay fully live: agents, focus, IPC, and session persistence keep working, and the remaining panes absorb the freed space instead of leaving a gap.</li>
-<li>The browser remembers its pop-out window position, so an agent that closes and reopens the browser (for example to recover a broken page) won&#x27;t yank it back into the workspace.</li>
-</ul>
-<h2>Portable project Blueprints</h2>
-<ul>
-<li>Project setup actions are now called Blueprints, and each Blueprint can be exported to a shareable .addyblueprint file from its card header, or imported from the Project pane&#x27;s new &quot;Import Blueprint&quot; button.</li>
-<li>Exports and imports are reviewed before they happen: Addy warns when a Blueprint contains absolute or machine-specific paths or values that look like credentials, and an import preview shows the action count and description before you accept it as a copy.</li>
-</ul>
-<h2>Reorder queued messages</h2>
-<ul>
-<li>Queued chat messages can now be dragged by their position badge to reorder them before they&#x27;re sent.</li>
-</ul>
-<h2>Improvements</h2>
-<ul>
-<li>Server steps in a Blueprint now show a &quot;Stop&quot; button while their server is running, and starting a Blueprint server whose pane was previously stopped restarts it in place instead of opening a duplicate collapsed pane.</li>
-<li>Right-clicking a link in a chat message adds a &quot;Copy Link&quot; action alongside &quot;Copy Message&quot;.</li>
-<li>Truncated pane titles now show the full name as a tooltip on hover, in both the pane header bar and inline editable pane names.</li>
-<li>Sidebar project rows now show server activity, not just model activity.</li>
-<li>A successful git pull shows a &quot;Pulled successfully&quot; confirmation toast instead of finishing silently.</li>
-<li>The project file browser now lists hidden dotfiles and directories.</li>
-<li>On a clean install, Addy picks its default model from the backends you actually have installed rather than shipping a fixed list, and Settings marks that auto-selected model as the current default.</li>
-<li>New installs now default to collapsed reviews, auto-compaction off, and the process window curtain off.</li>
-</ul>
-<h2>Bug Fixes</h2>
-<ul>
-<li>Fixed the Memory pane reloading and re-laying out repeatedly, including redundant work when a reload was already in flight.</li>
-<li>Fixed Blueprint command checks hanging indefinitely when a child process left inherited pipe handles open.</li>
-<li>Fixed clicks in one window matching panes in another; pane hit-testing is now scoped to the window the click occurred in.</li>
-<li>Closing the main window now also closes any pop-out pane windows, so the app quits properly.</li>
-</ul>
-<h2>Internal Changes</h2>
-<ul>
-<li>SwiftTerm is now pinned by revision rather than branch, and local SwiftPM edit-mode overrides are ignored, so builds are reproducible.</li>
-</ul>
-]]></description>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.70.zip" length="27400570" type="application/octet-stream" sparkle:edSignature="EfQCpuyqz/1tf6jmpsWFjJkPcxaGKgrbmHLu+x9XdFxS3cdYvCn+qqfwWTp9LNnPffb7UgswtcKbByxLtMNUDw=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787899769-1787790470.delta" sparkle:deltaFrom="1787790470" length="3663946" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="2GTl3rp3ljQPkX/RfxBopgHIO1IbxFOuBGIICfWitwuPLNcUPW+IzpL86k8WMHDh8LrVnSamp/+N50o9uu8uDg=="/>
@@ -133,50 +98,6 @@
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787899769-1784481548.delta" sparkle:deltaFrom="1784481548" length="5510262" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="C0P/kbCxEUHrWMA+EDpLGljYQZlr7A1WgxDIfKwBKax+EO4cDlTvmxkLD5QXL6BFJHTNjqqAf0ElkWQUUFLQAQ=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787899769-1784044938.delta" sparkle:deltaFrom="1784044938" length="7325978" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="OCSlDpjSi3apqcqf/IiOTM3l+E5rE1y94Te50amHnsaHjOMIt1vQaGl/AjrxCXcHutvLA+oQiAWHrIeW3hRVBQ=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787899769-1783923215.delta" sparkle:deltaFrom="1783923215" length="10907594" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="xURZW3uOHk+mHjfyekvSeoxZkPB/lWOW1fdFjvlZGYR6I3ZSt2tA/DxTv+e/c8mKdXBqJXoB9jnhe7zom+2vBQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.69</title>
-            <pubDate>Wed, 26 Aug 2026 17:32:14 -0700</pubDate>
-            <sparkle:version>1787790470</sparkle:version>
-            <sparkle:shortVersionString>0.69</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
-  h3 { margin: 0 0 8px; font-size: 14px; }
-  h2 { margin: 0 0 8px; font-size: 12px; }
-  ul { margin: 4px 0; padding-left: 20px; }
-  li { margin: 2px 0; }
-</style>
-<h3>What's New</h3>
-<h2>New Features</h2>
-<ul>
-<li>Fresh installs now discover their model list from the AI CLIs you actually have installed, automatically selecting the latest recommended model instead of seeding a fixed list of preset profiles. Settings marks that auto-selected model as the default and explains it in a tooltip.</li>
-</ul>
-<h2>Improvements</h2>
-<ul>
-<li>Truncated pane titles now show the full title on hover, both in editable pane headers and in the shared pane header bar.</li>
-<li>The project browser now shows hidden files and folders such as .env and .github, and file search matches them too.</li>
-<li>Sidebar project rows now display server activity, not just agent activity, so a running dev server shows up even when no model is working.</li>
-<li>Successful Git pulls now confirm with a &quot;Pulled successfully&quot; toast instead of only surfacing failures.</li>
-<li>Auto-compaction and the process window curtain now default to off, and code reviews now start collapsed by default.</li>
-</ul>
-<h2>Bug Fixes</h2>
-<ul>
-<li>Fixed the Memory pane reloading and re-laying out repeatedly, including redundant text measurement, so it opens and updates more smoothly.</li>
-</ul>
-<h2>Internal Changes</h2>
-<ul>
-<li>Removed an unused SwiftTerm dependency entry from the package lockfile.</li>
-</ul>
-]]></description>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.69.zip" length="27293070" type="application/octet-stream" sparkle:edSignature="Cl0PLMnc8QJQHs76TXeBbyM05Xw9KpcF1UAbCPU5wN+EPQ8P9UvXtUJkVPobuZ8WVG1FSlX8Ajqg9jzp+aBZCQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787790470-1787158515.delta" sparkle:deltaFrom="1787158515" length="2638634" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="outQL6ulyj5+A8+i/EFpKX9wIbAsg+yWJUKUHyVKr1qTAXx52C/3mNXf8sHuvRP4h2of7pEVtDqzTlVhNFm+DA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787790470-1784481548.delta" sparkle:deltaFrom="1784481548" length="5129598" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="RpHR78cyjNwUqPn5E59kK9d5FpZM/SP3iav2zhYizLLaHsCP5KeodPAlEkCdUOWWONX+os3Hmrdnr2itOH+4Dg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787790470-1784044938.delta" sparkle:deltaFrom="1784044938" length="7034522" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GSMOfpFZgzDVQ7BAxq6VviZaN8O6QWbfeYDoGfWRY1OYrS0zUsMEzM4OApyjyNK2HryJBbOko/2/An//C5/DDA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787790470-1783923215.delta" sparkle:deltaFrom="1783923215" length="10797186" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+arWOnOuHE7z89k0wOwb+uPk+nvJkcntAyCv8tKixScgGV2yTEkEyDnyqfvmN8ks9K+ARWyQuClnN+vwxze5Bw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1787790470-1783821826.delta" sparkle:deltaFrom="1783821826" length="10783154" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Y9gHTNPKLm8l6s2s+OMCSLtW+0N9K8ZImTwwuP9mfHGoZ5cIIn2yFJioYvEQ3DhJ7a+MLI9ILMfXhOe8H2MeDw=="/>
             </sparkle:deltas>
         </item>
         <item>
