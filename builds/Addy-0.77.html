@@ -1,0 +1,32 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Images returned by Claude&#x27;s tools now appear inline in chat, and markdown image paths that point to local files load in the message.</li>
+<li>Addy Mobile&#x27;s agent menu gained four actions: New Agent with Context, Connect Worktree, Grant Folder Access, and Rename.</li>
+<li>Addy Mobile also shows connected worktrees and favorited branches in the project list.</li>
+<li>Signing in to Addy is no longer limited to GitHub. The sign-in page now offers Apple, Google, GitHub, an email code, or email and password.</li>
+<li>The sign-in prompt now reads &quot;Sign In&quot; and invites you to &quot;sign in or create a free account&quot;.</li>
+<li>You can try the account gate on a single Mac before it ships to everyone. Run defaults write com.morganknutson.Addy AddyAccessGateOptIn -bool YES to turn it on. The opt-in only works against the production service, and it can&#x27;t switch off a gate that the app bundle already enables.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>The pairing constellation has a new look. It is drawn as white, softly glowing dust, and the old &quot;petals&quot; style is replaced by an atom with electrons on tilted orbits. It animates in step on the Mac and the phone, so a mismatched code is easy to spot.</li>
+<li>The constellation is larger in the pairing approval panel.</li>
+<li>Sync Now builds its local inventory faster.</li>
+<li>Sync now writes its system-field records in fewer, coalesced batches rather than rewriting them after every batch.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Queued layout changes now resolve by record name, and layout saves for layouts that no longer exist are dropped. Previously these could be stuck in the sync queue.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Chat activity transitions are now logged under [ACTIVITY] to make diagnosing busy and idle state changes easier.</li>
+</ul>
