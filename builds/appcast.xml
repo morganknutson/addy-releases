@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.77</title>
-            <pubDate>Sat, 03 Oct 2026 09:20:00 +0000</pubDate>
-            <sparkle:version>1791018752</sparkle:version>
-            <sparkle:shortVersionString>0.77</sparkle:shortVersionString>
+            <title>0.78</title>
+            <pubDate>Sat, 03 Oct 2026 15:52:06 +0000</pubDate>
+            <sparkle:version>1791042188</sparkle:version>
+            <sparkle:shortVersionString>0.78</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -18,29 +18,35 @@
 <h3>What's New</h3>
 <h2>New Features</h2>
 <ul>
-<li>Images returned by Claude&#x27;s tools now appear inline in chat, and markdown image paths that point to local files load in the message.</li>
-<li>Addy Mobile&#x27;s agent menu gained four actions: New Agent with Context, Connect Worktree, Grant Folder Access, and Rename.</li>
-<li>Addy Mobile also shows connected worktrees and favorited branches in the project list.</li>
-<li>Signing in to Addy is no longer limited to GitHub. The sign-in page now offers Apple, Google, GitHub, an email code, or email and password.</li>
-<li>The sign-in prompt now reads &quot;Sign In&quot; and invites you to &quot;sign in or create a free account&quot;.</li>
-<li>You can try the account gate on a single Mac before it ships to everyone. Run defaults write com.morganknutson.Addy AddyAccessGateOptIn -bool YES to turn it on. The opt-in only works against the production service, and it can&#x27;t switch off a gate that the app bundle already enables.</li>
+<li>Addy Mobile now supports a Live Activity on the Lock Screen and in the Dynamic Island. It shows up to three of your Mac&#x27;s chat agents that are working, waiting on you, or just finished, with the most urgent first.</li>
+<li>Permission prompts and questions from an agent appear in the Live Activity with up to two answer buttons, so you can respond without opening the app. Free-text questions still need the app.</li>
+<li>The Live Activity keeps updating when your phone isn&#x27;t connected to the Mac, using push updates through the relay. It starts when a burst of work begins and ends once every agent has been idle for a short while.</li>
+<li>You can send photos and files from the phone along with a message, up to 5 MB in total. Images are attached as images and everything else as a file.</li>
+<li>Images an agent shows, such as screenshots or pictures it links from disk, now appear inline in the phone&#x27;s transcript. Only the newest images are sent in full. Older ones in a long transcript fall back to their alt text.</li>
+<li>You can close a pane on your Mac from the phone, which ends an agent&#x27;s session as the close button does.</li>
 </ul>
 <h2>Improvements</h2>
 <ul>
-<li>The pairing constellation has a new look. It is drawn as white, softly glowing dust, and the old &quot;petals&quot; style is replaced by an atom with electrons on tilted orbits. It animates in step on the Mac and the phone, so a mismatched code is easy to spot.</li>
-<li>The constellation is larger in the pairing approval panel.</li>
-<li>Sync Now builds its local inventory faster.</li>
-<li>Sync now writes its system-field records in fewer, coalesced batches rather than rewriting them after every batch.</li>
-</ul>
-<h2>Bug Fixes</h2>
-<ul>
-<li>Queued layout changes now resolve by record name, and layout saves for layouts that no longer exist are dropped. Previously these could be stuck in the sync queue.</li>
+<li>The pairing approval panel now uses the same animated splash background as the phone (yellow, red and blue bands under film grain), so you can compare both screens while pairing. Dragging on the background pushes the bands like wet paint, and the background stays still if Reduce Motion is on. The panel&#x27;s text was switched to white to stay readable on it.</li>
+<li>Chat agents that haven&#x27;t been named yet now show as &quot;New Chat&quot; on the phone. New panes and mode changes (chat agent versus terminal) show up on the phone right away, without waiting for the saved layout to catch up.</li>
 </ul>
 <h2>Internal Changes</h2>
 <ul>
-<li>Chat activity transitions are now logged under [ACTIVITY] to make diagnosing busy and idle state changes easier.</li>
+<li>The remote protocol was updated to version 10 to support attachments, transcript images, closing panes and Live Activity registration. Update the Mac app and Addy Mobile together.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.78.zip" length="35378699" type="application/octet-stream" sparkle:edSignature="oJqf3gPOh1DP18foQW0bfCuYPnWYqbkt9pWS52OEoTIbLzT5V+1H6w2pEJemH0HF2XlvjA/ZSSW2qBUdbO2zCA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791042188-1791018752.delta" sparkle:deltaFrom="1791018752" length="5208090" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="AA8OFMFuSGVAbo5e1cDWvB8MHtydnqfX4/zzYeMDNcGl5qEepqJ/nZyKLKxxe//epz0kAtFJp40PVGkpLtkYAw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791042188-1791013537.delta" sparkle:deltaFrom="1791013537" length="5525046" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="P0GB2YOQpqEEG22o+qt5A0eQAsA+GrYz3bwlVxcKuaNU2dn61T7xIf2pPM7ZWCzx62zHoCt4nq0kpVhYaT8SAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.77</title>
+            <pubDate>Sat, 03 Oct 2026 09:20:00 +0000</pubDate>
+            <sparkle:version>1791018752</sparkle:version>
+            <sparkle:shortVersionString>0.77</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.77.zip" length="35173105" type="application/octet-stream" sparkle:edSignature="lEznoNUiv2+8ZY+we0igEXassU5lj6ir/94jS5XLR8H0ZBUDhClaY+Ud3ZN+/CYGZsKuP1JRiZZue5WeW7K5Cg=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791018752-1791013537.delta" sparkle:deltaFrom="1791013537" length="4576362" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0qpXQKBWId+sTpDWZF3KT5FU0uskuZNmZqvj+Kx+cTzbsts9IjCxcF/k3/FKmQvuBhv7TkeU8YDTBMk2ysOlDQ=="/>
@@ -57,18 +63,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791013537-1790896910.delta" sparkle:deltaFrom="1790896910" length="5693518" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UK0MS3lPfZb696n1V1zNtwQAMup4c3/RzHOeKvW3nOZ72S1yddmFtwhZenunjIFVPB/Kd3kR5uXmZrsOWr+dCA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791013537-1790758254.delta" sparkle:deltaFrom="1790758254" length="7259450" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XYH5IQHAjKvLV5vKo2hrwSsBwLgDtscAtUAB2dx2H1aNrhSLO0fssFJh83x/7ptNAbYAcRSOhgkiZRw32dc3BQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.75</title>
-            <pubDate>Thu, 01 Oct 2026 23:44:42 +0000</pubDate>
-            <sparkle:version>1790896910</sparkle:version>
-            <sparkle:shortVersionString>0.75</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.75.zip" length="34702982" type="application/octet-stream" sparkle:edSignature="sBUjf2WQ5Ub2xMZVxlT+fVyCWUg4oukGNcMHbRVXDM/Usx1S5fJsSIqksV6+7ZdttYNU0TBjN6aql42LltzPAQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1790896910-1790758254.delta" sparkle:deltaFrom="1790758254" length="6453118" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ExXMX4GPv0+jzM6ZaofkfQoOEVTW0Kk8DIAx5YU63QBasy1uiPe9YIAJoXYK38fym5qzdf9y9/azNkjskqdyDA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1790896910-1790748624.delta" sparkle:deltaFrom="1790748624" length="6499898" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qUiIS5uxbPKIFBridSjFTEyItx7S9B5L468O0mCc9vqj4zaYK2EYe2X/e3nu64ShedUqW2lRtzAODcMCcifoBA=="/>
             </sparkle:deltas>
         </item>
         <item>
