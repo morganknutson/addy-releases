@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.82</title>
-            <pubDate>Mon, 05 Oct 2026 07:08:08 +0000</pubDate>
-            <sparkle:version>1791183645</sparkle:version>
-            <sparkle:shortVersionString>0.82</sparkle:shortVersionString>
+            <title>0.83</title>
+            <pubDate>Mon, 05 Oct 2026 17:11:32 +0000</pubDate>
+            <sparkle:version>1791219788</sparkle:version>
+            <sparkle:shortVersionString>0.83</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -18,21 +18,26 @@
 <h3>What's New</h3>
 <h2>New Features</h2>
 <ul>
-<li>Project icons can now be picked from a searchable SF Symbol picker. Choose one from the sidebar&#x27;s project menu or from Project Health.</li>
-<li>Added a Close All Panes command (Cmd+Option+W) in the View menu. It closes every pane in the active split and starts a fresh agent in your default agent mode.</li>
-<li>Agents can now build custom pane types that draw the same chevron as Addy&#x27;s built-in panes. The MCP tools and IPC handler for custom panes were extended to support this.</li>
+<li>Typing something that isn&#x27;t a web address into the browser pane&#x27;s URL bar now searches Google, like Safari and Chrome. For example, &quot;swift async let&quot; or &quot;hello&quot; opens search results.</li>
 </ul>
 <h2>Improvements</h2>
 <ul>
-<li>The Project Health view was reworked to share the new icon picker, and the sidebar&#x27;s project icon handling was updated to match.</li>
-<li>Custom panes now use the same chevron shape as the rest of the app, so pane headers look consistent.</li>
-<li>Close All Panes appears in the Panes category of the keyboard shortcut settings, so you can rebind it.</li>
-</ul>
-<h2>Bug Fixes</h2>
-<ul>
-<li>Fixed the default agent mode being stuck on Terminal for settings saved by older versions. Those settings now reset to Chat once, and a Terminal default you choose afterward is kept.</li>
+<li>The URL bar now recognizes more kinds of addresses. Domains such as example.com load over https. Localhost, [::1], IPv4 addresses such as 192.168.1.20, and hostnames with a port such as devbox:8080 load over http. Addresses like about:blank load as typed.</li>
+<li>Search terms are encoded safely, so queries such as &quot;c++ &amp; rust?&quot; reach Google intact.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.83.zip" length="35812602" type="application/octet-stream" sparkle:edSignature="mQshius6Z8nBbK/fqgdMOS1Z2JsH9CQrj970z2RHyTtXm9wfmnOL1QVWIIgu8vjq/cIR81Ag7uj7cPUFzWCoBA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791219788-1791183645.delta" sparkle:deltaFrom="1791183645" length="3252322" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LI9yOBSen/SERDdnEUdzSwmIFBTdgP2xTESQc7p4DNVHrbYPwhyQsMa16KVFGN8BD607G79D0cCOo/Z7Hz9ICQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791219788-1791106320.delta" sparkle:deltaFrom="1791106320" length="4324514" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="v8wPy+gz63I63hi0eSwlTriBe/u84xARB4rr0dS64EUSmBn7Zi2WabH5ki5/Pf5tRjzRpUD7cc9H3BJwujfkAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.82</title>
+            <pubDate>Mon, 05 Oct 2026 07:08:08 +0000</pubDate>
+            <sparkle:version>1791183645</sparkle:version>
+            <sparkle:shortVersionString>0.82</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.82.zip" length="35810391" type="application/octet-stream" sparkle:edSignature="p4zTlgDhtkQ9g1maVxwQIBZl0CohTuVSO59wft2NjiMUUoQgZFZ+Bqg7B4DXuz27i8Gdab/RYCpKe3F5u0q7BQ=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791183645-1791106320.delta" sparkle:deltaFrom="1791106320" length="4285342" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qON2NOyGMHZiebKVNZcsca8g8RHZo0jXSQvakc8UuAOK30rnverzfzJ9QOv5MjdV70z6k226dPIFsDWjVfHpBw=="/>
@@ -49,18 +54,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791106320-1791090708.delta" sparkle:deltaFrom="1791090708" length="4786226" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MkIuDSpsryuFTyOA+67Jry5YU3bYYfDwCgGnYP0/Iax/9FG9LlxumZWJi2Xab73Q9ER86g6kUlMZjCiU0sl+Cg=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791106320-1791079809.delta" sparkle:deltaFrom="1791079809" length="5463170" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HemA457mK0hkPH4E3gQcecVaW12c/AR4f5HqPKRDgnjZCwR/xKRlnYC+UhKewaWyXL1ldkq1vSki2kpXJihAAQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.80</title>
-            <pubDate>Sun, 04 Oct 2026 05:18:52 +0000</pubDate>
-            <sparkle:version>1791090708</sparkle:version>
-            <sparkle:shortVersionString>0.80</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.80.zip" length="35550974" type="application/octet-stream" sparkle:edSignature="fXjoD7Eja42E0sfxQKZcQCc3uB2piiwhWZd8+ubOBg4QhLciBEv0xshH36eN2yXw/qAbbXiLc9+1GB1m4dMyDw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791090708-1791079809.delta" sparkle:deltaFrom="1791079809" length="4477830" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HZ1ztxhBzawbSKxmplOIHjpvsj1OQHKT7tGlfV7wDeCCOYTuURGfaqVxwb+3c4fn6wexTfLWiOI5zogcCNjjAA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791090708-1791042188.delta" sparkle:deltaFrom="1791042188" length="5055138" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fc8Sy1QdHi0kxLBrRa/YrGyxy8JqsUNOTr2K/dxRDCLJQI8ET+Or7H1n49hureHP6QgcT6EVhA/12oiBSElLBQ=="/>
             </sparkle:deltas>
         </item>
         <item>
