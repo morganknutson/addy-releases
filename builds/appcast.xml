@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.81</title>
-            <pubDate>Sun, 04 Oct 2026 09:39:04 +0000</pubDate>
-            <sparkle:version>1791106320</sparkle:version>
-            <sparkle:shortVersionString>0.81</sparkle:shortVersionString>
+            <title>0.82</title>
+            <pubDate>Mon, 05 Oct 2026 07:08:08 +0000</pubDate>
+            <sparkle:version>1791183645</sparkle:version>
+            <sparkle:shortVersionString>0.82</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -18,29 +18,33 @@
 <h3>What's New</h3>
 <h2>New Features</h2>
 <ul>
-<li>Agents can now build custom pane types. Each one is a small HTML/JS app in its own folder under ~/Library/Application Support/Addy/Panes/&lt;kind&gt;/, with a pane.json manifest. It renders as a native pane that hot-reloads when its files change.</li>
-<li>Custom panes get a window.addy bridge. It covers project file read/write/list, shell commands (addy.run), per-project storage, opening URLs in Addy&#x27;s browser, and theme variables that follow the active theme.</li>
-<li>Installed custom panes appear in the pane launcher. A new &quot;New Pane Type…&quot; action asks what you want and starts an agent that builds it.</li>
-<li>Two new agent tools, addy_list_pane_types and addy_open_custom_pane, let agents list installed pane types, read the authoring guide, and open or reload a custom pane. They can then check its text and JavaScript errors with addy_read_pane.</li>
-<li>Browser panes now show JavaScript alert, confirm and prompt dialogs inline in the pane instead of silently ignoring them.</li>
-<li>Browser downloads now save straight to ~/Downloads without overwriting existing files. A toast confirms each download with a &quot;Show in Finder&quot; action, or reports the failure.</li>
-<li>Browser panes now capture console.log, warn, error and info output, plus uncaught errors and rejections. A pane keeps up to 2,000 entries.</li>
+<li>Project icons can now be picked from a searchable SF Symbol picker. Choose one from the sidebar&#x27;s project menu or from Project Health.</li>
+<li>Added a Close All Panes command (Cmd+Option+W) in the View menu. It closes every pane in the active split and starts a fresh agent in your default agent mode.</li>
+<li>Agents can now build custom pane types that draw the same chevron as Addy&#x27;s built-in panes. The MCP tools and IPC handler for custom panes were extended to support this.</li>
 </ul>
 <h2>Improvements</h2>
 <ul>
-<li>When an agent&#x27;s browser action triggers a page dialog, it is answered automatically (OK for alerts, Cancel otherwise) so the agent isn&#x27;t blocked. The agent sees a console warning describing what happened.</li>
-<li>File pickers in browser panes only open for you, never during agent-driven actions.</li>
-<li>Hidden browser panes now pause media playback right away. They unload their page after 5 minutes, or immediately under memory pressure, and restore it when you return.</li>
-<li>Custom panes persist across layouts and restarts. Their data is stored outside the pane folder, so saving it doesn&#x27;t trigger a reload.</li>
-<li>Custom pane links to web pages open in Addy&#x27;s browser pane. Pages from the web can&#x27;t call the bridge.</li>
+<li>The Project Health view was reworked to share the new icon picker, and the sidebar&#x27;s project icon handling was updated to match.</li>
+<li>Custom panes now use the same chevron shape as the rest of the app, so pane headers look consistent.</li>
+<li>Close All Panes appears in the Panes category of the keyboard shortcut settings, so you can rebind it.</li>
 </ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>Clicking a download link in the browser pane no longer replaces the page with an error page.</li>
-<li>Reloading or navigating a hidden browser pane no longer gets confused by the &quot;paused while hidden&quot; placeholder. Its title and URL are no longer overwritten.</li>
-<li>Fixed the note shown when a page opens in a project you aren&#x27;t viewing. It now correctly says browser tools can&#x27;t reach the page until you switch to that project.</li>
+<li>Fixed the default agent mode being stuck on Terminal for settings saved by older versions. Those settings now reset to Chat once, and a Terminal default you choose afterward is kept.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.82.zip" length="35810391" type="application/octet-stream" sparkle:edSignature="p4zTlgDhtkQ9g1maVxwQIBZl0CohTuVSO59wft2NjiMUUoQgZFZ+Bqg7B4DXuz27i8Gdab/RYCpKe3F5u0q7BQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791183645-1791106320.delta" sparkle:deltaFrom="1791106320" length="4285342" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qON2NOyGMHZiebKVNZcsca8g8RHZo0jXSQvakc8UuAOK30rnverzfzJ9QOv5MjdV70z6k226dPIFsDWjVfHpBw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791183645-1791090708.delta" sparkle:deltaFrom="1791090708" length="5122866" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KgPajmFVmALHuUZQrrO6XWoELkwHnLERWUfoYC2RkQFrL1azudc+4GrrzBFhdmhQoq/3MVFooNlBtoWXUneCCQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.81</title>
+            <pubDate>Sun, 04 Oct 2026 09:39:04 +0000</pubDate>
+            <sparkle:version>1791106320</sparkle:version>
+            <sparkle:shortVersionString>0.81</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.81.zip" length="35738152" type="application/octet-stream" sparkle:edSignature="hHOQ8BnhGA5KUzV872RDVZ8ZIWFep9mLq8nOxye0gNmiNJ7PLIhrZMgi0Phl+IFaqIqalQ108C3N6JyF3MXBAg=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791106320-1791090708.delta" sparkle:deltaFrom="1791090708" length="4786226" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MkIuDSpsryuFTyOA+67Jry5YU3bYYfDwCgGnYP0/Iax/9FG9LlxumZWJi2Xab73Q9ER86g6kUlMZjCiU0sl+Cg=="/>
@@ -57,18 +61,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791090708-1791079809.delta" sparkle:deltaFrom="1791079809" length="4477830" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HZ1ztxhBzawbSKxmplOIHjpvsj1OQHKT7tGlfV7wDeCCOYTuURGfaqVxwb+3c4fn6wexTfLWiOI5zogcCNjjAA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791090708-1791042188.delta" sparkle:deltaFrom="1791042188" length="5055138" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fc8Sy1QdHi0kxLBrRa/YrGyxy8JqsUNOTr2K/dxRDCLJQI8ET+Or7H1n49hureHP6QgcT6EVhA/12oiBSElLBQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.79</title>
-            <pubDate>Sun, 04 Oct 2026 02:17:33 +0000</pubDate>
-            <sparkle:version>1791079809</sparkle:version>
-            <sparkle:shortVersionString>0.79</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.79.zip" length="35441218" type="application/octet-stream" sparkle:edSignature="HYpE/SbKNJC6goZTyVEAgxE6AIzqvxEyOLC92SJhK9cDmbGZ7etWlUrt7PbUl6Ftrvw+hmQj5qX8KHiCoeONDQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791079809-1791042188.delta" sparkle:deltaFrom="1791042188" length="4246906" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="oUgQn2I2A7guTxJxFctjpsxMN41fmxIoiNvcsXw3+laKjD/NCqzYz7obk6tVcgOGw1JOlWLt5Y77vEe1xGXlCg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791079809-1791018752.delta" sparkle:deltaFrom="1791018752" length="5485966" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3Xa2gMIRLrWkJZ/zL82evgYQ+rmIBcEN6VzXwzildOZHOxk2UNvb2bI4CYUVCTYvHzqCGD4fZEgIFQNC5vDKBg=="/>
             </sparkle:deltas>
         </item>
         <item>
