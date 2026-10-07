@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.84</title>
-            <pubDate>Wed, 07 Oct 2026 00:01:20 +0000</pubDate>
-            <sparkle:version>1791330173</sparkle:version>
-            <sparkle:shortVersionString>0.84</sparkle:shortVersionString>
+            <title>0.85</title>
+            <pubDate>Wed, 07 Oct 2026 04:51:08 +0000</pubDate>
+            <sparkle:version>1791348164</sparkle:version>
+            <sparkle:shortVersionString>0.85</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -18,32 +18,42 @@
 <h3>What's New</h3>
 <h2>New Features</h2>
 <ul>
-<li>Added a Connections pane for MCP connectors. It has a catalog of connectors, custom connector support, suggested connectors, and OAuth sign-in. Connectors are written to your CLI agents&#x27; configs, and credentials are kept in the Keychain.</li>
-<li>Any MCP-capable agent can now connect to and control Addy, including agents outside Addy. A new Connected Agents settings section lets you manage them, with approval prompts for sensitive actions and folder grants, per-agent tool policy presets, an audit log, and optional remote access through a cloud relay.</li>
-<li>Addy&#x27;s browser can now save and autofill website passwords. A save prompt appears after you sign in, saved logins are stored in the Keychain behind a vault lock, and a Passwords window lets you view and manage them. You can also import logins from elsewhere.</li>
-<li>Figma links now open in the Figma app instead of Addy&#x27;s browser.</li>
-<li>Claude Code memories are now imported into Addy&#x27;s memory store, and Claude&#x27;s own memory is turned off so there is one source of memory.</li>
-<li>Prompt attachments now appear in Addy Mobile transcripts.</li>
+<li>The code editor is now a full IDE-style editor. It adds code folding, a minimap, multiple cursors, snippets, inline Git blame and a Find in Files panel.</li>
+<li>The editor also gains a quick picker with fuzzy matching, code completion and language-server editing features, back/forward navigation history, and handling of file encodings and line endings.</li>
+<li>Addy now requires an Addy account in release builds. You sign in during onboarding through a new account step.</li>
+<li>Connected Agents settings has new Connect buttons for Claude and ChatGPT that set up the connection for you.</li>
+<li>Addy Mobile shows addy://conversation/… links in chat as conversation cards. Tapping a card opens that conversation, as clicking it on the Mac does.</li>
 </ul>
 <h2>Improvements</h2>
 <ul>
-<li>Addy&#x27;s rules and guide are now delivered to each agent session instead of being written into global CLI config files for Claude, Codex, Cursor, Grok and Antigravity. Your global CLI instructions are no longer modified, and legacy global entries are handled.</li>
-<li>The Addy MCP tool set was reduced from 87 to 67 tools, so agents have fewer tools to choose from.</li>
-<li>Addy&#x27;s MCP server instructions now fit within Claude Code&#x27;s 2,048-character limit, so they are no longer cut off.</li>
-<li>Chat content previews now keep their full width.</li>
+<li>Connected connector cards use a two-row layout. The Connections pane now shows CLI logos and normal-size buttons.</li>
+<li>Adding a connector now replaces a hand-added MCP server of the same name instead of conflicting with it.</li>
+<li>The theme preview cards now draw empty panes.</li>
+<li>Grok&#x27;s multi-line args arrays in MCP config are now read correctly.</li>
 </ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>Browser dialog cards no longer disappear when you click one of their own buttons.</li>
-<li>Cloud MCP sign-in now completes when Addy is served under a URL path prefix.</li>
-<li>Sensitive form fields are now redacted in the browser network log.</li>
+<li>Connector sign-ins keep working after the Keychain move, so you no longer have to reconnect.</li>
+<li>Fixed the wide gap after bullets on nested list items in chat messages.</li>
 </ul>
 <h2>Internal Changes</h2>
 <ul>
-<li>Added a shared Keychain store for per-account secrets.</li>
-<li>Releases are now built and published automatically on every push to main.</li>
+<li>Removed DeepWiki, Cloudflare Docs and Exa from the connector catalog.</li>
+<li>The Settings sidebar is now built from a single list of pages.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.85.zip" length="38249803" type="application/octet-stream" sparkle:edSignature="HM/CWTsm9Zn2LhkLvFK1D82VqdfmLX1OYmLN4vtIoHOHbKdbkWCfghQAX+N7K4OaXVRgco8CiW8MW3WOsgkKBA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791348164-1791330173.delta" sparkle:deltaFrom="1791330173" length="6372678" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="gbmKqKM4PjKPUG1Ni/cd7yVqGPS2FKc/MjFmNz3ZG9cfP+oiRGsrlIJ7rT2gDrfBI9Y8Aa3mcIJBCdCAJL3aBQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791348164-1791219788.delta" sparkle:deltaFrom="1791219788" length="8340542" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Nvpz82kO2/nySf1E23+gWwVI8A4PUHfg1kmtyo0GSr5lmwrav6ZpUAo5uJfJwk/pJv1SxT097qp2YWFbdItpDg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.84</title>
+            <pubDate>Wed, 07 Oct 2026 00:01:20 +0000</pubDate>
+            <sparkle:version>1791330173</sparkle:version>
+            <sparkle:shortVersionString>0.84</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.84.zip" length="37517676" type="application/octet-stream" sparkle:edSignature="PxGZai+HIn7XdfA/lugtPB2sIY7c3LU5R4KbwUVcgVwordNbN3zRJ12oifjtkyw2EC4K2dUvBoWngWzBeKp4DQ=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791330173-1791219788.delta" sparkle:deltaFrom="1791219788" length="7321702" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="RocqB2q4US/ShgdTznoe/tySHg4fsICZu2VZSIGt54Af2zFb53fzOANd6YaXRcc3yv9FusAJ6ET8fLlLeQAqCg=="/>
@@ -60,18 +70,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791219788-1791183645.delta" sparkle:deltaFrom="1791183645" length="3252322" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LI9yOBSen/SERDdnEUdzSwmIFBTdgP2xTESQc7p4DNVHrbYPwhyQsMa16KVFGN8BD607G79D0cCOo/Z7Hz9ICQ=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791219788-1791106320.delta" sparkle:deltaFrom="1791106320" length="4324514" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="v8wPy+gz63I63hi0eSwlTriBe/u84xARB4rr0dS64EUSmBn7Zi2WabH5ki5/Pf5tRjzRpUD7cc9H3BJwujfkAw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.82</title>
-            <pubDate>Mon, 05 Oct 2026 07:08:08 +0000</pubDate>
-            <sparkle:version>1791183645</sparkle:version>
-            <sparkle:shortVersionString>0.82</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.82.zip" length="35810391" type="application/octet-stream" sparkle:edSignature="p4zTlgDhtkQ9g1maVxwQIBZl0CohTuVSO59wft2NjiMUUoQgZFZ+Bqg7B4DXuz27i8Gdab/RYCpKe3F5u0q7BQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791183645-1791106320.delta" sparkle:deltaFrom="1791106320" length="4285342" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qON2NOyGMHZiebKVNZcsca8g8RHZo0jXSQvakc8UuAOK30rnverzfzJ9QOv5MjdV70z6k226dPIFsDWjVfHpBw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791183645-1791090708.delta" sparkle:deltaFrom="1791090708" length="5122866" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KgPajmFVmALHuUZQrrO6XWoELkwHnLERWUfoYC2RkQFrL1azudc+4GrrzBFhdmhQoq/3MVFooNlBtoWXUneCCQ=="/>
             </sparkle:deltas>
         </item>
         <item>
