@@ -1,0 +1,35 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Added a Connections pane for MCP connectors. It has a catalog of connectors, custom connector support, suggested connectors, and OAuth sign-in. Connectors are written to your CLI agents&#x27; configs, and credentials are kept in the Keychain.</li>
+<li>Any MCP-capable agent can now connect to and control Addy, including agents outside Addy. A new Connected Agents settings section lets you manage them, with approval prompts for sensitive actions and folder grants, per-agent tool policy presets, an audit log, and optional remote access through a cloud relay.</li>
+<li>Addy&#x27;s browser can now save and autofill website passwords. A save prompt appears after you sign in, saved logins are stored in the Keychain behind a vault lock, and a Passwords window lets you view and manage them. You can also import logins from elsewhere.</li>
+<li>Figma links now open in the Figma app instead of Addy&#x27;s browser.</li>
+<li>Claude Code memories are now imported into Addy&#x27;s memory store, and Claude&#x27;s own memory is turned off so there is one source of memory.</li>
+<li>Prompt attachments now appear in Addy Mobile transcripts.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Addy&#x27;s rules and guide are now delivered to each agent session instead of being written into global CLI config files for Claude, Codex, Cursor, Grok and Antigravity. Your global CLI instructions are no longer modified, and legacy global entries are handled.</li>
+<li>The Addy MCP tool set was reduced from 87 to 67 tools, so agents have fewer tools to choose from.</li>
+<li>Addy&#x27;s MCP server instructions now fit within Claude Code&#x27;s 2,048-character limit, so they are no longer cut off.</li>
+<li>Chat content previews now keep their full width.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Browser dialog cards no longer disappear when you click one of their own buttons.</li>
+<li>Cloud MCP sign-in now completes when Addy is served under a URL path prefix.</li>
+<li>Sensitive form fields are now redacted in the browser network log.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Added a shared Keychain store for per-account secrets.</li>
+<li>Releases are now built and published automatically on every push to main.</li>
+</ul>
