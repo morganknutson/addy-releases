@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.85</title>
-            <pubDate>Wed, 07 Oct 2026 04:51:08 +0000</pubDate>
-            <sparkle:version>1791348164</sparkle:version>
-            <sparkle:shortVersionString>0.85</sparkle:shortVersionString>
+            <title>0.86</title>
+            <pubDate>Wed, 07 Oct 2026 23:04:50 +0000</pubDate>
+            <sparkle:version>1791413785</sparkle:version>
+            <sparkle:shortVersionString>0.86</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -18,30 +18,27 @@
 <h3>What's New</h3>
 <h2>New Features</h2>
 <ul>
-<li>The code editor is now a full IDE-style editor. It adds code folding, a minimap, multiple cursors, snippets, inline Git blame and a Find in Files panel.</li>
-<li>The editor also gains a quick picker with fuzzy matching, code completion and language-server editing features, back/forward navigation history, and handling of file encodings and line endings.</li>
-<li>Addy now requires an Addy account in release builds. You sign in during onboarding through a new account step.</li>
-<li>Connected Agents settings has new Connect buttons for Claude and ChatGPT that set up the connection for you.</li>
-<li>Addy Mobile shows addy://conversation/… links in chat as conversation cards. Tapping a card opens that conversation, as clicking it on the Mac does.</li>
+<li>Choose your addy.land username during onboarding. A new &quot;Choose a Username&quot; step comes right after sign-in, prefilled with the handle your account got automatically. Pressing Next saves any change.</li>
+<li>A new Settings → Account page shows who is signed in and lets you change your addy.land username. It also has a &quot;Manage Account on addy.land&quot; button and a Sign Out button that asks for confirmation first.</li>
+<li>The username field gives live feedback as you type. It lowercases your entry, strips a leading &quot;@&quot;, and flags invalid characters or lengths right away (1–24 characters, lowercase letters, numbers and hyphens, no leading or trailing hyphen). After a short pause it checks with addy.land whether the name is available. If addy.land refuses a save, you see its reason.</li>
 </ul>
 <h2>Improvements</h2>
 <ul>
-<li>Connected connector cards use a two-row layout. The Connections pane now shows CLI logos and normal-size buttons.</li>
-<li>Adding a connector now replaces a hand-added MCP server of the same name instead of conflicting with it.</li>
-<li>The theme preview cards now draw empty panes.</li>
-<li>Grok&#x27;s multi-line args arrays in MCP config are now read correctly.</li>
-</ul>
-<h2>Bug Fixes</h2>
-<ul>
-<li>Connector sign-ins keep working after the Keychain move, so you no longer have to reconnect.</li>
-<li>Fixed the wide gap after bullets on nested list items in chat messages.</li>
-</ul>
-<h2>Internal Changes</h2>
-<ul>
-<li>Removed DeepWiki, Cloudflare Docs and Exa from the connector catalog.</li>
-<li>The Settings sidebar is now built from a single list of pages.</li>
+<li>Closing the setup window no longer quits Addy just because you haven&#x27;t finished the username step. Only signing in is required.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.86.zip" length="38327102" type="application/octet-stream" sparkle:edSignature="EQS86ic+FbKfbuxyc8Q/KUNNX9Om3qbcwjKnZ9mZ7oNIHhBnsDdtusOtQwHcRYTYKdQhNJ5GSuHTFicFnEnJDg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791413785-1791348164.delta" sparkle:deltaFrom="1791348164" length="4456702" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="yGvN1+Jj9e0B9elBAW4BCpO3pxl8GQJCnEK5FzJqeynUjNn+zuXkjx9yRCol5P/TIZZ2i17nXOPHYQgV/qswDw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791413785-1791330173.delta" sparkle:deltaFrom="1791330173" length="6493074" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="RTY/02mY+RiSjsgl2MxjFrCPweF52366CxXEBM0k6vOKZQzG0yljas8lDkQNZUSgI+EphojKQHpDq+1LJzLbAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.85</title>
+            <pubDate>Wed, 07 Oct 2026 04:51:08 +0000</pubDate>
+            <sparkle:version>1791348164</sparkle:version>
+            <sparkle:shortVersionString>0.85</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.85.zip" length="38249803" type="application/octet-stream" sparkle:edSignature="HM/CWTsm9Zn2LhkLvFK1D82VqdfmLX1OYmLN4vtIoHOHbKdbkWCfghQAX+N7K4OaXVRgco8CiW8MW3WOsgkKBA=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791348164-1791330173.delta" sparkle:deltaFrom="1791330173" length="6372678" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="gbmKqKM4PjKPUG1Ni/cd7yVqGPS2FKc/MjFmNz3ZG9cfP+oiRGsrlIJ7rT2gDrfBI9Y8Aa3mcIJBCdCAJL3aBQ=="/>
@@ -58,18 +55,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791330173-1791219788.delta" sparkle:deltaFrom="1791219788" length="7321702" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="RocqB2q4US/ShgdTznoe/tySHg4fsICZu2VZSIGt54Af2zFb53fzOANd6YaXRcc3yv9FusAJ6ET8fLlLeQAqCg=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791330173-1791183645.delta" sparkle:deltaFrom="1791183645" length="7326034" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="/mt8iHOlOHdRPCY/GxXCJxd0VVr3e6ocdFUcFowkR70FY5gU5f6RFkT/uBy7X0Aw+AnYjyHZjJmXo8IT9viECQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.83</title>
-            <pubDate>Mon, 05 Oct 2026 17:11:32 +0000</pubDate>
-            <sparkle:version>1791219788</sparkle:version>
-            <sparkle:shortVersionString>0.83</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.83.zip" length="35812602" type="application/octet-stream" sparkle:edSignature="mQshius6Z8nBbK/fqgdMOS1Z2JsH9CQrj970z2RHyTtXm9wfmnOL1QVWIIgu8vjq/cIR81Ag7uj7cPUFzWCoBA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791219788-1791183645.delta" sparkle:deltaFrom="1791183645" length="3252322" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LI9yOBSen/SERDdnEUdzSwmIFBTdgP2xTESQc7p4DNVHrbYPwhyQsMa16KVFGN8BD607G79D0cCOo/Z7Hz9ICQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791219788-1791106320.delta" sparkle:deltaFrom="1791106320" length="4324514" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="v8wPy+gz63I63hi0eSwlTriBe/u84xARB4rr0dS64EUSmBn7Zi2WabH5ki5/Pf5tRjzRpUD7cc9H3BJwujfkAw=="/>
             </sparkle:deltas>
         </item>
         <item>
