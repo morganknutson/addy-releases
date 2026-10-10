@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.88</title>
-            <pubDate>Thu, 08 Oct 2026 16:40:06 +0000</pubDate>
-            <sparkle:version>1791477040</sparkle:version>
-            <sparkle:shortVersionString>0.88</sparkle:shortVersionString>
+            <title>0.89</title>
+            <pubDate>Sat, 10 Oct 2026 07:32:24 +0000</pubDate>
+            <sparkle:version>1791616991</sparkle:version>
+            <sparkle:shortVersionString>0.89</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -18,21 +18,37 @@
 <h3>What's New</h3>
 <h2>New Features</h2>
 <ul>
-<li>Added a GitHub Actions view to the GitHub pane, next to pull requests. It lists recent workflow runs (up to 40 per repository) with their status, branch, trigger event, and duration. You can search the runs and filter them by All Runs, In Progress, or Failed.</li>
-<li>Runs that failed, timed out, or were cancelled have a Re-run button, plus a &quot;Re-run Failed Jobs&quot; context menu item. The context menu also has Open on GitHub, Copy URL, and Copy Branch.</li>
-<li>Closed browser tabs now come back. When you reopen the browser in a project, it restores the tabs from the last browser pane you closed there, including which tab was active. A browser that had only start pages leaves nothing to restore.</li>
-<li>When you edit a queued message from the Addy remote app, you can now add attachments to it. Text-only edits still work with Macs on older versions.</li>
+<li>Onboarding has been redesigned as a full-window takeover with a step indicator, header and footer. It now includes in-app sign-in to your Addy account using an emailed one-time code.</li>
+<li>Onboarding gained an Interface step, where you choose your layout, and a Project Import step. The import step discovers Git projects on your Mac so you can add them right away.</li>
+<li>The Manual has been rebuilt with a hero page, illustrated scenes and topic pages. It has a searchable outline for jumping to any topic.</li>
+<li>You can now select several worktrees at once in the sidebar and act on them in bulk.</li>
+<li>The project header now stays pinned at the top of the sidebar while you scroll through worktrees.</li>
+<li>A new Servers menu in the header shows the project&#x27;s servers through a pill button.</li>
 </ul>
 <h2>Improvements</h2>
 <ul>
-<li>Workflow runs refresh faster while any run is queued or in progress. Clear messages cover a missing GitHub CLI, signing in again, and repositories that can&#x27;t be read. If only some repositories fail, the others still load.</li>
-<li>The pull request list and the Actions list now share one GitHub pane layout and header.</li>
+<li>Servers now belong to the project rather than to individual panes, so they stay consistent as you move between panes and worktrees.</li>
+<li>Telemetry batches are now attributed to the Addy account you&#x27;re signed in with.</li>
+<li>Onboarding tool rows for GitHub, agent CLIs and your account have been refreshed. The Settings layout options now share the same layout picker views as onboarding.</li>
+<li>Action buttons and the server footer bar now use a shared spinning-symbol indicator for in-progress states.</li>
 </ul>
 <h2>Internal Changes</h2>
 <ul>
-<li>Added tests for the GitHub pane and Actions state handling, and for browser tab restore.</li>
+<li>Added tests for onboarding, email-code sign-in, telemetry, the Manual content, sidebar selection and the sticky header.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.89.zip" length="39023123" type="application/octet-stream" sparkle:edSignature="cMYXLIbUWhkPE37jIUbw+jnfzwaWvSgod/Hg847Cw4799i098PFVZN05Byb1cVoaQcg5VYIDeC4rT1iv6/zYCA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791616991-1791477040.delta" sparkle:deltaFrom="1791477040" length="6330622" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="kvK/iB1hLizHuKjciLqukY5mIgWI7XYRShbMAzUpuztAFdM2v0fdB4qRqW/4Ki9s5Lp7LpyWT9pIX00YwddUDw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791616991-1791414757.delta" sparkle:deltaFrom="1791414757" length="6720494" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Lk4r+ZYKHqs8vcf0HOv6OQ7DcNpFl2ffX0At8MIcJhV9K9/EnfHN0m1gEPC6VdynAGysk6/fO5/dhs38HpmhAA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.88</title>
+            <pubDate>Thu, 08 Oct 2026 16:40:06 +0000</pubDate>
+            <sparkle:version>1791477040</sparkle:version>
+            <sparkle:shortVersionString>0.88</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.88.zip" length="38512976" type="application/octet-stream" sparkle:edSignature="dC/lifjogaotk7s8BoHwX/WxBAQibvcS6iOsyXieG5BwzFUaZ8HuGZXk5UZHFjmDvH+HXlY7zrKLZ9ZhhUAgBw=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791477040-1791414757.delta" sparkle:deltaFrom="1791414757" length="5096330" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MNhEkj50i3xPUNBRlMsOz/S4UK7M7wWqxPNx5XG2Dq0Se8Hpb0LkIA/fVMj7LU5o4jWwTZW2xkFKz3yvbLRWDA=="/>
@@ -49,18 +65,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791414757-1791413785.delta" sparkle:deltaFrom="1791413785" length="4119574" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="WvW1iZgQNQEjuG+3Vbawl41Pq1c6VQkAiWv8LbGq+jDkW5u62xyKEq7Eps88wYo/FkS/NaGyIPQFhEHwXjz/Cw=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791414757-1791348164.delta" sparkle:deltaFrom="1791348164" length="4832762" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6Fv7rDaXEATm0+2iJetAsIkhwAs6fXEAPKMw7MQKlWeQX922lZkshTHiMXZEWdfY8l/WF0O/NF08S/axxDxmCg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.86</title>
-            <pubDate>Wed, 07 Oct 2026 23:04:50 +0000</pubDate>
-            <sparkle:version>1791413785</sparkle:version>
-            <sparkle:shortVersionString>0.86</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.86.zip" length="38327102" type="application/octet-stream" sparkle:edSignature="EQS86ic+FbKfbuxyc8Q/KUNNX9Om3qbcwjKnZ9mZ7oNIHhBnsDdtusOtQwHcRYTYKdQhNJ5GSuHTFicFnEnJDg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791413785-1791348164.delta" sparkle:deltaFrom="1791348164" length="4456702" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="yGvN1+Jj9e0B9elBAW4BCpO3pxl8GQJCnEK5FzJqeynUjNn+zuXkjx9yRCol5P/TIZZ2i17nXOPHYQgV/qswDw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791413785-1791330173.delta" sparkle:deltaFrom="1791330173" length="6493074" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="RTY/02mY+RiSjsgl2MxjFrCPweF52366CxXEBM0k6vOKZQzG0yljas8lDkQNZUSgI+EphojKQHpDq+1LJzLbAg=="/>
             </sparkle:deltas>
         </item>
         <item>
