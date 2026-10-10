@@ -1,0 +1,24 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Added a &quot;What&#x27;s New in Addy…&quot; item to the Addy menu. It opens a spotlight window that walks through the newest features, and it also appears automatically at launch when there is something new. It stays disabled while no spotlight is available.</li>
+<li>Feature pages in the What&#x27;s New window can link straight to the matching topic in the in-app manual.</li>
+<li>Admin accounts get a &quot;What&#x27;s New Drafts&quot; submenu in the Addy menu. It lists unpublished drafts from addy.land so they can be previewed in the app. Drafts with errors are shown greyed out with the issue count, and drafts that edit a published entry are marked &quot;(changes)&quot;.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Main-thread freezes are now reported once they last 2 seconds instead of 5. Shorter beachballs that never reached telemetry are now captured.</li>
+<li>A freeze is reported as soon as it crosses the threshold, so hangs that end in a force quit are still recorded. When the app recovers, it logs the total freeze duration against the same hang.</li>
+<li>Addy now finds command-line tools such as the agent CLIs by checking common install folders and your login-shell PATH. It no longer starts a login shell for each lookup.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed multi-second freezes when Addy looked for a CLI that isn&#x27;t installed. On Macs with a slow shell startup file, each lookup could block the app for up to 7 seconds, including during Settings refreshes.</li>
+</ul>
