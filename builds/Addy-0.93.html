@@ -1,0 +1,25 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>Improvements</h2>
+<ul>
+<li>Collapsed pane rails now open only when you ask. Double-click a rail or press ⌥R to expand it, and click it to peek at its contents. Dragging a divider no longer opens a rail by accident, and resizing the window no longer pops rails back open on its own. If a split is left with nothing but rails, one still reopens automatically so the split stays usable.</li>
+<li>Dragging a divider next to a rail now pushes the rail along at its strip width and resizes the full pane on the other side. A column that was dragged shut reopens as one unit, and a column made up only of rails now takes up one rail&#x27;s width instead of a full pane&#x27;s share.</li>
+<li>The sticky project header at the top of the sidebar now works like the row it covers. You can drag it to reorder the project, drop files or items onto it, ⌃-click it for the context menu and ⇧-click it to extend the selection. It also follows selection and row changes correctly, and VoiceOver no longer reads the project twice.</li>
+<li>When the sidebar is narrow, the worktree selection bar shows icon-only Hide and Delete buttons instead of holding the sidebar open.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>You can drag the sidebar down to its minimum width again. Long project names and the worktree selection bar no longer keep it wide.</li>
+<li>Removing a worktree now works even if you haven&#x27;t opened its parent project&#x27;s workspace since launching Addy. Before, it failed with &quot;No git provider for parent project&quot;.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Releases are now built on a self-hosted Mac runner, and the release DMG is built with dmgbuild so it works on a headless machine.</li>
+<li>Removed unused language-server protocol types.</li>
+</ul>

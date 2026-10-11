@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.92</title>
-            <pubDate>Sun, 11 Oct 2026 02:33:57 +0000</pubDate>
-            <sparkle:version>1791685437</sparkle:version>
-            <sparkle:shortVersionString>0.92</sparkle:shortVersionString>
+            <title>0.93</title>
+            <pubDate>Sat, 10 Oct 2026 22:04:06 -0700</pubDate>
+            <sparkle:version>1791694403</sparkle:version>
+            <sparkle:shortVersionString>0.93</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -16,34 +16,36 @@
   li { margin: 2px 0; }
 </style>
 <h3>What's New</h3>
-<h2>New Features</h2>
-<ul>
-<li>Browser panes now have find-in-page (Cmd+F), with Cmd+G and Shift+Cmd+G to jump to the next and previous match. A search bar appears at the top right of the pane.</li>
-<li>Browser panes can print the current page with Cmd+P.</li>
-<li>Cmd-clicking or middle-clicking a link in the browser opens it in a background tab. Browser panes also support swipe navigation.</li>
-<li>The browser address bar now autocompletes from your history and bookmarks. Suggestions appear in a dropdown, and the best match is completed inline as you type.</li>
-<li>A new History window (Addy menu → History…) lets you search, open and delete visited pages. It also has a clear-browsing-data option that removes history, cookies and cache.</li>
-<li>The browser blocks third-party ads and trackers by default. It only blocks requests to well-known ad and analytics hosts, so sign-in and site functionality aren&#x27;t affected.</li>
-<li>A project that synced from another Mac and has no local folder yet, or whose folder is missing or empty, now offers a one-click restore. It clones the repository into the right folder, or adopts a repository you already cloned by hand.</li>
-</ul>
 <h2>Improvements</h2>
 <ul>
-<li>The access gate now looks like onboarding. When you&#x27;re signed out, it shows onboarding&#x27;s sign-in step inside the gate.</li>
-<li>If a chat message was rejected because the CLI was signed out, signing back in restarts the chat process and resends your unanswered message automatically. Sending a new message replaces the rejected one.</li>
-<li>A failed repository clone now explains what went wrong. It offers &quot;Sign in to GitHub&quot; when GitHub reports a missing or inaccessible repository, &quot;Accept License&quot; when the Xcode license hasn&#x27;t been accepted, and a hint to paste a full URL when the address isn&#x27;t a repository.</li>
-<li>Opening a chat for a project whose folder is missing now says so and explains how to fix it, instead of showing a bare &quot;file doesn&#x27;t exist&quot; error.</li>
-<li>Browser sign-ins are now shared across every project, so logging in to a site once carries over everywhere, as in a normal browser. This also helps auth-heavy sites such as Apple Developer.</li>
-<li>The browser viewport now always renders on white, regardless of theme. Pages without their own background, such as App Store Connect, no longer show unreadable dark-on-dark text.</li>
-<li>Plan baselines and review diffs now include untracked files, so files that existed before a plan started are no longer mistaken for files the plan created, and new files an agent adds show up in its review.</li>
-<li>Long project and worktree names no longer widen the sidebar.</li>
+<li>Collapsed pane rails now open only when you ask. Double-click a rail or press ⌥R to expand it, and click it to peek at its contents. Dragging a divider no longer opens a rail by accident, and resizing the window no longer pops rails back open on its own. If a split is left with nothing but rails, one still reopens automatically so the split stays usable.</li>
+<li>Dragging a divider next to a rail now pushes the rail along at its strip width and resizes the full pane on the other side. A column that was dragged shut reopens as one unit, and a column made up only of rails now takes up one rail&#x27;s width instead of a full pane&#x27;s share.</li>
+<li>The sticky project header at the top of the sidebar now works like the row it covers. You can drag it to reorder the project, drop files or items onto it, ⌃-click it for the context menu and ⇧-click it to extend the selection. It also follows selection and row changes correctly, and VoiceOver no longer reads the project twice.</li>
+<li>When the sidebar is narrow, the worktree selection bar shows icon-only Hide and Delete buttons instead of holding the sidebar open.</li>
 </ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>Fixed browser slowdowns on pages. The DialKit bridge script now loads only when DialKit is available, and the content-security-policy watcher stops once the page head has loaded instead of observing the whole document.</li>
-<li>Starting a plan no longer freezes the window in large repositories. The baseline snapshot now runs off the main thread, and clicking Build twice can&#x27;t start the plan twice.</li>
-<li>If an agent can&#x27;t launch after you click Build, the plan returns to its previous state so Build is offered again.</li>
+<li>You can drag the sidebar down to its minimum width again. Long project names and the worktree selection bar no longer keep it wide.</li>
+<li>Removing a worktree now works even if you haven&#x27;t opened its parent project&#x27;s workspace since launching Addy. Before, it failed with &quot;No git provider for parent project&quot;.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Releases are now built on a self-hosted Mac runner, and the release DMG is built with dmgbuild so it works on a headless machine.</li>
+<li>Removed unused language-server protocol types.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.93.zip" length="39588753" type="application/octet-stream" sparkle:edSignature="n64TyYnAYGesvbOMQC0LWtF6F7GzI5cij8qAMdx9r1x0knyOcCR+ZXCF0GqKtZ4O6DYIYRcRXNKkbe8ZG0pnDQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791694403-1791685437.delta" sparkle:deltaFrom="1791685437" length="6030922" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SUYY3UJjTmWWto4gZlLvMkVqcxhIy7oPqFFXi6x5yyKDpAu5edXx/m1DXF1OBvRxd4qFO5MFhkwtSDPST/28Dw=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791694403-1791684701.delta" sparkle:deltaFrom="1791684701" length="7690334" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="EncZxBRUUsyzxUhkkQEHkwo7CsymlACzcEGXlNwQx4i7x5Jy7qKZ2BJsB1xmZDa8OMJsIClxAJ/OUuhsFGWNCg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.92</title>
+            <pubDate>Sun, 11 Oct 2026 02:33:57 +0000</pubDate>
+            <sparkle:version>1791685437</sparkle:version>
+            <sparkle:shortVersionString>0.92</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.92.zip" length="39660488" type="application/octet-stream" sparkle:edSignature="GwiP/NgaR3UQlQBhAk9rmRq6ncwx4w6q3Y943ubJs0l4JS+AGOjFnLqOWZuNYrOf7lmOpQYUXhkwHeDGmOCaBA=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791685437-1791684701.delta" sparkle:deltaFrom="1791684701" length="5657282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="us7AxqBFiAX4mBVsdvR4jPBgoWb1YPdeQH6AH0YEMtXws77i819/zqJ84uEBfYgdOQk9XHHBPv5CyffBKSAFDA=="/>
@@ -60,18 +62,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791684701-1791656497.delta" sparkle:deltaFrom="1791656497" length="5285770" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="v6rh+K+WEbitv0FdRxK3MaiHhWhGbKz/2ynBxv4ZCyuMeCG2BElbqPdBd6EEg6sjjGekpxAKPYL4H/J6gcqNDA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791684701-1791616991.delta" sparkle:deltaFrom="1791616991" length="5792658" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="teOUXjEQejSHgooy6Q8ATKDOiiE0/A72yVXq3NifOD4goZOtD3KlkSM3vOVCS8jrtyOlvaQAmlVTz/YTtlhvAg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.90</title>
-            <pubDate>Sat, 10 Oct 2026 18:31:27 +0000</pubDate>
-            <sparkle:version>1791656497</sparkle:version>
-            <sparkle:shortVersionString>0.90</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.90.zip" length="39213222" type="application/octet-stream" sparkle:edSignature="5kG8640dliS3faqPCnR+qWfgwbu+FnoTP2AkW0i5mynNXaDuamTZDbr/p2d4aycx+SYElQ4pLnCo95OKSBTIDw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791656497-1791616991.delta" sparkle:deltaFrom="1791616991" length="4938250" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="aakfUfrq7jSJkOP2V+cMqmAPQALzAuc5Az6F++UD6EhBrSE6CM5nmZGB7O0Mijfc5AOg7iRyIR8+L106AtfbCw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791656497-1791477040.delta" sparkle:deltaFrom="1791477040" length="6497282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="clGW74BIKwTl0SnjHbdVHLO8VTBPV7vC9XL9bnW+efTSYnGOwuhc5CkVf5CuWfg5mv6NHeLFLMoq7nmxVvgMBw=="/>
             </sparkle:deltas>
         </item>
         <item>
