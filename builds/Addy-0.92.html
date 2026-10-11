@@ -1,0 +1,35 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Browser panes now have find-in-page (Cmd+F), with Cmd+G and Shift+Cmd+G to jump to the next and previous match. A search bar appears at the top right of the pane.</li>
+<li>Browser panes can print the current page with Cmd+P.</li>
+<li>Cmd-clicking or middle-clicking a link in the browser opens it in a background tab. Browser panes also support swipe navigation.</li>
+<li>The browser address bar now autocompletes from your history and bookmarks. Suggestions appear in a dropdown, and the best match is completed inline as you type.</li>
+<li>A new History window (Addy menu → History…) lets you search, open and delete visited pages. It also has a clear-browsing-data option that removes history, cookies and cache.</li>
+<li>The browser blocks third-party ads and trackers by default. It only blocks requests to well-known ad and analytics hosts, so sign-in and site functionality aren&#x27;t affected.</li>
+<li>A project that synced from another Mac and has no local folder yet, or whose folder is missing or empty, now offers a one-click restore. It clones the repository into the right folder, or adopts a repository you already cloned by hand.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>The access gate now looks like onboarding. When you&#x27;re signed out, it shows onboarding&#x27;s sign-in step inside the gate.</li>
+<li>If a chat message was rejected because the CLI was signed out, signing back in restarts the chat process and resends your unanswered message automatically. Sending a new message replaces the rejected one.</li>
+<li>A failed repository clone now explains what went wrong. It offers &quot;Sign in to GitHub&quot; when GitHub reports a missing or inaccessible repository, &quot;Accept License&quot; when the Xcode license hasn&#x27;t been accepted, and a hint to paste a full URL when the address isn&#x27;t a repository.</li>
+<li>Opening a chat for a project whose folder is missing now says so and explains how to fix it, instead of showing a bare &quot;file doesn&#x27;t exist&quot; error.</li>
+<li>Browser sign-ins are now shared across every project, so logging in to a site once carries over everywhere, as in a normal browser. This also helps auth-heavy sites such as Apple Developer.</li>
+<li>The browser viewport now always renders on white, regardless of theme. Pages without their own background, such as App Store Connect, no longer show unreadable dark-on-dark text.</li>
+<li>Plan baselines and review diffs now include untracked files, so files that existed before a plan started are no longer mistaken for files the plan created, and new files an agent adds show up in its review.</li>
+<li>Long project and worktree names no longer widen the sidebar.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed browser slowdowns on pages. The DialKit bridge script now loads only when DialKit is available, and the content-security-policy watcher stops once the page head has loaded instead of observing the whole document.</li>
+<li>Starting a plan no longer freezes the window in large repositories. The baseline snapshot now runs off the main thread, and clicking Build twice can&#x27;t start the plan twice.</li>
+<li>If an agent can&#x27;t launch after you click Build, the plan returns to its previous state so Build is offered again.</li>
+</ul>

@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.91</title>
-            <pubDate>Sun, 11 Oct 2026 02:19:45 +0000</pubDate>
-            <sparkle:version>1791684701</sparkle:version>
-            <sparkle:shortVersionString>0.91</sparkle:shortVersionString>
+            <title>0.92</title>
+            <pubDate>Sun, 11 Oct 2026 02:33:57 +0000</pubDate>
+            <sparkle:version>1791685437</sparkle:version>
+            <sparkle:shortVersionString>0.92</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -18,23 +18,44 @@
 <h3>What's New</h3>
 <h2>New Features</h2>
 <ul>
-<li>Addy can now record content-free session replays: layout, focus, agent states, clicks, overlays and activity counts. It never records text, keystroke characters, paths, titles or commands. Chunks are compressed and uploaded in the background so you can keep working.</li>
-<li>Replays now include the pointer path. The pointer is sampled at up to 15 times per second, only while it moves and Addy is the active app. This doesn&#x27;t change hover behavior in any view.</li>
-<li>Telemetry batches now carry a session ID, so telemetry can be matched to the replay from the same app launch. Shortcut use and incident marks appear in the replay as events with no properties.</li>
+<li>Browser panes now have find-in-page (Cmd+F), with Cmd+G and Shift+Cmd+G to jump to the next and previous match. A search bar appears at the top right of the pane.</li>
+<li>Browser panes can print the current page with Cmd+P.</li>
+<li>Cmd-clicking or middle-clicking a link in the browser opens it in a background tab. Browser panes also support swipe navigation.</li>
+<li>The browser address bar now autocompletes from your history and bookmarks. Suggestions appear in a dropdown, and the best match is completed inline as you type.</li>
+<li>A new History window (Addy menu → History…) lets you search, open and delete visited pages. It also has a clear-browsing-data option that removes history, cookies and cache.</li>
+<li>The browser blocks third-party ads and trackers by default. It only blocks requests to well-known ad and analytics hosts, so sign-in and site functionality aren&#x27;t affected.</li>
+<li>A project that synced from another Mac and has no local folder yet, or whose folder is missing or empty, now offers a one-click restore. It clones the repository into the right folder, or adopts a repository you already cloned by hand.</li>
 </ul>
 <h2>Improvements</h2>
 <ul>
-<li>Setting ADDY_TELEMETRY_DISABLED=1 now turns off session replay along with telemetry.</li>
-<li>Replays can be switched off remotely. If the server answers that recording is off, Addy stops recording and deletes any pending replay chunks.</li>
-<li>A replay left behind by a crash or force quit is closed out on the next launch, so it still ends cleanly.</li>
-<li>Setting ADDY_TELEMETRY_ENDPOINT points telemetry and replay uploads at a local server for development.</li>
+<li>The access gate now looks like onboarding. When you&#x27;re signed out, it shows onboarding&#x27;s sign-in step inside the gate.</li>
+<li>If a chat message was rejected because the CLI was signed out, signing back in restarts the chat process and resends your unanswered message automatically. Sending a new message replaces the rejected one.</li>
+<li>A failed repository clone now explains what went wrong. It offers &quot;Sign in to GitHub&quot; when GitHub reports a missing or inaccessible repository, &quot;Accept License&quot; when the Xcode license hasn&#x27;t been accepted, and a hint to paste a full URL when the address isn&#x27;t a repository.</li>
+<li>Opening a chat for a project whose folder is missing now says so and explains how to fix it, instead of showing a bare &quot;file doesn&#x27;t exist&quot; error.</li>
+<li>Browser sign-ins are now shared across every project, so logging in to a site once carries over everywhere, as in a normal browser. This also helps auth-heavy sites such as Apple Developer.</li>
+<li>The browser viewport now always renders on white, regardless of theme. Pages without their own background, such as App Store Connect, no longer show unreadable dark-on-dark text.</li>
+<li>Plan baselines and review diffs now include untracked files, so files that existed before a plan started are no longer mistaken for files the plan created, and new files an agent adds show up in its review.</li>
+<li>Long project and worktree names no longer widen the sidebar.</li>
 </ul>
-<h2>Internal Changes</h2>
+<h2>Bug Fixes</h2>
 <ul>
-<li>Replay and telemetry uploads now share one authentication path.</li>
-<li>Added test coverage for replay encoding, keyframes, live upload, main-thread safety, pointer sampling and the remote off switch.</li>
+<li>Fixed browser slowdowns on pages. The DialKit bridge script now loads only when DialKit is available, and the content-security-policy watcher stops once the page head has loaded instead of observing the whole document.</li>
+<li>Starting a plan no longer freezes the window in large repositories. The baseline snapshot now runs off the main thread, and clicking Build twice can&#x27;t start the plan twice.</li>
+<li>If an agent can&#x27;t launch after you click Build, the plan returns to its previous state so Build is offered again.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.92.zip" length="39660488" type="application/octet-stream" sparkle:edSignature="GwiP/NgaR3UQlQBhAk9rmRq6ncwx4w6q3Y943ubJs0l4JS+AGOjFnLqOWZuNYrOf7lmOpQYUXhkwHeDGmOCaBA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791685437-1791684701.delta" sparkle:deltaFrom="1791684701" length="5657282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="us7AxqBFiAX4mBVsdvR4jPBgoWb1YPdeQH6AH0YEMtXws77i819/zqJ84uEBfYgdOQk9XHHBPv5CyffBKSAFDA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791685437-1791656497.delta" sparkle:deltaFrom="1791656497" length="6166314" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="/2qYv/fjKmIMU6xrjXjinqE8uHucG/+5C2OGlI7x3Kf/D163E7rP885kjAVQY2yzYR/Hn18T24T/Jh0e7ktLAA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.91</title>
+            <pubDate>Sun, 11 Oct 2026 02:19:45 +0000</pubDate>
+            <sparkle:version>1791684701</sparkle:version>
+            <sparkle:shortVersionString>0.91</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.91.zip" length="39516030" type="application/octet-stream" sparkle:edSignature="a1cF+pbTSRw9uqFKCtXf2upLV/O7gge+jO8f0YRDsn7xFNBbdC89tj3ioUJ4aEoqDka+yz8qrGUGSR72icahDA=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791684701-1791656497.delta" sparkle:deltaFrom="1791656497" length="5285770" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="v6rh+K+WEbitv0FdRxK3MaiHhWhGbKz/2ynBxv4ZCyuMeCG2BElbqPdBd6EEg6sjjGekpxAKPYL4H/J6gcqNDA=="/>
@@ -51,18 +72,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791656497-1791616991.delta" sparkle:deltaFrom="1791616991" length="4938250" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="aakfUfrq7jSJkOP2V+cMqmAPQALzAuc5Az6F++UD6EhBrSE6CM5nmZGB7O0Mijfc5AOg7iRyIR8+L106AtfbCw=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791656497-1791477040.delta" sparkle:deltaFrom="1791477040" length="6497282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="clGW74BIKwTl0SnjHbdVHLO8VTBPV7vC9XL9bnW+efTSYnGOwuhc5CkVf5CuWfg5mv6NHeLFLMoq7nmxVvgMBw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.89</title>
-            <pubDate>Sat, 10 Oct 2026 07:32:24 +0000</pubDate>
-            <sparkle:version>1791616991</sparkle:version>
-            <sparkle:shortVersionString>0.89</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.89.zip" length="39023123" type="application/octet-stream" sparkle:edSignature="cMYXLIbUWhkPE37jIUbw+jnfzwaWvSgod/Hg847Cw4799i098PFVZN05Byb1cVoaQcg5VYIDeC4rT1iv6/zYCA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791616991-1791477040.delta" sparkle:deltaFrom="1791477040" length="6330622" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="kvK/iB1hLizHuKjciLqukY5mIgWI7XYRShbMAzUpuztAFdM2v0fdB4qRqW/4Ki9s5Lp7LpyWT9pIX00YwddUDw=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791616991-1791414757.delta" sparkle:deltaFrom="1791414757" length="6720494" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Lk4r+ZYKHqs8vcf0HOv6OQ7DcNpFl2ffX0At8MIcJhV9K9/EnfHN0m1gEPC6VdynAGysk6/fO5/dhs38HpmhAA=="/>
             </sparkle:deltas>
         </item>
         <item>
