@@ -1,0 +1,24 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>When a Claude chat is given a /goal, a goal button now appears in the pane&#x27;s footer. Hovering over it shows the condition the agent is working toward. Clicking it shows whether the goal is Working or Paused, how many checks have come back unmet, and the evaluator&#x27;s reason from the last check, with a Clear Goal button to stop it.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>If you remove several worktrees at once and one has uncommitted changes, the warning now offers &quot;Remove All&quot; and tells you how many more are queued. Choosing it removes the rest without asking again for each one.</li>
+<li>Closing a pane now moves focus to the pane next to it in the same split, or the nearest pane before it. Focus no longer jumps to the first pane in the window, and open panes get focus ahead of collapsed rails.</li>
+<li>A collapsed rail dragged into a different split now turns to match that split&#x27;s direction. For example, a horizontal strip dropped into a row becomes a vertical rail instead of stretching a full pane wide.</li>
+<li>Dragging a column shut now turns any horizontal strips already in it into vertical rails, so the column closes cleanly.</li>
+<li>Tooltips across Addy now use Addy&#x27;s own tooltip style instead of the native macOS one. This covers chat, connectors, the editor, the theme editor, settings, plans, tests, tasks and the browser.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Tooltips that change often, like status and progress indicators, now just update their text instead of being rebuilt on every refresh.</li>
+</ul>
