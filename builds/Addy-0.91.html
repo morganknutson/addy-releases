@@ -1,0 +1,26 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Addy can now record content-free session replays: layout, focus, agent states, clicks, overlays and activity counts. It never records text, keystroke characters, paths, titles or commands. Chunks are compressed and uploaded in the background so you can keep working.</li>
+<li>Replays now include the pointer path. The pointer is sampled at up to 15 times per second, only while it moves and Addy is the active app. This doesn&#x27;t change hover behavior in any view.</li>
+<li>Telemetry batches now carry a session ID, so telemetry can be matched to the replay from the same app launch. Shortcut use and incident marks appear in the replay as events with no properties.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Setting ADDY_TELEMETRY_DISABLED=1 now turns off session replay along with telemetry.</li>
+<li>Replays can be switched off remotely. If the server answers that recording is off, Addy stops recording and deletes any pending replay chunks.</li>
+<li>A replay left behind by a crash or force quit is closed out on the next launch, so it still ends cleanly.</li>
+<li>Setting ADDY_TELEMETRY_ENDPOINT points telemetry and replay uploads at a local server for development.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Replay and telemetry uploads now share one authentication path.</li>
+<li>Added test coverage for replay encoding, keyframes, live upload, main-thread safety, pointer sampling and the remote off switch.</li>
+</ul>
