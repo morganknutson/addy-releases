@@ -1,0 +1,33 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Chat panes now show a Background Tasks button in the footer while an agent has work running between turns, such as a backgrounded shell command, a Monitor watch or a sub-agent. Click it to see each task, its type and how long it has been running, so a pane that is waiting on a deploy or a long build no longer looks idle.</li>
+<li>You can now move a pane by dragging its title. A plain click on the title still renames the pane.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Dragging a divider now pushes through several panes. Once the nearest pane reaches its minimum size and snaps to a strip, the next pane starts to shrink, and so on to the edge of the split. Backing off reopens the panes that drag collapsed, and Escape cancels the drag.</li>
+<li>Rails and header-only panes now move with a divider drag instead of blocking it, so you can drag any divider that has a resizable pane on both sides.</li>
+<li>The text no longer shifts when you start editing a pane title, and the title now gets a rounded background while you edit it.</li>
+<li>The Addy robot on compaction cards, pane-reference chips and the agent menu was redrawn as an outlined pill with tall rounded eyes. It now renders sharply at any size and follows the theme color.</li>
+<li>Empty-state screens have a bolder icon and title, a smaller subtitle and more spacing around the icon.</li>
+<li>The Codex install prompt now finds npm and Homebrew in common locations like ~/.local/bin, /opt/homebrew/bin and /usr/local/bin, even when the app&#x27;s PATH doesn&#x27;t include them. This means it suggests a working install command more often.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Codex chats now always send an explicit speed setting. Before, a fast tier set in your own Codex config could take effect while Addy showed standard speed.</li>
+<li>Codex&#x27;s fast mode and reasoning effort settings now use the latest model list, so a long-running chat sees model updates without a restart.</li>
+<li>When strips that were opened together come back as panes, they now reopen together at an even share of the space instead of leaving slivers behind.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Tests now use a temporary data folder, so running them never reads or changes your real Addy settings or data.</li>
+<li>Session replay recording now captures the actual on-screen window and pane geometry and records the current state again at each checkpoint, which makes replays more accurate.</li>
+</ul>

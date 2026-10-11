@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.93</title>
-            <pubDate>Sat, 10 Oct 2026 22:04:06 -0700</pubDate>
-            <sparkle:version>1791694403</sparkle:version>
-            <sparkle:shortVersionString>0.93</sparkle:shortVersionString>
+            <title>0.94</title>
+            <pubDate>Sat, 10 Oct 2026 23:37:51 -0700</pubDate>
+            <sparkle:version>1791700006</sparkle:version>
+            <sparkle:shortVersionString>0.94</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -16,24 +16,44 @@
   li { margin: 2px 0; }
 </style>
 <h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Chat panes now show a Background Tasks button in the footer while an agent has work running between turns, such as a backgrounded shell command, a Monitor watch or a sub-agent. Click it to see each task, its type and how long it has been running, so a pane that is waiting on a deploy or a long build no longer looks idle.</li>
+<li>You can now move a pane by dragging its title. A plain click on the title still renames the pane.</li>
+</ul>
 <h2>Improvements</h2>
 <ul>
-<li>Collapsed pane rails now open only when you ask. Double-click a rail or press ⌥R to expand it, and click it to peek at its contents. Dragging a divider no longer opens a rail by accident, and resizing the window no longer pops rails back open on its own. If a split is left with nothing but rails, one still reopens automatically so the split stays usable.</li>
-<li>Dragging a divider next to a rail now pushes the rail along at its strip width and resizes the full pane on the other side. A column that was dragged shut reopens as one unit, and a column made up only of rails now takes up one rail&#x27;s width instead of a full pane&#x27;s share.</li>
-<li>The sticky project header at the top of the sidebar now works like the row it covers. You can drag it to reorder the project, drop files or items onto it, ⌃-click it for the context menu and ⇧-click it to extend the selection. It also follows selection and row changes correctly, and VoiceOver no longer reads the project twice.</li>
-<li>When the sidebar is narrow, the worktree selection bar shows icon-only Hide and Delete buttons instead of holding the sidebar open.</li>
+<li>Dragging a divider now pushes through several panes. Once the nearest pane reaches its minimum size and snaps to a strip, the next pane starts to shrink, and so on to the edge of the split. Backing off reopens the panes that drag collapsed, and Escape cancels the drag.</li>
+<li>Rails and header-only panes now move with a divider drag instead of blocking it, so you can drag any divider that has a resizable pane on both sides.</li>
+<li>The text no longer shifts when you start editing a pane title, and the title now gets a rounded background while you edit it.</li>
+<li>The Addy robot on compaction cards, pane-reference chips and the agent menu was redrawn as an outlined pill with tall rounded eyes. It now renders sharply at any size and follows the theme color.</li>
+<li>Empty-state screens have a bolder icon and title, a smaller subtitle and more spacing around the icon.</li>
+<li>The Codex install prompt now finds npm and Homebrew in common locations like ~/.local/bin, /opt/homebrew/bin and /usr/local/bin, even when the app&#x27;s PATH doesn&#x27;t include them. This means it suggests a working install command more often.</li>
 </ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>You can drag the sidebar down to its minimum width again. Long project names and the worktree selection bar no longer keep it wide.</li>
-<li>Removing a worktree now works even if you haven&#x27;t opened its parent project&#x27;s workspace since launching Addy. Before, it failed with &quot;No git provider for parent project&quot;.</li>
+<li>Codex chats now always send an explicit speed setting. Before, a fast tier set in your own Codex config could take effect while Addy showed standard speed.</li>
+<li>Codex&#x27;s fast mode and reasoning effort settings now use the latest model list, so a long-running chat sees model updates without a restart.</li>
+<li>When strips that were opened together come back as panes, they now reopen together at an even share of the space instead of leaving slivers behind.</li>
 </ul>
 <h2>Internal Changes</h2>
 <ul>
-<li>Releases are now built on a self-hosted Mac runner, and the release DMG is built with dmgbuild so it works on a headless machine.</li>
-<li>Removed unused language-server protocol types.</li>
+<li>Tests now use a temporary data folder, so running them never reads or changes your real Addy settings or data.</li>
+<li>Session replay recording now captures the actual on-screen window and pane geometry and records the current state again at each checkpoint, which makes replays more accurate.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.94.zip" length="39708811" type="application/octet-stream" sparkle:edSignature="FYxrj47+QuUoq9KXxaWuGzWrhMUyhKtf1OImZQYVWw05/lLu8FYao0k1iCtzB3Bf7b7/chV8JDb39btGKtaHCQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791700006-1791694403.delta" sparkle:deltaFrom="1791694403" length="5215962" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="AFa69zl/JRcoGKwYskyJ7UTOVO5+MzSCPjKPuowlr2JaDCXZMWWQ8GVdWNakEFnlBdtBorYUwdCGtyvt+9o6CA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791700006-1791685437.delta" sparkle:deltaFrom="1791685437" length="7322774" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="al5qGxVK7hTT1NYOd+LdRlqF+M4qKiYWKVJ/38rk1F506N7vOUmUUWmHlgL0HVVpTz6yQrJQT8J9F8rixFhKAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.93</title>
+            <pubDate>Sat, 10 Oct 2026 22:04:06 -0700</pubDate>
+            <sparkle:version>1791694403</sparkle:version>
+            <sparkle:shortVersionString>0.93</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.93.zip" length="39588753" type="application/octet-stream" sparkle:edSignature="n64TyYnAYGesvbOMQC0LWtF6F7GzI5cij8qAMdx9r1x0knyOcCR+ZXCF0GqKtZ4O6DYIYRcRXNKkbe8ZG0pnDQ=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791694403-1791685437.delta" sparkle:deltaFrom="1791685437" length="6030922" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SUYY3UJjTmWWto4gZlLvMkVqcxhIy7oPqFFXi6x5yyKDpAu5edXx/m1DXF1OBvRxd4qFO5MFhkwtSDPST/28Dw=="/>
@@ -50,18 +70,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791685437-1791684701.delta" sparkle:deltaFrom="1791684701" length="5657282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="us7AxqBFiAX4mBVsdvR4jPBgoWb1YPdeQH6AH0YEMtXws77i819/zqJ84uEBfYgdOQk9XHHBPv5CyffBKSAFDA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791685437-1791656497.delta" sparkle:deltaFrom="1791656497" length="6166314" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="/2qYv/fjKmIMU6xrjXjinqE8uHucG/+5C2OGlI7x3Kf/D163E7rP885kjAVQY2yzYR/Hn18T24T/Jh0e7ktLAA=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.91</title>
-            <pubDate>Sun, 11 Oct 2026 02:19:45 +0000</pubDate>
-            <sparkle:version>1791684701</sparkle:version>
-            <sparkle:shortVersionString>0.91</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.91.zip" length="39516030" type="application/octet-stream" sparkle:edSignature="a1cF+pbTSRw9uqFKCtXf2upLV/O7gge+jO8f0YRDsn7xFNBbdC89tj3ioUJ4aEoqDka+yz8qrGUGSR72icahDA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791684701-1791656497.delta" sparkle:deltaFrom="1791656497" length="5285770" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="v6rh+K+WEbitv0FdRxK3MaiHhWhGbKz/2ynBxv4ZCyuMeCG2BElbqPdBd6EEg6sjjGekpxAKPYL4H/J6gcqNDA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1791684701-1791616991.delta" sparkle:deltaFrom="1791616991" length="5792658" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="teOUXjEQejSHgooy6Q8ATKDOiiE0/A72yVXq3NifOD4goZOtD3KlkSM3vOVCS8jrtyOlvaQAmlVTz/YTtlhvAg=="/>
             </sparkle:deltas>
         </item>
         <item>
