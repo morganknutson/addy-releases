@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.98</title>
-            <pubDate>Wed, 14 Oct 2026 16:57:22 -0700</pubDate>
-            <sparkle:version>1792021548</sparkle:version>
-            <sparkle:shortVersionString>0.98</sparkle:shortVersionString>
+            <title>0.99</title>
+            <pubDate>Thu, 15 Oct 2026 12:16:16 -0700</pubDate>
+            <sparkle:version>1792091073</sparkle:version>
+            <sparkle:shortVersionString>0.99</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -18,10 +18,23 @@
 <h3>What's New</h3>
 <h2>Bug Fixes</h2>
 <ul>
-<li>Fixed a crash that could happen when you closed a popped-out pane&#x27;s window, such as a browser, to dock it back in. The workspace no longer collapses to the docked pane&#x27;s width and pulls the main window below its minimum size, which used to start a resize loop that crashed the app.</li>
-<li>The main window now stays at or above its minimum size even when its contents try to make it narrower or shorter.</li>
+<li>Cmd+W now closes the current browser tab even when keyboard focus has moved out of the web view, for example after a click that didn&#x27;t take focus or a restored layout that focused a chat prompt. Before, it could close the whole browser pane.</li>
+<li>Cmd+W in a popped-out browser window closes tabs one at a time before it closes the window.</li>
+<li>A browser with only an empty start page still lets Cmd+W close the pane or window, as before.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.99.zip" length="40253518" type="application/octet-stream" sparkle:edSignature="LfTxFczA6S2n8GhvA3OCNEAKoR04q6MbnlK4LW+QK+LcsCVJfiQsebHfInM3mFFJMxCxOEBGShBh3V7QhrSSBg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792091073-1792021548.delta" sparkle:deltaFrom="1792021548" length="2893214" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="b0y9JB9wZNf2OR2/yXJuRM4dzasEEFx6JVai4E+BPIAFya0PS1jd0xFn1WDfyyGIobUPzK0SCpknHng4RmBXDg=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792091073-1792014172.delta" sparkle:deltaFrom="1792014172" length="3523710" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="oVDbPXJ2wv5f4DRj5tRmcms3m5ghSOpH+zJa6GWuEw+irqFelomywVq1pfi1z1ZUre5XHAox3yv9LYff3AQTDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.98</title>
+            <pubDate>Wed, 14 Oct 2026 16:57:22 -0700</pubDate>
+            <sparkle:version>1792021548</sparkle:version>
+            <sparkle:shortVersionString>0.98</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.98.zip" length="40253761" type="application/octet-stream" sparkle:edSignature="hpqrrp9di3rJYWT9j5sTiH07p0BrYg+umJlm/Qdq8+nLoiIfJE/c/Sv00UfH0D+2y8+KL3zsmaAYWLxXPCqwCA=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792021548-1792014172.delta" sparkle:deltaFrom="1792014172" length="3389958" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="s5w+EjptD7JY0WXQQX6SeqMYpQUymSyBOSDULmhUsO/O0aLh9ytKSWvJxU7TDl+MyP13y7kOLFGBWlqdRMieCg=="/>
@@ -38,18 +51,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792014172-1792006455.delta" sparkle:deltaFrom="1792006455" length="3952790" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QQCibxgJRcck0m7w499jF04il8UoBG3vBnf+UobmtpbBMJWqI6xfJeRANPdfeYO1S6+PErubDRlEBNFj9YZSBQ=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792014172-1791702477.delta" sparkle:deltaFrom="1791702477" length="8920994" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PCMFpQFfUHq5qI4+OtsX45H2zM1Zy/rf/0ztoQLveo2NCCJ3rEdU3FMlK3Yi4aw8NcUtsbzrq2kADSfT1DqcBA=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.96</title>
-            <pubDate>Wed, 14 Oct 2026 12:45:56 -0700</pubDate>
-            <sparkle:version>1792006455</sparkle:version>
-            <sparkle:shortVersionString>0.96</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.96.zip" length="40262555" type="application/octet-stream" sparkle:edSignature="i0SKy/FahaFeFQ2Rsz7zElBxD32dPbrCHRdUgZUqDwr4pjrKkkyyLEFyF5K9U+yPjCYorC0y+9cAUgTD7nF8Cw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792006455-1791702477.delta" sparkle:deltaFrom="1791702477" length="8930614" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="H40NR6F3Y2dduEnsdsGRu5eJXOJZN7z6+loBCgLZu0/gXy+Ii7G1RFCdVGpwl56bawxpPK56M3S+Ysrfdd9GBQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792006455-1791700006.delta" sparkle:deltaFrom="1791700006" length="8953050" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Dot2K51ZvQV6ZQBLaUWDyeccjVgThsFK7ow+nthR0qtglSsGtXpwxPbtJBb2fx6AfxH74veaGyamX47mlQLBDA=="/>
             </sparkle:deltas>
         </item>
         <item>
