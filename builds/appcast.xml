@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.99</title>
-            <pubDate>Thu, 15 Oct 2026 12:16:16 -0700</pubDate>
-            <sparkle:version>1792091073</sparkle:version>
-            <sparkle:shortVersionString>0.99</sparkle:shortVersionString>
+            <title>0.100</title>
+            <pubDate>Fri, 23 Oct 2026 12:12:41 -0700</pubDate>
+            <sparkle:version>1792781734</sparkle:version>
+            <sparkle:shortVersionString>0.100</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -16,13 +16,137 @@
   li { margin: 2px 0; }
 </style>
 <h3>What's New</h3>
+<h2>Your Other Macs</h2>
+<ul>
+<li>Click the computer switcher at the bottom of the sidebar to open another Mac&#x27;s Addy in this window, with its projects, chats, terminals, Git, Plans and other panes. Macs signed into your iCloud or Addy account connect straight away. Any other Mac must be approved by matching a pattern and words on both screens. Browser panes and localhost dev servers are forwarded so pages load as they would on that Mac.</li>
+<li>Settings → Addy Mobile is now Remote Access and covers your other Macs as well as your phone. Turn on Allow remote access there on the Mac you want to reach.</li>
+</ul>
+<h2>Orchestration</h2>
+<ul>
+<li>An agent pipeline that takes GitHub issues, Linear issues, Addy tasks or new tasks all the way to a pull request. Each item gets its own worktree and agent, then checks and an agent review, and moves through Implementing, Validating and Revising until it&#x27;s ready to merge. Addy can also merge it for you once it&#x27;s green and reviewed.</li>
+<li>The Orchestration board includes a workflow builder with playbooks, rules and quota-aware routing. Items that need you collect under Needs you, and open Addy tasks can be picked up automatically.</li>
+<li>⇧⌘O</li>
+</ul>
+<h2>Linear pane</h2>
+<ul>
+<li>Connect Linear, browse issues (including ones that aren&#x27;t in any project), and click Start work to send an issue through the pipeline or Build to work on it in a new agent chat.</li>
+<li>Model Usage pane and menu bar meter: see live session and weekly limits for each provider, your pace (&quot;in reserve&quot; or &quot;in deficit&quot;) and costs priced from Claude and Codex session logs. Addy alerts you at 80% and 95% and when you&#x27;re on pace to run out. You can add Anthropic or OpenAI admin keys to see API spend.</li>
+<li>Addy can keep running in the menu bar after you close its last window. The menu bar dropdown has Agents, Orchestration and Usage tabs and shows an amber dot when an agent is waiting on you.</li>
+</ul>
+<h2>Skills pane</h2>
+<ul>
+<li>Browse skills.sh, install skills for one project or for all of them, and use them with / in any chat (Codex uses $). Every installed skill now works with every agent Addy runs.</li>
+<li>Tasks pane is now in release builds. It has a chat-style composer that accepts pasted and dropped images, plus an Active/Completed toggle.</li>
+<li>GitHub pane is now in release builds. It lists pull requests and Actions runs, and you can now merge a pull request right from the pane and choose the merge method.</li>
+</ul>
+<h2>Steering</h2>
+<ul>
+<li>Click Steer on a queued message to send it into the turn that&#x27;s running, without stopping the agent. Messages other agents send to a busy chat are steered in the same way.</li>
+<li>You can change Claude&#x27;s thinking level and fast mode on a live session; the change applies from the next turn. Models, thinking levels and fast mode now come from Claude Code&#x27;s own catalog.</li>
+<li>Added Meta&#x27;s Muse Code as an agent backend. You can install it and sign in under Settings → Models.</li>
+<li>Voice input and read-aloud are now in release builds, with Kokoro and Qwen3 as local text-to-speech models. You can stop a reading from its message or from the pane header.</li>
+<li>A new Latest mode in the sidebar lists recent agent work first instead of grouping branches under their projects.</li>
+<li>Agent builds that share a build folder now wait in a queue instead of colliding. A waiting build shows the whole queue.</li>
+<li>Shift-Command-R in the browser clears the site&#x27;s cache and reloads the page.</li>
+<li>Open in Addy and Remix in Addy links on addy.land now open those apps directly in Addy.</li>
+<li>The Element Inspector&#x27;s Rewrite first tries Apple&#x27;s on-device model for simple text edits. It hands the edit to a cloud agent only when it can&#x27;t apply the rewrite safely.</li>
+<li>The What&#x27;s New spotlight now plays live scenes of the real UI, has a Past Updates view, and the manual gained topics for Your Other Macs, Orchestration, Linear, Skills, Model Usage, the menu bar, Voice, Steering and Models.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Pane shortcuts no longer use Control</li>
+</ul>
+<h2>Sidebar</h2>
+<ul>
+<li>⇧⌘S</li>
+</ul>
+<h2>Header</h2>
+<ul>
+<li>⇧⌘H</li>
+</ul>
+<h2>Plans</h2>
+<ul>
+<li>⌥⇧P</li>
+</ul>
+<h2>Git</h2>
+<ul>
+<li>⌥⇧G</li>
+</ul>
+<h2>Tasks</h2>
+<ul>
+<li>⌥⇧T</li>
+</ul>
+<h2>Model Usage</h2>
+<ul>
+<li>⌥⇧M</li>
+</ul>
+<h2>Chat mode</h2>
+<ul>
+<li>⌘↩</li>
+<li>When an agent spawns another agent, Addy launches the model the agent asked for. Agent work is marked done when the turn ends, along with the files the agent actually edited.</li>
+<li>Stopping a Claude turn now stops it inside the session instead of killing the process.</li>
+<li>Agent Merge now opens as a chat instead of a terminal command.</li>
+<li>Closing a pane from its rail or context menu no longer stops the agents it owns. Long pane titles are truncated instead of widening the pane.</li>
+<li>Most panes were rebuilt on shared collapsible content sections with themed headers, including Git, GitHub, Plans, Tests, Skills, Memory, Conversations, Linear, Connections, Project and Orchestration. Their controls moved into the pane headers, and titled buttons turn into icons when a header gets narrow.</li>
+<li>Chat attachments now show as tiles: a wrapping grid in sent messages and a paging strip while you write.</li>
+<li>Queued message cards have more room, an always-visible close button, icon-only Edit and Steer, and a grip you can drag from anywhere on the card.</li>
+<li>Rail strips show the agent&#x27;s color, have an Expand action, and keep clicks separate from drags more reliably.</li>
+<li>Every pane corner now has the same rounding, only one popover can be open at a time, and scrollable menus size to their rows.</li>
+<li>Every search field uses the same search glyph.</li>
+<li>Narrow segment pickers show symbols instead of labels, and question options stack in a column when they don&#x27;t fit.</li>
+<li>Diff scrolling locks to the direction a swipe starts in.</li>
+<li>Commit file diffs are indented to their path, like working-tree diffs.</li>
+<li>Restarting a recipe&#x27;s server restarts it in place and opens its page once it&#x27;s listening.</li>
+<li>Pipeline slot worktrees are marked in the sidebar and listed last.</li>
+<li>Root projects stay on main while agents work in their own worktrees.</li>
+<li>Pipeline worktrees are released on merge and their Addy tasks are completed.</li>
+<li>The theme editor is laid out as sections that link samples to their tokens. New theme tokens cover buttons, text fields, section headers, lists, tables, tooltips, agent message bubbles and eyebrow headings.</li>
+<li>The default and light themes were retuned.</li>
+<li>The phone app gained terminal keys, fast and permission modes, review panes, richer push notifications, and browser pages served through tunnels. It also has new Connections, Linear, Model Usage, Orchestration and Pull Requests panes.</li>
+<li>Hosted speech model downloads are now checked against pinned SHA-256 checksums.</li>
+<li>Models are no longer labeled &quot;(Latest)&quot;.</li>
+</ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>Cmd+W now closes the current browser tab even when keyboard focus has moved out of the web view, for example after a click that didn&#x27;t take focus or a restored layout that focused a chat prompt. Before, it could close the whole browser pane.</li>
-<li>Cmd+W in a popped-out browser window closes tabs one at a time before it closes the window.</li>
-<li>A browser with only an empty start page still lets Cmd+W close the pane or window, as before.</li>
+<li>Fixed many app hangs found by hang reports, including in</li>
+<li>Huge Git working trees and commit histories, which now page in rows</li>
+<li>Section and conversation lists, which reuse rows instead of rebuilding them</li>
+<li>Rapid card expansion</li>
+<li>Chat retiling, which now skips off-screen and collapsed panes</li>
+<li>Pane layout</li>
+<li>The memory pane</li>
+<li>The menu bar Usage tab on large usage histories</li>
+<li>Launch no longer blocks on the Keychain or on statting every project. Pipeline snapshots, connector credentials, and Addy tasks are now read and written off the main thread.</li>
+<li>Quitting can no longer hang on a Keychain flush.</li>
+<li>Pipeline commands can no longer starve Addy&#x27;s agent communication and deadlock, and storms of git and gh processes are throttled.</li>
+<li>Concurrent token refreshes no longer sign connectors out, and Linear no longer looks disconnected while it&#x27;s still signing in.</li>
+<li>Automatic pickup no longer takes back work you cancelled or picks up work that&#x27;s already finished.</li>
+<li>Question cards can still be answered after their CLI has exited, and Stop now cancels pending sends.</li>
+<li>Chat sends survive navigation, and chats no longer jump to a new scroll position during pane changes or while hidden.</li>
+<li>The workspace window keeps its launch size instead of resizing after its content loads.</li>
+<li>The sidebar keeps scrolling up while a drag hovers over the sticky project header.</li>
+<li>Headless pipeline workers no longer open web pages.</li>
+<li>Earlier worker logs are rebuilt from disk after a relaunch.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Crashes are now captured with KSCrash and uploaded with hangs and MetricKit diagnostics to telemetry.addy.md, and release dSYMs are uploaded so crash reports show symbol names. Crashes of child processes are no longer filed as Addy crashes.</li>
+<li>Pipelines, skills and model usage now sync across your Macs through iCloud.</li>
+<li>SwiftTerm was updated to 2d49947.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.100.zip" length="60318384" type="application/octet-stream" sparkle:edSignature="wdl3PdJ1vdGa/1+I9kFcYMrrGFzV28mgW4FsFmZW0gCFEa88sYDWHW2hje9cg6iiiJjfIYLvmfGvqmuPU7mnDw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792781734-1792091073.delta" sparkle:deltaFrom="1792091073" length="27915222" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9TSoiLkOUcWMEZMu6wSron4WEitVtmX5p5/wjPVbs/FpE1sOgMSFgYwHUspPFGzXsns0DOnekMO/Psk7MZkcBA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792781734-1792021548.delta" sparkle:deltaFrom="1792021548" length="27897946" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fsu4PoH0vnO0kNZmgPnWTTEf42OFudsfSXpvfS5LzGeSMUKOHYf5Ewa1R59RYh3fOdD2k46tUt7VNWdMYpWmBQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.99</title>
+            <pubDate>Thu, 15 Oct 2026 12:16:16 -0700</pubDate>
+            <sparkle:version>1792091073</sparkle:version>
+            <sparkle:shortVersionString>0.99</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.99.zip" length="40253518" type="application/octet-stream" sparkle:edSignature="LfTxFczA6S2n8GhvA3OCNEAKoR04q6MbnlK4LW+QK+LcsCVJfiQsebHfInM3mFFJMxCxOEBGShBh3V7QhrSSBg=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792091073-1792021548.delta" sparkle:deltaFrom="1792021548" length="2893214" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="b0y9JB9wZNf2OR2/yXJuRM4dzasEEFx6JVai4E+BPIAFya0PS1jd0xFn1WDfyyGIobUPzK0SCpknHng4RmBXDg=="/>
@@ -39,18 +163,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792021548-1792014172.delta" sparkle:deltaFrom="1792014172" length="3389958" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="s5w+EjptD7JY0WXQQX6SeqMYpQUymSyBOSDULmhUsO/O0aLh9ytKSWvJxU7TDl+MyP13y7kOLFGBWlqdRMieCg=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792021548-1792006455.delta" sparkle:deltaFrom="1792006455" length="4061366" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ShxU9kR/gb8KTQTobG/Up3PLSRUEulsI3rtqJ1dGRmid7aH5CVLjfsADpNuV6K5bsdqkJD7+a00J3TNVOMGbAg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.97</title>
-            <pubDate>Wed, 14 Oct 2026 14:54:20 -0700</pubDate>
-            <sparkle:version>1792014172</sparkle:version>
-            <sparkle:shortVersionString>0.97</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.97.zip" length="40251760" type="application/octet-stream" sparkle:edSignature="tojAQFsg23+E2jznXioiJadfS3WPNc6uIduZnoT4pjPXiY83swBZjWDL0t1F0FDtbpcnfOYpBCA67/4QjgSuAQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792014172-1792006455.delta" sparkle:deltaFrom="1792006455" length="3952790" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QQCibxgJRcck0m7w499jF04il8UoBG3vBnf+UobmtpbBMJWqI6xfJeRANPdfeYO1S6+PErubDRlEBNFj9YZSBQ=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792014172-1791702477.delta" sparkle:deltaFrom="1791702477" length="8920994" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PCMFpQFfUHq5qI4+OtsX45H2zM1Zy/rf/0ztoQLveo2NCCJ3rEdU3FMlK3Yi4aw8NcUtsbzrq2kADSfT1DqcBA=="/>
             </sparkle:deltas>
         </item>
         <item>
