@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.101</title>
-            <pubDate>Fri, 23 Oct 2026 13:49:07 -0700</pubDate>
-            <sparkle:version>1792787556</sparkle:version>
-            <sparkle:shortVersionString>0.101</sparkle:shortVersionString>
+            <title>0.102</title>
+            <pubDate>Fri, 23 Oct 2026 15:57:31 -0700</pubDate>
+            <sparkle:version>1792795202</sparkle:version>
+            <sparkle:shortVersionString>0.102</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -16,20 +16,26 @@
   li { margin: 2px 0; }
 </style>
 <h3>What's New</h3>
-<h2>New Features</h2>
-<ul>
-<li>Orchestration task cards have a new Ask button, which appears when you hover over a card. It opens a chat agent next to the Orchestration pane that reads the task&#x27;s worker logs, reports, review findings, failing checks, history and pull request, then tells you what the task is doing, whether it&#x27;s stuck or needs you, and what will likely happen next. The agent only looks and reports; it doesn&#x27;t edit, push, merge or change the task.</li>
-<li>Playbooks can now ship a release when their work merges. Turn on &quot;Ship a release after merging&quot; in a playbook&#x27;s shipping rules and Addy adds a release marker ([release] by default, customizable under &quot;Release marker&quot;) to the merge commit&#x27;s subject, so a release workflow watching the base branch can pick it up. This works with squash and merge commits but not rebase, since a rebase creates no merge commit.</li>
-</ul>
-<h2>Improvements</h2>
-<ul>
-<li>When releases are on, the playbook&#x27;s summary line reads &quot;ships a release&quot;. Playbooks and in-progress tasks saved before this option existed still load, with releases turned off.</li>
-</ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>Fixed a crash (SIGABRT) that could occur at launch while Addy checked provider status and usage limits. These checks still run in parallel, but the conditions that caused the crash are gone.</li>
+<li>The GitHub pane no longer says the gh CLI is missing when you open Addy from Finder or the Dock. Addy now uses your login shell&#x27;s environment and also checks common install locations like Homebrew. This covers pull requests, GitHub Actions and other GitHub commands.</li>
+<li>When you show another Mac&#x27;s workspace, this Mac&#x27;s sidebar project list and panes are now fully hidden. Before, they could show through translucent themes or take clicks. This Mac&#x27;s panes keep running in the background, so switching back is still instant.</li>
+<li>Switching back from another Mac returns keyboard focus to the pane you were typing in, if that pane is still visible.</li>
+<li>The Ask button on Orchestration task cards now works for tasks that were already on the board when the pane opened. Before, clicking it did nothing.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.102.zip" length="60380300" type="application/octet-stream" sparkle:edSignature="EPiM09ntsdPeD51DLcoxJ6vn6goqJq9+dqzO53FEC35qkhZ1rO7NMZFXahFZamrqZgq1Bq6D7Gb1odGxPOiSCg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792795202-1792787556.delta" sparkle:deltaFrom="1792787556" length="6046538" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LAFWZiXBBI+CSYTogZkHtcmlhx/2ZQoVrzzhnUSGAkNdG1mjQdbaJv9h45Udq+ao1rnYAU72FEvnMU8mbwY+Ag=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792795202-1792781734.delta" sparkle:deltaFrom="1792781734" length="7400590" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jahXoQO0bzXBrPFRvumvXgcDK9jlUiom5wemc6z8yhVSNr5N/8oMMRS2Nh6SuF9UExqoATRuFDX+wDpBwNKkDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.101</title>
+            <pubDate>Fri, 23 Oct 2026 13:49:07 -0700</pubDate>
+            <sparkle:version>1792787556</sparkle:version>
+            <sparkle:shortVersionString>0.101</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.101.zip" length="60377749" type="application/octet-stream" sparkle:edSignature="3zH0cQo49YfSv3QBJnXhmtRg3nXTD0MBj2mNFStx/MBVA2OucB5ezgknPy8ncDn0RCLja8vJVxvZ9YCCAPMJBQ=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792787556-1792781734.delta" sparkle:deltaFrom="1792781734" length="7014914" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="q6QJr+STClov44Rahb+2CGn9+URsWoh2DMoL55M9Y3aqSua6uB57EbLNTfzZ8zA0A3qW94qsOW+0bVIqWca1Bg=="/>
@@ -46,18 +52,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792781734-1792091073.delta" sparkle:deltaFrom="1792091073" length="27915222" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9TSoiLkOUcWMEZMu6wSron4WEitVtmX5p5/wjPVbs/FpE1sOgMSFgYwHUspPFGzXsns0DOnekMO/Psk7MZkcBA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792781734-1792021548.delta" sparkle:deltaFrom="1792021548" length="27897946" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fsu4PoH0vnO0kNZmgPnWTTEf42OFudsfSXpvfS5LzGeSMUKOHYf5Ewa1R59RYh3fOdD2k46tUt7VNWdMYpWmBQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.99</title>
-            <pubDate>Thu, 15 Oct 2026 12:16:16 -0700</pubDate>
-            <sparkle:version>1792091073</sparkle:version>
-            <sparkle:shortVersionString>0.99</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.99.zip" length="40253518" type="application/octet-stream" sparkle:edSignature="LfTxFczA6S2n8GhvA3OCNEAKoR04q6MbnlK4LW+QK+LcsCVJfiQsebHfInM3mFFJMxCxOEBGShBh3V7QhrSSBg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792091073-1792021548.delta" sparkle:deltaFrom="1792021548" length="2893214" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="b0y9JB9wZNf2OR2/yXJuRM4dzasEEFx6JVai4E+BPIAFya0PS1jd0xFn1WDfyyGIobUPzK0SCpknHng4RmBXDg=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792091073-1792014172.delta" sparkle:deltaFrom="1792014172" length="3523710" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="oVDbPXJ2wv5f4DRj5tRmcms3m5ghSOpH+zJa6GWuEw+irqFelomywVq1pfi1z1ZUre5XHAox3yv9LYff3AQTDA=="/>
             </sparkle:deltas>
         </item>
         <item>
