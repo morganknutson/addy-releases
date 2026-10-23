@@ -1,0 +1,21 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Orchestration task cards have a new Ask button, which appears when you hover over a card. It opens a chat agent next to the Orchestration pane that reads the task&#x27;s worker logs, reports, review findings, failing checks, history and pull request, then tells you what the task is doing, whether it&#x27;s stuck or needs you, and what will likely happen next. The agent only looks and reports; it doesn&#x27;t edit, push, merge or change the task.</li>
+<li>Playbooks can now ship a release when their work merges. Turn on &quot;Ship a release after merging&quot; in a playbook&#x27;s shipping rules and Addy adds a release marker ([release] by default, customizable under &quot;Release marker&quot;) to the merge commit&#x27;s subject, so a release workflow watching the base branch can pick it up. This works with squash and merge commits but not rebase, since a rebase creates no merge commit.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>When releases are on, the playbook&#x27;s summary line reads &quot;ships a release&quot;. Playbooks and in-progress tasks saved before this option existed still load, with releases turned off.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed a crash (SIGABRT) that could occur at launch while Addy checked provider status and usage limits. These checks still run in parallel, but the conditions that caused the crash are gone.</li>
+</ul>
