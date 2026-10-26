@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.104</title>
-            <pubDate>Mon, 26 Oct 2026 00:17:58 -0700</pubDate>
-            <sparkle:version>1792998011</sparkle:version>
-            <sparkle:shortVersionString>0.104</sparkle:shortVersionString>
+            <title>0.105</title>
+            <pubDate>Mon, 26 Oct 2026 12:32:55 -0700</pubDate>
+            <sparkle:version>1793042136</sparkle:version>
+            <sparkle:shortVersionString>0.105</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -16,37 +16,39 @@
   li { margin: 2px 0; }
 </style>
 <h3>What's New</h3>
-<h2>New Features</h2>
-<ul>
-<li>Connect GitHub from inside Addy. The Pull Requests and Actions panes, failed clones, and a new GitHub card in Settings → Integrations now show a Connect GitHub button. If the GitHub CLI is missing, Addy installs it first (no Homebrew needed). It then opens GitHub&#x27;s sign-in page in your browser, shows the one-time code and copies it to your clipboard, so you no longer have to run gh auth login in a terminal.</li>
-<li>Retry failed clones automatically. If a clone fails because of GitHub access, the error screen now offers Connect GitHub and tries the clone again once you&#x27;re signed in.</li>
-<li>New one-page setup for a new Mac. A single &quot;Setting Up Your Mac&quot; page replaces the separate &quot;Install Git&quot; and &quot;Install Agents&quot; steps. Tools start installing as soon as the page appears, so you can keep going while they finish. Git and GitHub rows show a checkmark and disappear when they&#x27;re done.</li>
-<li>Setup picks up where you left off. If you quit setup partway through, it reopens at the furthest page you reached.</li>
-<li>Clearer Git install during setup. Addy watches Apple&#x27;s Command Line Tools installer and explains that downloading Git takes about 10 minutes. A &quot;Show Installer&quot; button brings Apple&#x27;s window back if it ended up behind Addy.</li>
-<li>Agent sign-in without a terminal. Claude Code and Codex now sign in through the browser right from setup, and each agent says hello once it&#x27;s signed in so you can see it working.</li>
-</ul>
 <h2>Improvements</h2>
 <ul>
-<li>Codex installs on a fresh Mac. Codex now installs with OpenAI&#x27;s standalone installer, so it no longer needs npm or Homebrew.</li>
-<li>Sidebar Projects / Latest switch is now optional. The switch is hidden by default and the sidebar stays on Projects. A new &quot;Projects / Latest switch&quot; setting brings it back, along with the mode you last used.</li>
-<li>Fewer local network prompts. The computer switcher at the bottom of the sidebar only appears once Remote Access is on, or while you&#x27;re viewing another Mac. Addy also no longer searches for nearby Macs until Remote Access is on, so a fresh install won&#x27;t trigger macOS&#x27;s local network permission prompt.</li>
-<li>Project import only appears when needed. Setup searches for Git projects in the background, and the import page only appears if it finds some.</li>
-<li>Start page colors. The browser start page now uses Addy&#x27;s yellow.</li>
-<li>New icon. The app icon was updated.</li>
+<li>Language servers now start the first time you open a file in that language in the code editor, not when a project opens. Projects where you never open the editor no longer pay for a server indexing the whole workspace, and files you opened while a server was starting are passed to it once it&#x27;s ready.</li>
+<li>Language servers now get up to 60 seconds to finish their first start instead of 5. Slow cold starts, like sourcekit-lsp resolving a Swift package, no longer fail. A server that never finishes starting is now shut down instead of being left running unused.</li>
+<li>Installing plugins now adds the official Claude plugin marketplace first if Claude Code doesn&#x27;t already have it. Plugin installs no longer fail on a fresh Claude Code setup.</li>
+<li>The plugin installer now finds the Claude CLI the same way the rest of Addy does and uses your login-shell environment. If an install fails or takes longer than two minutes, the CLI&#x27;s output is logged.</li>
+<li>The &quot;About&quot; picker in the Feedback window now gets a wide slot so it no longer collapses.</li>
 </ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>⌘Q works on the access screen. ⌘Q now quits Addy while the access sheet is showing; before, it only beeped.</li>
-<li>Restored terminals stay plain. Terminal panes restored from a saved layout no longer relaunch the default chat model. Only terminals that were actually running a model CLI start it again.</li>
-<li>Sidebar drag crash fixed. Addy no longer crashes when a drag ends over the sidebar.</li>
-<li>Browser inspector fix. The inspector no longer fails while reading React component trees that contain fragment, root or text nodes.</li>
+<li>A fixed-width or pinned pane now keeps the size you last dragged it to. Previously a window resize, a layout pass or putting the pane on the rail could overwrite that size, so it sometimes reopened only 36pt wide.</li>
+<li>When a layout leaves panes below their minimum width and redistributing can&#x27;t fix it, Addy now stops retrying the same redistribution on every resize.</li>
+<li>Addy now detects which plugins are already installed correctly by reading the current format of Claude Code&#x27;s installed_plugins.json.</li>
+<li>&quot;Sync Now&quot; on a new iCloud account no longer fails before Addy&#x27;s iCloud zone has been created. It now treats iCloud as empty and syncs normally.</li>
 </ul>
 <h2>Internal Changes</h2>
 <ul>
-<li>Faster sync lookups. Sync now looks up projects from the list already in memory instead of reading it from disk each time.</li>
-<li>Release build fix. Release scripts now ask SwiftPM where it put the universal build instead of guessing the path.</li>
+<li>Anonymous telemetry now covers clicks on the pane rail, divider drags and the layout solver&#x27;s decisions, plus layouts where panes stay too narrow. These events contain only counts, pane types and outcomes, never pane names.</li>
+<li>Session replays now record double-click counts and flag stuck layouts. Language server failures are now reported as separate events for failed launches, failed starts and crashes.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.105.zip" length="66901821" type="application/octet-stream" sparkle:edSignature="sJUCxj4NQvQqUYRciFIAT6YPjd8jsDxDfcbHmBvEJIC9m6Kwk0Z21KajYLMNmIRNmdS5l/rSgGadx2YVrFOhAQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1793042136-1792998011.delta" sparkle:deltaFrom="1792998011" length="7147846" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="y9isJyd4uYHpF4i6MS5RofZyaGIEFMsXwYAROfyxy7yczn/BOwbxIeZpNYD2/lTfOHtdd6joWcdhnDwTnx/cCA=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1793042136-1792977632.delta" sparkle:deltaFrom="1792977632" length="8698614" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8oa96famYEPOE278mUj23omsqz9G607C0Rx3sf70B0G0SrKgk9U/WGeYE5R2A4t/mkbE3stAbz15ioCbGjagAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.104</title>
+            <pubDate>Mon, 26 Oct 2026 00:17:58 -0700</pubDate>
+            <sparkle:version>1792998011</sparkle:version>
+            <sparkle:shortVersionString>0.104</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.104.zip" length="66873711" type="application/octet-stream" sparkle:edSignature="FyVVwJRIw3Njhla9rkfa/j3nFuXcM4IU1hJtj+wIWiibaXNblVBchjUx141odgy3DsQHlJMmdZq422r8S2ZZDg=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792998011-1792977632.delta" sparkle:deltaFrom="1792977632" length="8311342" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dK5FZ6zfQw6fflxXpx5XtCBiL3pXFg7O1o5metxWuvn8Ta7jlBqmli0feZmoev2VoKb1KaSRENMR5uyhCKUODA=="/>
@@ -63,18 +65,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792977632-1792795202.delta" sparkle:deltaFrom="1792795202" length="17089858" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LVGrkjKt+aWWTlShBJ99S+76gw2ApP78HDXGgK7T7O/l8vRjH5U5cMCAKL0Spxmc9EVHK4gA5gEgGAV+/5/VDg=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792977632-1792787556.delta" sparkle:deltaFrom="1792787556" length="17150266" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="L/vBMT/M/q+ASBTVeqy/1fsU8R5It4vZxjq+aiGY6RmfOiyUjxyflKVmhKehTJx9zSgUNWXqeM+fxQa9kd+4Dg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.102</title>
-            <pubDate>Fri, 23 Oct 2026 15:57:31 -0700</pubDate>
-            <sparkle:version>1792795202</sparkle:version>
-            <sparkle:shortVersionString>0.102</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.102.zip" length="60380300" type="application/octet-stream" sparkle:edSignature="EPiM09ntsdPeD51DLcoxJ6vn6goqJq9+dqzO53FEC35qkhZ1rO7NMZFXahFZamrqZgq1Bq6D7Gb1odGxPOiSCg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792795202-1792787556.delta" sparkle:deltaFrom="1792787556" length="6046538" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LAFWZiXBBI+CSYTogZkHtcmlhx/2ZQoVrzzhnUSGAkNdG1mjQdbaJv9h45Udq+ao1rnYAU72FEvnMU8mbwY+Ag=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792795202-1792781734.delta" sparkle:deltaFrom="1792781734" length="7400590" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jahXoQO0bzXBrPFRvumvXgcDK9jlUiom5wemc6z8yhVSNr5N/8oMMRS2Nh6SuF9UExqoATRuFDX+wDpBwNKkDA=="/>
             </sparkle:deltas>
         </item>
         <item>

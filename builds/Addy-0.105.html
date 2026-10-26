@@ -1,0 +1,28 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>Improvements</h2>
+<ul>
+<li>Language servers now start the first time you open a file in that language in the code editor, not when a project opens. Projects where you never open the editor no longer pay for a server indexing the whole workspace, and files you opened while a server was starting are passed to it once it&#x27;s ready.</li>
+<li>Language servers now get up to 60 seconds to finish their first start instead of 5. Slow cold starts, like sourcekit-lsp resolving a Swift package, no longer fail. A server that never finishes starting is now shut down instead of being left running unused.</li>
+<li>Installing plugins now adds the official Claude plugin marketplace first if Claude Code doesn&#x27;t already have it. Plugin installs no longer fail on a fresh Claude Code setup.</li>
+<li>The plugin installer now finds the Claude CLI the same way the rest of Addy does and uses your login-shell environment. If an install fails or takes longer than two minutes, the CLI&#x27;s output is logged.</li>
+<li>The &quot;About&quot; picker in the Feedback window now gets a wide slot so it no longer collapses.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>A fixed-width or pinned pane now keeps the size you last dragged it to. Previously a window resize, a layout pass or putting the pane on the rail could overwrite that size, so it sometimes reopened only 36pt wide.</li>
+<li>When a layout leaves panes below their minimum width and redistributing can&#x27;t fix it, Addy now stops retrying the same redistribution on every resize.</li>
+<li>Addy now detects which plugins are already installed correctly by reading the current format of Claude Code&#x27;s installed_plugins.json.</li>
+<li>&quot;Sync Now&quot; on a new iCloud account no longer fails before Addy&#x27;s iCloud zone has been created. It now treats iCloud as empty and syncs normally.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Anonymous telemetry now covers clicks on the pane rail, divider drags and the layout solver&#x27;s decisions, plus layouts where panes stay too narrow. These events contain only counts, pane types and outcomes, never pane names.</li>
+<li>Session replays now record double-click counts and flag stuck layouts. Language server failures are now reported as separate events for failed launches, failed starts and crashes.</li>
+</ul>
