@@ -1,0 +1,38 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Connect GitHub from inside Addy. The Pull Requests and Actions panes, failed clones, and a new GitHub card in Settings → Integrations now show a Connect GitHub button. If the GitHub CLI is missing, Addy installs it first (no Homebrew needed). It then opens GitHub&#x27;s sign-in page in your browser, shows the one-time code and copies it to your clipboard, so you no longer have to run gh auth login in a terminal.</li>
+<li>Retry failed clones automatically. If a clone fails because of GitHub access, the error screen now offers Connect GitHub and tries the clone again once you&#x27;re signed in.</li>
+<li>New one-page setup for a new Mac. A single &quot;Setting Up Your Mac&quot; page replaces the separate &quot;Install Git&quot; and &quot;Install Agents&quot; steps. Tools start installing as soon as the page appears, so you can keep going while they finish. Git and GitHub rows show a checkmark and disappear when they&#x27;re done.</li>
+<li>Setup picks up where you left off. If you quit setup partway through, it reopens at the furthest page you reached.</li>
+<li>Clearer Git install during setup. Addy watches Apple&#x27;s Command Line Tools installer and explains that downloading Git takes about 10 minutes. A &quot;Show Installer&quot; button brings Apple&#x27;s window back if it ended up behind Addy.</li>
+<li>Agent sign-in without a terminal. Claude Code and Codex now sign in through the browser right from setup, and each agent says hello once it&#x27;s signed in so you can see it working.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Codex installs on a fresh Mac. Codex now installs with OpenAI&#x27;s standalone installer, so it no longer needs npm or Homebrew.</li>
+<li>Sidebar Projects / Latest switch is now optional. The switch is hidden by default and the sidebar stays on Projects. A new &quot;Projects / Latest switch&quot; setting brings it back, along with the mode you last used.</li>
+<li>Fewer local network prompts. The computer switcher at the bottom of the sidebar only appears once Remote Access is on, or while you&#x27;re viewing another Mac. Addy also no longer searches for nearby Macs until Remote Access is on, so a fresh install won&#x27;t trigger macOS&#x27;s local network permission prompt.</li>
+<li>Project import only appears when needed. Setup searches for Git projects in the background, and the import page only appears if it finds some.</li>
+<li>Start page colors. The browser start page now uses Addy&#x27;s yellow.</li>
+<li>New icon. The app icon was updated.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>⌘Q works on the access screen. ⌘Q now quits Addy while the access sheet is showing; before, it only beeped.</li>
+<li>Restored terminals stay plain. Terminal panes restored from a saved layout no longer relaunch the default chat model. Only terminals that were actually running a model CLI start it again.</li>
+<li>Sidebar drag crash fixed. Addy no longer crashes when a drag ends over the sidebar.</li>
+<li>Browser inspector fix. The inspector no longer fails while reading React component trees that contain fragment, root or text nodes.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Faster sync lookups. Sync now looks up projects from the list already in memory instead of reading it from disk each time.</li>
+<li>Release build fix. Release scripts now ask SwiftPM where it put the universal build instead of guessing the path.</li>
+</ul>
