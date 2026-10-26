@@ -1,0 +1,99 @@
+<style>
+  body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
+  h3 { margin: 0 0 8px; font-size: 14px; }
+  h2 { margin: 0 0 8px; font-size: 12px; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+<h3>What's New</h3>
+<h2>New Features</h2>
+<ul>
+<li>Run GitHub Actions workflows from Addy. The Actions tab in the GitHub pane has a new Run Workflow button for any workflow with a workflow_dispatch trigger. Pick a branch or tag and fill in the workflow&#x27;s inputs; Run stays disabled until every required input is valid, and the form explains any refusal from GitHub without losing what you typed. Past runs offer &quot;Run Workflow Again…&quot;.</li>
+<li>Move an agent to another project by dragging its pane onto the sidebar. The project row it would land on highlights while you drag. The agent and any sub-agents it started move together, resuming their sessions in the new folder, and a move requested mid-turn waits until the agent is idle.</li>
+<li>Agents can move themselves into a worktree or another project without switching your view. If the move leaves behind a starter chat you never used, Addy closes it.</li>
+<li>Pasting a worktree into the chat composer attaches it as a worktree card showing its name and branch. Sending the message connects the worktree to that agent.</li>
+<li>Support for Claude&#x27;s /goal. The goal shows as a pinned card in the chat, and the transcript records when it is set, when a check finds it unmet, and when it is cleared. The goal is kept across relaunches. Start Goal… and Loop… are also available from the new Agent Tools menu.</li>
+<li>Skills and agent commands become chips in the composer. They appear as colored pills with their icon, and skills and tools use different colors so you can tell them apart at a glance.</li>
+<li>Send feedback from inside the app. Use Feedback → Send Feedback… to choose a kind, write a message and send it. If sending fails, you can resend without the report being duplicated.</li>
+<li>Quota card under usage checks. When an agent checks model usage, the provider&#x27;s quota card from the Model Usage pane appears under the tool card and keeps updating while it&#x27;s on screen.</li>
+</ul>
+<h2>Improvements</h2>
+<ul>
+<li>Worktree connections now apply to one agent. Connecting a worktree affects only the agent pane you connect it from, not every agent in the project. Worktrees granted to the whole project still count for all of its agents.</li>
+<li>Reworked pane menu</li>
+<li>Pane colors are shown inline.</li>
+<li>The new Agent Tools submenu carries the running CLI&#x27;s logo, and the old Tools item is now &quot;Addy Tools&quot;.</li>
+<li>Paste Worktree or Connect Worktree… sits with the workspace items.</li>
+<li>Pin, Collapse to Rail, Pop Out to Window and Return to Workspace are grouped just above Close.</li>
+<li>Servers popover. Servers now open in a popover with inline Start/Stop, Show Pane and Open Page buttons. Rows update in place when a server stops or exits.</li>
+<li>Browser pane behaves more like Safari</li>
+<li>Fullscreen video works, including YouTube&#x27;s fullscreen button.</li>
+<li>AirPlay is enabled.</li>
+<li>Sites receive a Safari user agent instead of a degraded page.</li>
+<li>Pages animate at your display&#x27;s full refresh rate instead of being capped near 60 fps.</li>
+<li>The browser stays smoother on busy pages.</li>
+<li>Browser tab and URL field</li>
+<li>Browser tabs take their tint from the top edge of the visible page.</li>
+<li>Opening a new tab puts focus in the URL field.</li>
+<li>Menu bar</li>
+<li>The dropdown reopens on the tab you last used.</li>
+<li>The menu bar meter follows the selected Usage tab.</li>
+<li>The Usage tab has a compact quota summary with pace lines, cost tiles, credits, and Refresh / Open Model Usage buttons.</li>
+<li>Work board&#x27;s Done section</li>
+<li>You can page through older finished items with Show more / Show newer instead of losing everything past 15.</li>
+<li>It no longer builds every finished card up front.</li>
+<li>Plan descriptions render as proper documents and no longer repeat the card&#x27;s own content.</li>
+<li>Shared Markdown editor and renderer</li>
+<li>The Notepad is built on Scribl&#x27;s shared Markdown editor, and Memory docs use the live editor.</li>
+<li>Skills, plans, Linear, the manual and previews render with the same Markdown renderer.</li>
+<li>Code and plan reviews redesigned</li>
+<li>Reviews were rebuilt with the standard content sections, and progress dots now sit beside the review&#x27;s title.</li>
+<li>Finding details are only prepared when you open them.</li>
+<li>Permission and question requests and connection notices were redesigned to match the rest of the chat.</li>
+<li>Panes use their own icons everywhere they appear, and redundant headings were removed from the Conversations, Model Usage, Plans and Tests panes.</li>
+<li>Empty states and sign-in: empty states stay centered in their list, and Linear&#x27;s sign-in is now an empty state.</li>
+</ul>
+<h2>Light theme</h2>
+<ul>
+<li>The bundled light palette was retuned, and controls now blend with the fill of the surface behind them.</li>
+<li>Rails are drawn as a single raised surface with their title and controls. Squeezed rails shorten their titles instead of breaking the layout.</li>
+<li>Agent-link plug: collapsed (railed) panes now show it, and agent links can end there.</li>
+<li>Terminals now run as xterm-256color.</li>
+</ul>
+<h2>Element inspector</h2>
+<ul>
+<li>Its property list now scrolls.</li>
+<li>What&#x27;s New has new splash and vertical mockup transitions, plus manual topics for Goals, Sources &amp; Playbooks, and Notepad.</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed a crash when reading output from git processes.</li>
+<li>Browser downloads no longer freeze the app for seconds. Files are saved to a private folder first and then moved into ~/Downloads in the background.</li>
+<li>Closing the main window no longer destroys it, so it comes back correctly when reopened.</li>
+<li>Fixed several main-thread hangs</li>
+<li>Large tool output in remote transcripts is now trimmed without scanning the whole text.</li>
+<li>Remote polling no longer converts entire chats on every tick or resolves every worktree path each time.</li>
+<li>The conversation index is saved in the background.</li>
+<li>Chat scrolling and resizing are smoother: reloading rows and re-anchoring no longer force a layout of the whole window, and width changes wait for AppKit&#x27;s layout pass.</li>
+<li>The Tests pane only rebuilds rows that changed during live progress and keeps existing suite sections in place, so large test runs stay responsive.</li>
+<li>The browser&#x27;s network log no longer slows down on pages that make many requests to the same URL.</li>
+<li>Fixed layout problems</li>
+<li>Attachment tiles keep their size with long file names, and the composer&#x27;s attachment strip fits its items.</li>
+<li>The composer leaves room for the send button.</li>
+<li>Nested cards expand to the right height.</li>
+<li>Section chevrons are hidden when there&#x27;s nothing to collapse.</li>
+<li>When a row overflows, the layout solver can now close a whole column instead of leaving the panes squeezed.</li>
+<li>A focused text field now uses the theme from the start, not only after the first keystroke.</li>
+<li>Menu bar Usage buttons now show a fallback icon when their own icon is missing.</li>
+</ul>
+<h2>Removed</h2>
+<ul>
+<li>The Figma pane and built-in Figma integration were removed, including their settings and agent tools.</li>
+<li>The Release Notes pane was removed.</li>
+</ul>
+<h2>Internal Changes</h2>
+<ul>
+<li>Hang detection now measures from an unanswered main-thread ping, for more accurate freeze reports.</li>
+<li>Onboarding now records which step people reach and where they leave.</li>
+<li>The telemetry device name is looked up once, off the main thread.</li>
+</ul>
