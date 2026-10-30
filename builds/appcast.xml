@@ -3,10 +3,10 @@
     <channel>
         <title>Addy</title>
         <item>
-            <title>0.106</title>
-            <pubDate>Mon, 26 Oct 2026 14:17:53 -0700</pubDate>
-            <sparkle:version>1793048424</sparkle:version>
-            <sparkle:shortVersionString>0.106</sparkle:shortVersionString>
+            <title>0.107</title>
+            <pubDate>Thu, 29 Oct 2026 23:56:53 -0700</pubDate>
+            <sparkle:version>1793342352</sparkle:version>
+            <sparkle:shortVersionString>0.107</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[<style>
   body { font-family: -apple-system, sans-serif; font-size: 13px; line-height: 1.5; padding: 12px; }
@@ -18,18 +18,40 @@
 <h3>What's New</h3>
 <h2>New Features</h2>
 <ul>
-<li>Settings → Remote Access has a new &quot;Install Addy Mobile&quot; row for joining the Addy Mobile beta on TestFlight. Click &quot;Show QR code&quot; to get a code you can scan with your iPhone, along with step-by-step instructions, or use &quot;Copy link&quot; or &quot;Open in browser&quot;.</li>
+<li>New ⌘K search (View → Search Chats and Projects…) covers every project in the sidebar and every chat inside them. Project names match fuzzily and chat titles match as you type. Matches in message text appear a moment later with an excerpt, and closing the palette puts focus back where it was.</li>
+<li>Chat footers can show a Commit button. It tells the agent to commit only the changes it made in that conversation, leaving other agents&#x27; and your own uncommitted edits alone, and never to push, amend, rebase or switch branches. Turn it on in Settings with the new &quot;Commit button&quot; toggle. The button is disabled while the agent is busy.</li>
 </ul>
 <h2>Improvements</h2>
 <ul>
-<li>The &quot;Pair a phone&quot; section in Remote Access settings now explains that Addy Mobile finds a nearby Mac by itself. The one-time pairing code is now behind &quot;Pair manually&quot;, for when the Mac doesn&#x27;t show up, and the connection status now appears under the &quot;Allow remote access&quot; switch.</li>
-<li>When an automatic CLI update keeps failing, Addy now waits longer between attempts instead of retrying every hour. The wait doubles after each failure in a row, up to once a day, and goes back to normal after the next successful update.</li>
+<li>Git history, GitHub Actions runs and Linear issue lists load more as you scroll to the end. Git history used to stop at 20 commits and Actions at 40 runs, and Linear needed a &quot;Show more&quot; button. If a Linear page fails to load, the reason appears under the issues with a Retry button.</li>
+<li>The Done section of the work board now lists your project&#x27;s full history as light rows that load as you scroll. Each row shows the item&#x27;s state, source and playbook, and expands to show its details and actions.</li>
+<li>In a wide chat pane, the footer and composer now float over the bottom of the transcript at a fixed width, and the transcript scrolls underneath. In narrow panes the footer stays docked edge to edge.</li>
+<li>Long transcripts scroll and resize more smoothly.</li>
+<li>Content is padded and spaced the same way in every pane list and scrolling pane, so sections line up from pane to pane.</li>
+<li>The Git pane&#x27;s Commit button now has a commit icon.</li>
 </ul>
 <h2>Bug Fixes</h2>
 <ul>
-<li>Failed automatic CLI updates now show the real reason they failed. Before, updaters that print their error to normal output, such as cursor-agent, showed no useful message, and the cause at the end of long installer logs like npm&#x27;s could be cut off.</li>
+<li>Model Usage no longer shows repeated Keychain password dialogs each time Claude Code updates its stored login. If Addy can&#x27;t read the login without asking, the Claude card shows an &quot;Allow Access&quot; button, and clicking it once brings up the macOS password dialog.</li>
+<li>A chat streaming in a hidden project or sub-agent pane no longer slows the whole window for seconds at a time.</li>
+<li>A brief error or rate limit from a connector&#x27;s sign-in server no longer signs you out of that connector. Addy keeps the sign-in and tries again on the next request; only a real rejection asks you to sign in again.</li>
+<li>A Mac whose Addy data was reset no longer shows up twice in the remote Mac switcher. Its new entry now replaces the old one.</li>
+<li>The remove badge on attachment thumbnails in the composer is no longer clipped, and a click anywhere near it removes the attachment.</li>
+<li>A running activity chip no longer loses its animation when the theme refreshes.</li>
 </ul>
 ]]></description>
+            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.107.zip" length="67191165" type="application/octet-stream" sparkle:edSignature="snLlxfKkbGWCvMbL0fgvGZ16TQNtVVEp8ti1Rc2drtuSoBOXql7DT6NG0ItnMoFX+KaWzTH2XUeLH7c2aoMNCw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1793342352-1793048424.delta" sparkle:deltaFrom="1793048424" length="9747894" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mQnzkose7JKLJKqICdnbhPNJU2orFBr+IhFcTWgDt/Eud4ZoJmi5MNOFk5/CGNs1o2QLNh4w7fsdDD9s8/oJBQ=="/>
+                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1793342352-1793042136.delta" sparkle:deltaFrom="1793042136" length="9877994" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="OniKrfMJy2SscTH8EiV8sscjDkHsRcGi3VwpmJKUSsUQVf52qjUaLsXgLremSLBAVbn9YsF6bdXFYuxbAUlzAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.106</title>
+            <pubDate>Mon, 26 Oct 2026 14:17:53 -0700</pubDate>
+            <sparkle:version>1793048424</sparkle:version>
+            <sparkle:shortVersionString>0.106</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.106.zip" length="66926030" type="application/octet-stream" sparkle:edSignature="3D0WtsoUJwDrha8sMmg4zZH8SRUgHx7xbCEvQsdVzKhWFuJaP2LCjzBtkfLI+z2bDd4mrasCLtjI0qWuQj0SCg=="/>
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1793048424-1793042136.delta" sparkle:deltaFrom="1793042136" length="6655534" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UE1nlCQrfJbKmTu7rkfp1MoS+YdI79skQPPdQlkE/Koz9POaDFvpBZKTOIRImPLx9OUY5+UDGkOboQedsfPkDg=="/>
@@ -46,18 +68,6 @@
             <sparkle:deltas>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1793042136-1792998011.delta" sparkle:deltaFrom="1792998011" length="7147846" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="y9isJyd4uYHpF4i6MS5RofZyaGIEFMsXwYAROfyxy7yczn/BOwbxIeZpNYD2/lTfOHtdd6joWcdhnDwTnx/cCA=="/>
                 <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1793042136-1792977632.delta" sparkle:deltaFrom="1792977632" length="8698614" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8oa96famYEPOE278mUj23omsqz9G607C0Rx3sf70B0G0SrKgk9U/WGeYE5R2A4t/mkbE3stAbz15ioCbGjagAg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.104</title>
-            <pubDate>Mon, 26 Oct 2026 00:17:58 -0700</pubDate>
-            <sparkle:version>1792998011</sparkle:version>
-            <sparkle:shortVersionString>0.104</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy-0.104.zip" length="66873711" type="application/octet-stream" sparkle:edSignature="FyVVwJRIw3Njhla9rkfa/j3nFuXcM4IU1hJtj+wIWiibaXNblVBchjUx141odgy3DsQHlJMmdZq422r8S2ZZDg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792998011-1792977632.delta" sparkle:deltaFrom="1792977632" length="8311342" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dK5FZ6zfQw6fflxXpx5XtCBiL3pXFg7O1o5metxWuvn8Ta7jlBqmli0feZmoev2VoKb1KaSRENMR5uyhCKUODA=="/>
-                <enclosure url="https://morganknutson.github.io/addy-releases/builds/Addy1792998011-1792795202.delta" sparkle:deltaFrom="1792795202" length="17300806" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jUN/Xt8VdJtX7gSO0i/OfSFWUEix26ydAYEUr6XZzik6YTgLEoPtHldlroVB5u/HPz8F5UPEMous9em1TSQYAQ=="/>
             </sparkle:deltas>
         </item>
         <item>
